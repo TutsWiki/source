@@ -1,0 +1,18 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.17"
+        config: config.toml
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - leipert/git-push:
+        gh_oauth: $GIT_TOKEN
+        basedir: public
+        clean_removed_files: true
+        branch: master
+        repo: TutsWiki/tutswiki.github.io
+        gh_pages_domain: tutswiki.com

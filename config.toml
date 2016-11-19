@@ -1,0 +1,22 @@
+baseurl = "http://tutswiki.com/"
+MetaDataFormat = "yaml"
+
+[params]
+  description = "Collaborative tutorials for the internet"
+  author = "Chankey Pathak (@chankeypathak)"
+
+[taxonomies]
+  tag = "tags"
+  group = "groups"
+
+[[menu.main]]
+    name = "Perl"
+    identifier = "getting started"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+[[menu.main]]
+    name = "Linux"
+    identifier = "commands"
+    pre = "<i class='fa fa-space-shuttle'></i>"
+    weight = -95
+    url = "/commands/"
