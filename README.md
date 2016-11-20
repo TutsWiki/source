@@ -1,4 +1,4 @@
-[![wercker status](https://app.wercker.com/status/82608dfc977366f94601c3dd1fce7de7/s/master "wercker status")](https://app.wercker.com/project/byKey/82608dfc977366f94601c3dd1fce7de7)
+[![wercker status](https://app.wercker.com/status/869c3599ae2b088beafa8aeca93b1483/s/master "wercker status")](https://app.wercker.com/project/byKey/869c3599ae2b088beafa8aeca93b1483)
 
 # [TutsWiki.com](http://tutswiki.com)
 Collaborative tutorials for the internet
