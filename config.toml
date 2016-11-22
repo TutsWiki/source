@@ -12,4 +12,5 @@ MetaDataFormat = "yaml"
 [[menu.main]]
     name = "Perl"
     identifier = "getting started"
+    pre = "<i class='fa perl'></i>"
     weight = -100
