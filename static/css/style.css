@@ -590,7 +590,9 @@ i.freebsd-19px:before {
     }
 }
 
-
+.perl{
+  content:url('../img/perl.png');
+}
 
 
 
