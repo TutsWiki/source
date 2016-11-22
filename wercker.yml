@@ -11,6 +11,7 @@ deploy:
         packages: git ssh-client
     - leipert/git-push:
         gh_oauth: $GIT_TOKEN
+        user: chankeypathak
         basedir: public
         clean_removed_files: true
         branch: master
