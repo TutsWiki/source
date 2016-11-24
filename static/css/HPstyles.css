@@ -269,3 +269,43 @@ footer a:hover {
 .owl-carousel blockquote p {
     font-size: 20pt;
 }
+
+.header .vert-text > a {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 390px;
+    min-height: 390px;
+    position: relative;
+    width: 100%;
+    transition: all 0.2s ease-in 0s;
+    box-shadow: 0 0 10px 9px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.header .vert-text > a:hover {
+    background-color: #ffffff;
+    transition: all 0.2s ease-in 0s;
+    box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 767px) {
+    header .vert-text > a {  max-width: 300px;  min-height: 300px;}
+    logo {  max-width: 90%;}
+}
+
