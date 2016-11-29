@@ -3,7 +3,7 @@ date: 2016-12-01
 linktitle: Introduction
 menu:
   main:
-    parent: getting started
+    parent: perl
 next: /perl/installation
 title: Introduction to Perl
 weight: 5

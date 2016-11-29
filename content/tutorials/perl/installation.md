@@ -3,7 +3,7 @@ date: 2016-12-01
 linktitle: Installation (Windows)
 menu:
   main:
-    parent: getting started
+    parent: perl
 next: /perl/introduction
 prev: /perl/introduction
 title: Installing Perl on Windows
