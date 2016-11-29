@@ -39,7 +39,7 @@ body {
     background-size: cover;
     z-index: 99999;
     background-color: black;
-    padding: 63px 15px;
+    padding: 63px 15px 0px;
 }
 
 .logo {
@@ -277,8 +277,9 @@ footer a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 390px;
-    min-height: 390px;
+    margin-bottom: 72px;
+    max-width: 450px;
+    min-height: 450px;
     position: relative;
     width: 100%;
     transition: all 0.2s ease-in 0s;
@@ -291,7 +292,7 @@ footer a:hover {
     display: block;
     left: 0;
     margin: auto;
-    max-width: 100%;
+    max-width: 89%;
     padding: 0;
     position: absolute;
     right: 0;
