@@ -1,5 +1,6 @@
 baseurl = "http://tutswiki.com/"
 MetaDataFormat = "yaml"
+disableHugoGeneratorInject = true
 
 [params]
   description = "Collaborative tutorials for the internet"
