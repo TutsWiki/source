@@ -11,7 +11,6 @@ disableHugoGeneratorInject = true
   group = "groups"
 
 [[menu.main]]
-    name = "Perl"
-    identifier = "perl"
-    pre = "<i class='fa perl'></i>"
+    name = "Pandas Cookbook"
+    identifier = "pandas"
     weight = -100
