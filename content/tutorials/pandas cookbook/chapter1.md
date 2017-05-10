@@ -34,8 +34,8 @@ Output:
 
 You'll notice that this is totally broken! read_csv has a bunch of options that will let us fix that, though. Here we'll
 
-- change the column separator to a ;
-- Set the encoding to 'latin1' (the default is 'utf8')
+- Change the column separator to a ;
+- Set the encoding to '_latin1_' (the default is '_utf8_')
 - Parse the dates in the 'Date' column
 - Tell it that our dates have the date first instead of the month first
 - Set the index to be the 'Date' column
