@@ -18,6 +18,8 @@ We're going to be looking some cyclist data from Montréal. Here's the [original
 This dataset is a list of how many people were on 7 different bike paths in Montreal, each day.
 
 ```python
+import pandas as pd
+
 broken_df = pd.read_csv('bikes.csv')
 # Look at the first 3 rows
 print broken_df[:3]
