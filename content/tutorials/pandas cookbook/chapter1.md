@@ -5,9 +5,17 @@ menu:
   main:
     parent: pandas
 next: /pandas-cookbook/chapter2
+keywords:
+  - pandas
+  - csv
+  - read csv pandas
+  - read column pandas
+  - select column
+  - plot column
 title: Chapter 1 - Reading from a CSV
 weight: 10
 url: /pandas-cookbook/chapter1
+description: Chapter 1 - Reading from a CSV
 ---
 ```python
 # Render our plots inline

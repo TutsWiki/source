@@ -9,6 +9,7 @@ prev: /pandas-cookbook/chapter1
 title: Chapter 2 - Selecting and finding desired data
 weight: 10
 url: /pandas-cookbook/chapter2
+description: Chapter 2 - Selecting and finding desired data
 ---
 
 ```python
@@ -35,6 +36,7 @@ complaints = pd.read_csv('311-service-requests.csv')
 ```
 
 Depending on your pandas version, you might see an error like `"DtypeWarning: Columns (8) have mixed types"`. This means that it's encountered a problem reading in our data. In this case it almost certainly means that it has columns where some of the entries are strings and some are integers.
+
 For now we're going to ignore it and hope we don't run into a problem, but in the long run we'd need to investigate this warning.
 
 ## 2.1 What's even in it? (the summary)
