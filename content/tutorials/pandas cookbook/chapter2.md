@@ -3908,3 +3908,489 @@ Output:
 4                     Rodent
 Name: Complaint Type, dtype: object
 ```
+
+## 2.3 Selecting multiple columns
+
+What if we just want to know the complaint type and the borough, but not the rest of the information? Pandas makes it really easy to select a subset of the columns: just index with list of columns you want.
+
+```python
+print complaints[['Complaint Type', 'Borough']]
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Complaint Type</th>
+      <th>Borough</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0 </th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>1 </th>
+      <td>          Illegal Parking</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>2 </th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>3 </th>
+      <td>          Noise - Vehicle</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>4 </th>
+      <td>                   Rodent</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>5 </th>
+      <td>       Noise - Commercial</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>6 </th>
+      <td>         Blocked Driveway</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>7 </th>
+      <td>       Noise - Commercial</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>8 </th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>9 </th>
+      <td>       Noise - Commercial</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td> Noise - House of Worship</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>          Illegal Parking</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>          Noise - Vehicle</td>
+      <td>         BRONX</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>                   Rodent</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td> Noise - House of Worship</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td> STATEN ISLAND</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>          Illegal Parking</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>   Street Light Condition</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td> Noise - House of Worship</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>          Noise - Vehicle</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>       Noise - Commercial</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>         Blocked Driveway</td>
+      <td> STATEN ISLAND</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td> STATEN ISLAND</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>   Street Light Condition</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>     Harboring Bees/Wasps</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>   Street Light Condition</td>
+      <td> STATEN ISLAND</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>         Blocked Driveway</td>
+      <td> STATEN ISLAND</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>           Taxi Complaint</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td> Noise - House of Worship</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>      Homeless Encampment</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>         Blocked Driveway</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td> Traffic Signal Condition</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>       Noise - Commercial</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td> Traffic Signal Condition</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>         Blocked Driveway</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>       Noise - Commercial</td>
+      <td>        QUEENS</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>       Food Establishment</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>       Noise - Commercial</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>       Noise - Commercial</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>             Noise - Park</td>
+      <td>         BRONX</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td>         BRONX</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>       Noise - Commercial</td>
+      <td>         BRONX</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>           Taxi Complaint</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>  Noise - Street/Sidewalk</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>        Broken Muni Meter</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>         Blocked Driveway</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td> Benefit Card Replacement</td>
+      <td>   Unspecified</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>       Noise - Commercial</td>
+      <td>     MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>     Sanitation Condition</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>                 ELECTRIC</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>                 PLUMBING</td>
+      <td>      BROOKLYN</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>                  HEATING</td>
+      <td>         BRONX</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<p>111069 rows × 2 columns</p>
+</div>
+</div>
+
+That showed us a summary, and then we can look at the first 10 rows:
+
+```python
+print complaints[['Complaint Type', 'Borough']][:10]
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Complaint Type</th>
+      <th>Borough</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> Noise - Street/Sidewalk</td>
+      <td>    QUEENS</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>         Illegal Parking</td>
+      <td>    QUEENS</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>      Noise - Commercial</td>
+      <td> MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>         Noise - Vehicle</td>
+      <td> MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>                  Rodent</td>
+      <td> MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>      Noise - Commercial</td>
+      <td>    QUEENS</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>        Blocked Driveway</td>
+      <td>    QUEENS</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>      Noise - Commercial</td>
+      <td>    QUEENS</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>      Noise - Commercial</td>
+      <td> MANHATTAN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>      Noise - Commercial</td>
+      <td>  BROOKLYN</td>
+    </tr>
+  </tbody>
+</table>
+<p>10 rows × 2 columns</p>
+</div>
+</div>
+
+## 2.4 What's the most common complaint type?
+
+This is a really easy question to answer! There's a [.value_counts()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.value_counts.html) method that we can use:
+
+```python
+print complaints['Complaint Type'].value_counts()
+```
+
+Output:
+
+```bash
+HEATING                     14200
+GENERAL CONSTRUCTION         7471
+Street Light Condition       7117
+DOF Literature Request       5797
+PLUMBING                     5373
+PAINT - PLASTER              5149
+Blocked Driveway             4590
+NONCONST                     3998
+Street Condition             3473
+Illegal Parking              3343
+Noise                        3321
+Traffic Signal Condition     3145
+Dirty Conditions             2653
+Water System                 2636
+Noise - Commercial           2578
+...
+Opinion for the Mayor                2
+Window Guard                         2
+DFTA Literature Request              2
+Legal Services Provider Complaint    2
+Open Flame Permit                    1
+Snow                                 1
+Municipal Parking Facility           1
+X-Ray Machine/Equipment              1
+Stalled Sites                        1
+DHS Income Savings Requirement       1
+Tunnel Condition                     1
+Highway Sign - Damaged               1
+Ferry Permit                         1
+Trans Fat                            1
+DWD                                  1
+Length: 165, dtype: int64
+```
+
+If we just wanted the top 10 most common complaints, we can do this:
+
+```python
+complaint_counts = complaints['Complaint Type'].value_counts()
+print complaint_counts[:10]
+```
+
+Output:
+
+```bash
+HEATING                   14200
+GENERAL CONSTRUCTION       7471
+Street Light Condition     7117
+DOF Literature Request     5797
+PLUMBING                   5373
+PAINT - PLASTER            5149
+Blocked Driveway           4590
+NONCONST                   3998
+Street Condition           3473
+Illegal Parking            3343
+dtype: int64
+```
+
+But it gets better! We can plot them!
+
+```python
+complaint_counts[:10].plot(kind='bar')
+```
+
+Output:
+<div>
+<img src="/img/plot_complaints.png" alt="Plotting complaints with Matplotlib" />
+</div>
