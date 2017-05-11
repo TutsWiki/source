@@ -9,7 +9,14 @@ prev: /pandas-cookbook/chapter1
 title: Chapter 2 - Selecting and finding desired data
 weight: 10
 url: /pandas-cookbook/chapter2
-description: Chapter 2 - Selecting and finding desired data
+description: Select data from a pandas dataframe, take slices and get columns
+keywords:
+  - pandas
+  - csv
+  - read csv pandas
+  - read column pandas
+  - select column
+  - plot column
 ---
 
 ```python

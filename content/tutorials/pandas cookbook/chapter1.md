@@ -5,6 +5,10 @@ menu:
   main:
     parent: pandas
 next: /pandas-cookbook/chapter2
+title: Chapter 1 - Reading from a CSV
+weight: 10
+url: /pandas-cookbook/chapter1
+description: Read data from a CSV using pandas dataframe
 keywords:
   - pandas
   - csv
@@ -12,10 +16,6 @@ keywords:
   - read column pandas
   - select column
   - plot column
-title: Chapter 1 - Reading from a CSV
-weight: 10
-url: /pandas-cookbook/chapter1
-description: Chapter 1 - Reading from a CSV
 ---
 ```python
 # Render our plots inline
