@@ -596,3 +596,12 @@ i.freebsd-19px:before {
 
 
 
+img[src$='#reducesize']
+{
+    width: 90%;
+}
+
+img[src$='#floatright']
+{
+	float:right;
+}
