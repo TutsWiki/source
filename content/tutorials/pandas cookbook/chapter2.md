@@ -34,7 +34,7 @@ We're going to use a new dataset here, to demonstrate how to deal with larger da
 complaints = pd.read_csv('311-service-requests.csv')
 ```
 
-Depending on your pandas version, you might see an error like "DtypeWarning: Columns (8) have mixed types". This means that it's encountered a problem reading in our data. In this case it almost certainly means that it has columns where some of the entries are strings and some are integers.
+Depending on your pandas version, you might see an error like `"DtypeWarning: Columns (8) have mixed types"`. This means that it's encountered a problem reading in our data. In this case it almost certainly means that it has columns where some of the entries are strings and some are integers.
 For now we're going to ignore it and hope we don't run into a problem, but in the long run we'd need to investigate this warning.
 
 ## 2.1 What's even in it? (the summary)
@@ -3468,3 +3468,434 @@ Output:
 <p>111069 rows × 52 columns</p>
 </div>
 </div>
+
+## 2.2 Selecting columns and rows
+
+To select a column, we index with the name of the column, like this:
+
+```python
+print complaints['Complaint Type']
+```
+
+Output:
+
+```bash
+
+0      Noise - Street/Sidewalk
+1              Illegal Parking
+2           Noise - Commercial
+3              Noise - Vehicle
+4                       Rodent
+5           Noise - Commercial
+6             Blocked Driveway
+7           Noise - Commercial
+8           Noise - Commercial
+9           Noise - Commercial
+10    Noise - House of Worship
+11          Noise - Commercial
+12             Illegal Parking
+13             Noise - Vehicle
+14                      Rodent
+...
+111054    Noise - Street/Sidewalk
+111055         Noise - Commercial
+111056      Street Sign - Missing
+111057                      Noise
+111058         Noise - Commercial
+111059    Noise - Street/Sidewalk
+111060                      Noise
+111061         Noise - Commercial
+111062               Water System
+111063               Water System
+111064    Maintenance or Facility
+111065            Illegal Parking
+111066    Noise - Street/Sidewalk
+111067         Noise - Commercial
+111068           Blocked Driveway
+Name: Complaint Type, Length: 111069, dtype: object
+```
+
+To get the first 5 rows of a dataframe, we can use a slice: df[:5].
+This is a great way to get a sense for what kind of information is in the dataframe -- take a minute to look at the contents and get a feel for this dataset.
+
+```python
+print complaints[:5]
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unique Key</th>
+      <th>Created Date</th>
+      <th>Closed Date</th>
+      <th>Agency</th>
+      <th>Agency Name</th>
+      <th>Complaint Type</th>
+      <th>Descriptor</th>
+      <th>Location Type</th>
+      <th>Incident Zip</th>
+      <th>Incident Address</th>
+      <th>Street Name</th>
+      <th>Cross Street 1</th>
+      <th>Cross Street 2</th>
+      <th>Intersection Street 1</th>
+      <th>Intersection Street 2</th>
+      <th>Address Type</th>
+      <th>City</th>
+      <th>Landmark</th>
+      <th>Facility Type</th>
+      <th>Status</th>
+      <th>Due Date</th>
+      <th>Resolution Action Updated Date</th>
+      <th>Community Board</th>
+      <th>Borough</th>
+      <th>X Coordinate (State Plane)</th>
+      <th>Y Coordinate (State Plane)</th>
+      <th>Park Facility Name</th>
+      <th>Park Borough</th>
+      <th>School Name</th>
+      <th>School Number</th>
+      <th>School Region</th>
+      <th>School Code</th>
+      <th>School Phone Number</th>
+      <th>School Address</th>
+      <th>School City</th>
+      <th>School State</th>
+      <th>School Zip</th>
+      <th>School Not Found</th>
+      <th>School or Citywide Complaint</th>
+      <th>Vehicle Type</th>
+      <th>Taxi Company Borough</th>
+      <th>Taxi Pick Up Location</th>
+      <th>Bridge Highway Name</th>
+      <th>Bridge Highway Direction</th>
+      <th>Road Ramp</th>
+      <th>Bridge Highway Segment</th>
+      <th>Garage Lot Name</th>
+      <th>Ferry Direction</th>
+      <th>Ferry Terminal Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 26589651</td>
+      <td> 10/31/2013 02:08:41 AM</td>
+      <td>                    NaN</td>
+      <td>  NYPD</td>
+      <td>         New York City Police Department</td>
+      <td> Noise - Street/Sidewalk</td>
+      <td>                 Loud Talking</td>
+      <td>     Street/Sidewalk</td>
+      <td> 11432</td>
+      <td> 90-03 169 STREET</td>
+      <td>      169 STREET</td>
+      <td>       90 AVENUE</td>
+      <td>                        91 AVENUE</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td>   ADDRESS</td>
+      <td>  JAMAICA</td>
+      <td> NaN</td>
+      <td> Precinct</td>
+      <td> Assigned</td>
+      <td> 10/31/2013 10:08:41 AM</td>
+      <td> 10/31/2013 02:35:17 AM</td>
+      <td>    12 QUEENS</td>
+      <td>    QUEENS</td>
+      <td> 1042027</td>
+      <td> 197389</td>
+      <td> Unspecified</td>
+      <td>    QUEENS</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> N</td>
+      <td>NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> 40.708275</td>
+      <td>-73.791604</td>
+      <td>  (40.70827532593202, -73.79160395779721)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 26593698</td>
+      <td> 10/31/2013 02:01:04 AM</td>
+      <td>                    NaN</td>
+      <td>  NYPD</td>
+      <td>         New York City Police Department</td>
+      <td>         Illegal Parking</td>
+      <td> Commercial Overnight Parking</td>
+      <td>     Street/Sidewalk</td>
+      <td> 11378</td>
+      <td>        58 AVENUE</td>
+      <td>       58 AVENUE</td>
+      <td>        58 PLACE</td>
+      <td>                        59 STREET</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> BLOCKFACE</td>
+      <td>  MASPETH</td>
+      <td> NaN</td>
+      <td> Precinct</td>
+      <td>     Open</td>
+      <td> 10/31/2013 10:01:04 AM</td>
+      <td>                    NaN</td>
+      <td>    05 QUEENS</td>
+      <td>    QUEENS</td>
+      <td> 1009349</td>
+      <td> 201984</td>
+      <td> Unspecified</td>
+      <td>    QUEENS</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> N</td>
+      <td>NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> 40.721041</td>
+      <td>-73.909453</td>
+      <td> (40.721040535628305, -73.90945306791765)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 26594139</td>
+      <td> 10/31/2013 02:00:24 AM</td>
+      <td> 10/31/2013 02:40:32 AM</td>
+      <td>  NYPD</td>
+      <td>         New York City Police Department</td>
+      <td>      Noise - Commercial</td>
+      <td>             Loud Music/Party</td>
+      <td> Club/Bar/Restaurant</td>
+      <td> 10032</td>
+      <td>    4060 BROADWAY</td>
+      <td>        BROADWAY</td>
+      <td> WEST 171 STREET</td>
+      <td>                  WEST 172 STREET</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td>   ADDRESS</td>
+      <td> NEW YORK</td>
+      <td> NaN</td>
+      <td> Precinct</td>
+      <td>   Closed</td>
+      <td> 10/31/2013 10:00:24 AM</td>
+      <td> 10/31/2013 02:39:42 AM</td>
+      <td> 12 MANHATTAN</td>
+      <td> MANHATTAN</td>
+      <td> 1001088</td>
+      <td> 246531</td>
+      <td> Unspecified</td>
+      <td> MANHATTAN</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> N</td>
+      <td>NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> 40.843330</td>
+      <td>-73.939144</td>
+      <td>  (40.84332975466513, -73.93914371913482)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> 26595721</td>
+      <td> 10/31/2013 01:56:23 AM</td>
+      <td> 10/31/2013 02:21:48 AM</td>
+      <td>  NYPD</td>
+      <td>         New York City Police Department</td>
+      <td>         Noise - Vehicle</td>
+      <td>               Car/Truck Horn</td>
+      <td>     Street/Sidewalk</td>
+      <td> 10023</td>
+      <td>   WEST 72 STREET</td>
+      <td>  WEST 72 STREET</td>
+      <td> COLUMBUS AVENUE</td>
+      <td>                 AMSTERDAM AVENUE</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> BLOCKFACE</td>
+      <td> NEW YORK</td>
+      <td> NaN</td>
+      <td> Precinct</td>
+      <td>   Closed</td>
+      <td> 10/31/2013 09:56:23 AM</td>
+      <td> 10/31/2013 02:21:10 AM</td>
+      <td> 07 MANHATTAN</td>
+      <td> MANHATTAN</td>
+      <td>  989730</td>
+      <td> 222727</td>
+      <td> Unspecified</td>
+      <td> MANHATTAN</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> N</td>
+      <td>NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> 40.778009</td>
+      <td>-73.980213</td>
+      <td>   (40.7780087446372, -73.98021349023975)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td> 26590930</td>
+      <td> 10/31/2013 01:53:44 AM</td>
+      <td>                    NaN</td>
+      <td> DOHMH</td>
+      <td> Department of Health and Mental Hygiene</td>
+      <td>                  Rodent</td>
+      <td> Condition Attracting Rodents</td>
+      <td>          Vacant Lot</td>
+      <td> 10027</td>
+      <td>  WEST 124 STREET</td>
+      <td> WEST 124 STREET</td>
+      <td>    LENOX AVENUE</td>
+      <td> ADAM CLAYTON POWELL JR BOULEVARD</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> BLOCKFACE</td>
+      <td> NEW YORK</td>
+      <td> NaN</td>
+      <td>      NaN</td>
+      <td>  Pending</td>
+      <td> 11/30/2013 01:53:44 AM</td>
+      <td> 10/31/2013 01:59:54 AM</td>
+      <td> 10 MANHATTAN</td>
+      <td> MANHATTAN</td>
+      <td>  998815</td>
+      <td> 233545</td>
+      <td> Unspecified</td>
+      <td> MANHATTAN</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> Unspecified</td>
+      <td> N</td>
+      <td>NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> NaN</td>
+      <td> 40.807691</td>
+      <td>-73.947387</td>
+      <td>  (40.80769092704951, -73.94738703491433)</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 52 columns</p>
+</div>
+</div>
+
+We can combine these to get the first 5 rows of a column:
+
+```python
+print complaints['Complaint Type'][:5]
+```
+
+Output:
+
+```bash
+0    Noise - Street/Sidewalk
+1            Illegal Parking
+2         Noise - Commercial
+3            Noise - Vehicle
+4                     Rodent
+Name: Complaint Type, dtype: object
+```
+
+and it doesn't matter which direction we do it in:
+
+```python
+print complaints['Complaint Type'][:5]
+```
+
+Output:
+
+```bash
+0    Noise - Street/Sidewalk
+1            Illegal Parking
+2         Noise - Commercial
+3            Noise - Vehicle
+4                     Rodent
+Name: Complaint Type, dtype: object
+```
