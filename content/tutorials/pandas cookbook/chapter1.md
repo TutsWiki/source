@@ -9,6 +9,17 @@ title: Chapter 1 - Reading from a CSV
 weight: 10
 url: /pandas-cookbook/chapter1
 ---
+```python
+# Render our plots inline
+%matplotlib inline
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pd.set_option('display.mpl_style', 'default') # Make the graphs a bit prettier
+plt.rcParams['figure.figsize'] = (15, 5)
+```
+
 ## 1.1 Reading data from a CSV file
 
 You can read data from a CSV file using the [read_csv](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html) function. By default, it assumes that the fields are comma-separated.
@@ -27,12 +38,31 @@ print broken_df[:3]
 
 Output:
 
-```bash
-  Date;Berri 1;Br?beuf (donn?es non disponibles);C?te-Sainte-Catherine;Maisonneuve 1;Maisonneuve 2;du Parc;Pierre-Dupuy;Rachel1;St-Urbain (donn?es non disponibles)
-0                   01/01/2012;35;;0;38;51;26;10;16;                                                                                                               
-1                   02/01/2012;83;;1;68;153;53;6;43;                                                                                                               
-2                 03/01/2012;135;;2;104;248;89;3;58;   
-```
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date;Berri 1;Br�beuf (donn�es non disponibles);C�te-Sainte-Catherine;Maisonneuve 1;Maisonneuve 2;du Parc;Pierre-Dupuy;Rachel1;St-Urbain (donn�es non disponibles)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   01/01/2012;35;;0;38;51;26;10;16;</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>   02/01/2012;83;;1;68;153;53;6;43;</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 03/01/2012;135;;2;104;248;89;3;58;</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 1 columns</p>
+</div>
 
 You'll notice that this is totally broken! read_csv has a bunch of options that will let us fix that, though. Here we'll
 
@@ -49,12 +79,75 @@ print fixed_df[:3]
 
 Output:
 
-
-| Date       | Berri 1 | Brébeuf  (données  non  disponibles) | Côte- Sainte- Catherine | Maisonneuve 1 | Maisonneuve 2 | du Parc | Pierre- Dupuy | Rachel1 | St-Urbain (données  non  disponibles) |
-|------------|---------|--------------------------------------|-------------------------|---------------|---------------|---------|---------------|---------|---------------------------------------|
-| 2012-01-01 | 35      | NaN                                  | 0                       | 38            | 51            | 26      | 10            | 16      | NaN                                   |
-| 2012-01-02 | 83      | NaN                                  | 1                       | 68            | 153           | 53      | 6             | 43      | NaN                                   |
-| 2012-01-03 | 135     | NaN                                  | 2                       | 104           | 248           | 89      | 3             | 58      | NaN                                   |
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berri 1</th>
+      <th>Brébeuf (données non disponibles)</th>
+      <th>Côte-Sainte-Catherine</th>
+      <th>Maisonneuve 1</th>
+      <th>Maisonneuve 2</th>
+      <th>du Parc</th>
+      <th>Pierre-Dupuy</th>
+      <th>Rachel1</th>
+      <th>St-Urbain (données non disponibles)</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2012-01-01</th>
+      <td>  35</td>
+      <td>NaN</td>
+      <td> 0</td>
+      <td>  38</td>
+      <td>  51</td>
+      <td> 26</td>
+      <td> 10</td>
+      <td> 16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2012-01-02</th>
+      <td>  83</td>
+      <td>NaN</td>
+      <td> 1</td>
+      <td>  68</td>
+      <td> 153</td>
+      <td> 53</td>
+      <td>  6</td>
+      <td> 43</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2012-01-03</th>
+      <td> 135</td>
+      <td>NaN</td>
+      <td> 2</td>
+      <td> 104</td>
+      <td> 248</td>
+      <td> 89</td>
+      <td>  3</td>
+      <td> 58</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 9 columns</p>
+</div>
 
 ## 1.2 Selecting a column
 
