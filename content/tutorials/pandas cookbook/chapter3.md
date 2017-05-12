@@ -5,7 +5,7 @@ menu:
   main:
     parent: pandas
 next: /pandas-cookbook/chapter4
-prev: /pandas-cookbook/chapter3
+prev: /pandas-cookbook/chapter2
 title: Chapter 3 - Filter dataframes
 weight: 10
 url: /pandas-cookbook/chapter3
