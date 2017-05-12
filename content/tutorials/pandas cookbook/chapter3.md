@@ -6,7 +6,7 @@ menu:
     parent: pandas
 next: /pandas-cookbook/chapter4
 prev: /pandas-cookbook/chapter2
-title: Chapter 3 - Filter dataframes
+title: Chapter 3 - Filtering dataframes
 weight: 10
 url: /pandas-cookbook/chapter3
 description: Here we get into serious slicing and dicing and learn how to filter dataframes in complicated ways, really fast.
@@ -681,7 +681,7 @@ Name: Complaint Type, Length: 111069, dtype: bool
 
 This is a big array of Trues and Falses, one for each row in our dataframe. When we index our dataframe with this array, we get just the rows where our boolean array evaluated to True. It's important to note that for row filtering by a boolean array the length of our dataframe's index must be the same length as the boolean array used for filtering.
 
-You can also combine more than one condition with the & operator like this:
+You can also combine more than one condition with the `&` operator like this:
 
 ```python
 is_noise = complaints['Complaint Type'] == "Noise - Street/Sidewalk"
@@ -1132,3 +1132,114 @@ Output:
 
 ## 3.2 A digression about numpy arrays
 
+On the inside, the type of a column is [pd.Series](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html)
+
+```python
+print pd.Series([1,2,3])
+```
+
+Output:
+
+```bash
+0    1
+1    2
+2    3
+dtype: int64
+```
+
+and pandas Series are internally [numpy arrays](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html). If you add `.values` to the end of any Series, you'll get its internal numpy array
+
+```python
+print np.array([1,2,3])
+```
+
+Output:
+
+```bash
+array([1, 2, 3])
+```
+
+```python
+print pd.Series([1,2,3]).values
+```
+
+Output:
+
+```bash
+array([1, 2, 3])
+```
+
+So this binary-array-selection business is actually something that works with any numpy array:
+
+```python
+arr = np.array([1,2,3])
+print arr != 2
+```
+
+Output:
+
+```bash
+array([ True, False,  True], dtype=bool)
+```
+
+```python
+print arr[arr != 2]
+```
+
+Output:
+
+```bash
+array([1, 3])
+```
+
+## 3.3 So, which borough has the most noise complaints?
+
+```python
+is_noise = complaints['Complaint Type'] == "Noise - Street/Sidewalk"
+noise_complaints = complaints[is_noise]
+print noise_complaints['Borough'].value_counts()
+```
+
+Output:
+
+```bash
+BRONX            0
+BROOKLYN         0
+MANHATTAN        0
+QUEENS           0
+STATEN ISLAND    0
+Unspecified      0
+dtype: int64
+```
+
+Oops, why was that zero? That's no good. This is because of integer division in Python 2. Let's fix it, by converting complaint_counts into an array of floats.
+
+```python
+print noise_complaint_counts / complaint_counts.astype(float)
+```
+
+Output:
+
+```bash
+BRONX            0.014833
+BROOKLYN         0.013864
+MANHATTAN        0.037755
+QUEENS           0.010143
+STATEN ISLAND    0.007474
+Unspecified      0.000141
+dtype: float64
+```
+
+Now let's plot it!
+
+```python
+(noise_complaint_counts / complaint_counts.astype(float)).plot(kind='bar')
+```
+
+Output:
+
+<div>
+<img src="/img/noise_complaints_plot.png" alt="Plot which borough has the most noise complaints" />
+</div>
+
+So Manhattan really does complain more about noise than the other boroughs! Neat.
