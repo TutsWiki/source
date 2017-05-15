@@ -226,3 +226,156 @@ Output:
 </table>
 </div>
 </div>
+
+## 4.2 Adding up the cyclists by weekday
+
+This turns out to be really easy!
+Dataframes have a `.groupby()` method that is similar to SQL groupby, if you're familiar with that. I'm not going to explain more about it right now -- if you want to to know more, [the documentation](http://pandas.pydata.org/pandas-docs/stable/groupby.html) is really good.
+
+In this case, `berri_bikes.groupby('weekday').aggregate(sum)` means 
+
+> Group the rows by weekday and then add up all the values with the same weekday.
+
+```python
+weekday_counts = berri_bikes.groupby('weekday').aggregate(sum)
+weekday_counts
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berri 1</th>
+    </tr>
+    <tr>
+      <th>weekday</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 134298</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 135305</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 152972</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> 160131</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td> 141771</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td> 101578</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>  99310</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+It's hard to remember what 0, 1, 2, 3, 4, 5, 6 mean, so we can fix it up and graph it:
+
+```python
+weekday_counts.index = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+weekday_counts
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berri 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Monday</th>
+      <td> 134298</td>
+    </tr>
+    <tr>
+      <th>Tuesday</th>
+      <td> 135305</td>
+    </tr>
+    <tr>
+      <th>Wednesday</th>
+      <td> 152972</td>
+    </tr>
+    <tr>
+      <th>Thursday</th>
+      <td> 160131</td>
+    </tr>
+    <tr>
+      <th>Friday</th>
+      <td> 141771</td>
+    </tr>
+    <tr>
+      <th>Saturday</th>
+      <td> 101578</td>
+    </tr>
+    <tr>
+      <th>Sunday</th>
+      <td>  99310</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+```python
+weekday_counts.plot(kind='bar')
+```
+
+Output:
+
+<div>
+    <img src="/img/cycle_weeday_plot.png" alt="Plot dataframe as per weekdays" />
+</div>
+
+So it looks like Montrealers are commuter cyclists -- they bike much more during the week. Neat!
+
+## 4.3 Putting it together
+
+Let's put all that together, to prove how easy it is. 6 lines of magical pandas!
+If you want to play around, try changing sum to max, numpy.median, or any other function you like.
+
+```python
+bikes = pd.read_csv('../data/bikes.csv', 
+                    sep=';', encoding='latin1', 
+                    parse_dates=['Date'], dayfirst=True, 
+                    index_col='Date')
+# Add the weekday column
+berri_bikes = bikes[['Berri 1']].copy()
+berri_bikes.loc[:,'weekday'] = berri_bikes.index.weekday
+
+# Add up the number of cyclists by weekday, and plot!
+weekday_counts = berri_bikes.groupby('weekday').aggregate(sum)
+weekday_counts.index = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+weekday_counts.plot(kind='bar')
+```
+
+Output:
+
+<div>
+    <img src="/img/cycle_weeday_plot.png" alt="Plot dataframe as per weekdays" />
+</div>
