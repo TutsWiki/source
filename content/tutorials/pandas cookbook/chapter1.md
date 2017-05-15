@@ -217,7 +217,6 @@ import matplotlib.pyplot as plt
 
 fixed_df = pd.read_csv('bikes.csv', sep=';', encoding='latin1', parse_dates=['Date'], dayfirst=True, index_col='Date')
 fixed_df['Berri 1'].plot()
-plt.show()
 ```
 
 Output:
