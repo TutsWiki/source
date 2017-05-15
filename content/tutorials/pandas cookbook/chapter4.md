@@ -230,11 +230,11 @@ Output:
 ## 4.2 Adding up the cyclists by weekday
 
 This turns out to be really easy!
-Dataframes have a `.groupby()` method that is similar to SQL groupby, if you're familiar with that. I'm not going to explain more about it right now -- if you want to to know more, [the documentation](http://pandas.pydata.org/pandas-docs/stable/groupby.html) is really good.
+Dataframes have a [.groupby()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html) method that is similar to [SQL groupby](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql), if you're familiar with that. I'm not going to explain more about it right now -- if you want to to know more, [the documentation](http://pandas.pydata.org/pandas-docs/stable/groupby.html) is really good.
 
 In this case, `berri_bikes.groupby('weekday').aggregate(sum)` means 
 
-> Group the rows by weekday and then add up all the values with the same weekday.
+> "Group the rows by weekday and then add up all the values with the same weekday."
 
 ```python
 weekday_counts = berri_bikes.groupby('weekday').aggregate(sum)
