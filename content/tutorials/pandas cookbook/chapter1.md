@@ -41,7 +41,7 @@ import pandas as pd
 
 broken_df = pd.read_csv('bikes.csv')
 # Look at the first 3 rows
-print broken_df[:3]
+broken_df[:3]
 ```
 
 Output:
@@ -82,7 +82,7 @@ You'll notice that this is totally broken! read_csv has a bunch of options that 
 
 ```python
 fixed_df = pd.read_csv('bikes.csv', sep=';', encoding='latin1', parse_dates=['Date'], dayfirst=True, index_col='Date')
-print fixed_df[:3]
+fixed_df[:3]
 ```
 
 Output:
@@ -164,7 +164,7 @@ When you read a CSV, you get a kind of object called a [DataFrame](http://pandas
 Here's an example:
 
 ```python
-print fixed_df['Berri 1']
+fixed_df['Berri 1']
 ```
 
 Output:

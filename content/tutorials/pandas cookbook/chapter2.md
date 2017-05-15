@@ -51,7 +51,7 @@ When you print a large dataframe, it will only show you the first few rows.
 If you don't see this, don't panic! The default behavior for large dataframes changed between pandas 0.12 and 0.13. Previous to 0.13 it would show you a summary of the dataframe. This includes all the columns, and how many non-null values there are in each column.
 
 ```python
-print complaints
+complaints
 ```
 
 Output:
@@ -3483,7 +3483,7 @@ Output:
 To select a column, we index with the name of the column, like this:
 
 ```python
-print complaints['Complaint Type']
+complaints['Complaint Type']
 ```
 
 Output:
@@ -3528,7 +3528,7 @@ To get the first 5 rows of a dataframe, we can use a slice: df[:5].
 This is a great way to get a sense for what kind of information is in the dataframe -- take a minute to look at the contents and get a feel for this dataset.
 
 ```python
-print complaints[:5]
+complaints[:5]
 ```
 
 Output:
@@ -3878,7 +3878,7 @@ Output:
 We can combine these to get the first 5 rows of a column:
 
 ```python
-print complaints['Complaint Type'][:5]
+complaints['Complaint Type'][:5]
 ```
 
 Output:
@@ -3895,7 +3895,7 @@ Name: Complaint Type, dtype: object
 and it doesn't matter which direction we do it in:
 
 ```python
-print complaints['Complaint Type'][:5]
+complaints['Complaint Type'][:5]
 ```
 
 Output:
@@ -3914,7 +3914,7 @@ Name: Complaint Type, dtype: object
 What if we just want to know the complaint type and the borough, but not the rest of the information? Pandas makes it really easy to select a subset of the columns: just index with list of columns you want.
 
 ```python
-print complaints[['Complaint Type', 'Borough']]
+complaints[['Complaint Type', 'Borough']]
 ```
 
 Output:
@@ -4244,7 +4244,7 @@ Output:
 That showed us a summary, and then we can look at the first 10 rows:
 
 ```python
-print complaints[['Complaint Type', 'Borough']][:10]
+complaints[['Complaint Type', 'Borough']][:10]
 ```
 
 Output:
@@ -4321,7 +4321,7 @@ Output:
 This is a really easy question to answer! There's a [.value_counts()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.value_counts.html) method that we can use:
 
 ```python
-print complaints['Complaint Type'].value_counts()
+complaints['Complaint Type'].value_counts()
 ```
 
 Output:
@@ -4365,7 +4365,7 @@ If we just wanted the top 10 most common complaints, we can do this:
 
 ```python
 complaint_counts = complaints['Complaint Type'].value_counts()
-print complaint_counts[:10]
+complaint_counts[:10]
 ```
 
 Output:

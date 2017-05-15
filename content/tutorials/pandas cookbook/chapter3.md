@@ -48,7 +48,7 @@ complaints = pd.read_csv('311-service-requests.csv')
 I'd like to know which borough has the most noise complaints. First, we'll take a look at the data to see what it looks like:
 
 ```python
-print complaints[:5]
+complaints[:5]
 ```
 
 Output:
@@ -399,7 +399,7 @@ To get the noise complaints, we need to find the rows where the "Complaint Type"
 
 ```python
 noise_complaints = complaints[complaints['Complaint Type'] == "Noise - Street/Sidewalk"]
-print noise_complaints[:3]
+noise_complaints[:3]
 ```
 
 Output:
@@ -686,7 +686,7 @@ You can also combine more than one condition with the `&` operator like this:
 ```python
 is_noise = complaints['Complaint Type'] == "Noise - Street/Sidewalk"
 in_brooklyn = complaints['Borough'] == "BROOKLYN"
-print complaints[is_noise & in_brooklyn][:5]
+complaints[is_noise & in_brooklyn][:5]
 ```
 
 Output:
@@ -1036,7 +1036,7 @@ Output:
 Or if we just wanted a few columns:
 
 ```python
-print complaints[is_noise & in_brooklyn][['Complaint Type', 'Borough', 'Created Date', 'Descriptor']][:10]
+complaints[is_noise & in_brooklyn][['Complaint Type', 'Borough', 'Created Date', 'Descriptor']][:10]
 ```
 
 Output:
@@ -1135,7 +1135,7 @@ Output:
 On the inside, the type of a column is [pd.Series](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html)
 
 ```python
-print pd.Series([1,2,3])
+pd.Series([1,2,3])
 ```
 
 Output:
@@ -1150,7 +1150,7 @@ dtype: int64
 and pandas Series are internally [numpy arrays](https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html). If you add `.values` to the end of any Series, you'll get its internal numpy array
 
 ```python
-print np.array([1,2,3])
+np.array([1,2,3])
 ```
 
 Output:
@@ -1160,7 +1160,7 @@ array([1, 2, 3])
 ```
 
 ```python
-print pd.Series([1,2,3]).values
+pd.Series([1,2,3]).values
 ```
 
 Output:
@@ -1173,7 +1173,7 @@ So this binary-array-selection business is actually something that works with an
 
 ```python
 arr = np.array([1,2,3])
-print arr != 2
+arr != 2
 ```
 
 Output:
@@ -1183,7 +1183,7 @@ array([ True, False,  True], dtype=bool)
 ```
 
 ```python
-print arr[arr != 2]
+arr[arr != 2]
 ```
 
 Output:
@@ -1197,9 +1197,28 @@ array([1, 3])
 ```python
 is_noise = complaints['Complaint Type'] == "Noise - Street/Sidewalk"
 noise_complaints = complaints[is_noise]
-print noise_complaints['Borough'].value_counts()
+noise_complaints['Borough'].value_counts()
 ```
 
+Output:
+
+```bash
+MANHATTAN        917
+BROOKLYN         456
+BRONX            292
+QUEENS           226
+STATEN ISLAND     36
+Unspecified        1
+dtype: int64
+```
+
+It's Manhattan! But what if we wanted to divide by the total number of complaints, to make it make a bit more sense? That would be easy too:
+
+```python
+noise_complaint_counts = noise_complaints['Borough'].value_counts()
+complaint_counts = complaints['Borough'].value_counts()
+noise_complaint_counts / complaint_counts
+```
 Output:
 
 ```bash
@@ -1215,7 +1234,7 @@ dtype: int64
 Oops, why was that zero? That's no good. This is because of integer division in Python 2. Let's fix it, by converting complaint_counts into an array of floats.
 
 ```python
-print noise_complaint_counts / complaint_counts.astype(float)
+noise_complaint_counts / complaint_counts.astype(float)
 ```
 
 Output:
