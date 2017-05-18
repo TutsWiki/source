@@ -1938,3 +1938,778 @@ Date/Time
 
 So it looks like the time with the highest median temperature is 2pm. Neat.
 
+## 5.3 Getting the whole year of data
+
+Okay, so what if we want the data for the whole year? Ideally the API would just let us download that, but I couldn't figure out a way to do that.
+
+First, let's put our work from above into a function that gets the weather for a given month.
+
+I noticed that there's an irritating bug where when I ask for January, it gives me data for the previous year, so we'll fix that too. [no, really. You can check =)]
+
+```python
+def download_weather_month(year, month):
+    if month == 1:
+        year += 1
+    url = url_template.format(year=year, month=month)
+    weather_data = pd.read_csv(url, skiprows=15, index_col='Date/Time', parse_dates=True, header=True)
+    weather_data = weather_data.dropna(axis=1)
+    weather_data.columns = [col.replace('\xb0', '') for col in weather_data.columns]
+    weather_data = weather_data.drop(['Year', 'Day', 'Month', 'Time', 'Data Quality'], axis=1)
+    return weather_data
+```
+
+We can test that this function does the right thing:
+
+```python
+download_weather_month(2012, 1)[:5]
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Temp (C)</th>
+      <th>Dew Point Temp (C)</th>
+      <th>Rel Hum (%)</th>
+      <th>Wind Spd (km/h)</th>
+      <th>Visibility (km)</th>
+      <th>Stn Press (kPa)</th>
+      <th>Weather</th>
+    </tr>
+    <tr>
+      <th>Date/Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2013-01-01 00:00:00</th>
+      <td>-1.0</td>
+      <td> -1.7</td>
+      <td> 95</td>
+      <td> 35</td>
+      <td>  6.4</td>
+      <td>  99.89</td>
+      <td>         Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 01:00:00</th>
+      <td>-2.0</td>
+      <td> -5.1</td>
+      <td> 79</td>
+      <td> 35</td>
+      <td> 16.1</td>
+      <td>  99.93</td>
+      <td> Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 02:00:00</th>
+      <td>-2.7</td>
+      <td> -6.0</td>
+      <td> 78</td>
+      <td> 28</td>
+      <td> 19.3</td>
+      <td> 100.08</td>
+      <td>         Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 03:00:00</th>
+      <td>-5.6</td>
+      <td>-11.7</td>
+      <td> 62</td>
+      <td> 30</td>
+      <td> 25.0</td>
+      <td> 100.21</td>
+      <td>        Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 04:00:00</th>
+      <td>-7.7</td>
+      <td>-12.6</td>
+      <td> 68</td>
+      <td> 35</td>
+      <td> 19.3</td>
+      <td> 100.32</td>
+      <td> Mainly Clear</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+Now we can get all the months at once. This will take a little while to run.
+
+```python
+data_by_month = [download_weather_month(2012, i) for i in range(1, 13)]
+```
+
+Once we have this, it's easy to concatenate all the dataframes together into one big dataframe using [pd.concat](http://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.concat.html). And now we have the whole year's data!
+
+```python
+weather_2012 = pd.concat(data_by_month)
+weather_2012
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Temp (C)</th>
+      <th>Dew Point Temp (C)</th>
+      <th>Rel Hum (%)</th>
+      <th>Wind Spd (km/h)</th>
+      <th>Visibility (km)</th>
+      <th>Stn Press (kPa)</th>
+      <th>Weather</th>
+    </tr>
+    <tr>
+      <th>Date/Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2013-01-01 00:00:00</th>
+      <td> -1.0</td>
+      <td> -1.7</td>
+      <td> 95</td>
+      <td> 35</td>
+      <td>  6.4</td>
+      <td>  99.89</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 01:00:00</th>
+      <td> -2.0</td>
+      <td> -5.1</td>
+      <td> 79</td>
+      <td> 35</td>
+      <td> 16.1</td>
+      <td>  99.93</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 02:00:00</th>
+      <td> -2.7</td>
+      <td> -6.0</td>
+      <td> 78</td>
+      <td> 28</td>
+      <td> 19.3</td>
+      <td> 100.08</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 03:00:00</th>
+      <td> -5.6</td>
+      <td>-11.7</td>
+      <td> 62</td>
+      <td> 30</td>
+      <td> 25.0</td>
+      <td> 100.21</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 04:00:00</th>
+      <td> -7.7</td>
+      <td>-12.6</td>
+      <td> 68</td>
+      <td> 35</td>
+      <td> 19.3</td>
+      <td> 100.32</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 05:00:00</th>
+      <td> -9.7</td>
+      <td>-14.8</td>
+      <td> 66</td>
+      <td> 33</td>
+      <td> 25.0</td>
+      <td> 100.47</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 06:00:00</th>
+      <td>-11.1</td>
+      <td>-17.0</td>
+      <td> 62</td>
+      <td> 30</td>
+      <td> 25.0</td>
+      <td> 100.65</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 07:00:00</th>
+      <td>-12.2</td>
+      <td>-17.2</td>
+      <td> 66</td>
+      <td> 20</td>
+      <td> 25.0</td>
+      <td> 100.78</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 08:00:00</th>
+      <td>-13.0</td>
+      <td>-17.7</td>
+      <td> 68</td>
+      <td> 13</td>
+      <td> 24.1</td>
+      <td> 100.87</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 09:00:00</th>
+      <td>-13.0</td>
+      <td>-17.3</td>
+      <td> 70</td>
+      <td> 20</td>
+      <td> 24.1</td>
+      <td> 100.86</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 10:00:00</th>
+      <td>-12.6</td>
+      <td>-17.8</td>
+      <td> 65</td>
+      <td> 19</td>
+      <td> 24.1</td>
+      <td> 100.90</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 11:00:00</th>
+      <td>-12.2</td>
+      <td>-17.6</td>
+      <td> 64</td>
+      <td> 22</td>
+      <td> 24.1</td>
+      <td> 100.88</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 12:00:00</th>
+      <td>-11.8</td>
+      <td>-17.2</td>
+      <td> 64</td>
+      <td> 26</td>
+      <td> 24.1</td>
+      <td> 100.87</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 13:00:00</th>
+      <td>-11.3</td>
+      <td>-17.4</td>
+      <td> 61</td>
+      <td> 26</td>
+      <td> 24.1</td>
+      <td> 100.83</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 14:00:00</th>
+      <td>-11.3</td>
+      <td>-17.4</td>
+      <td> 61</td>
+      <td> 28</td>
+      <td> 24.1</td>
+      <td> 100.82</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 15:00:00</th>
+      <td>-11.4</td>
+      <td>-17.6</td>
+      <td> 60</td>
+      <td> 30</td>
+      <td> 24.1</td>
+      <td> 100.85</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 16:00:00</th>
+      <td>-12.0</td>
+      <td>-18.0</td>
+      <td> 61</td>
+      <td> 22</td>
+      <td> 24.1</td>
+      <td> 100.81</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 17:00:00</th>
+      <td>-13.0</td>
+      <td>-18.4</td>
+      <td> 64</td>
+      <td> 19</td>
+      <td> 25.0</td>
+      <td> 100.90</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 18:00:00</th>
+      <td>-13.4</td>
+      <td>-18.4</td>
+      <td> 66</td>
+      <td> 24</td>
+      <td> 25.0</td>
+      <td> 100.96</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 19:00:00</th>
+      <td>-14.1</td>
+      <td>-18.7</td>
+      <td> 68</td>
+      <td> 20</td>
+      <td> 25.0</td>
+      <td> 101.02</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 20:00:00</th>
+      <td>-14.3</td>
+      <td>-19.0</td>
+      <td> 67</td>
+      <td> 15</td>
+      <td> 25.0</td>
+      <td> 101.04</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 21:00:00</th>
+      <td>-14.8</td>
+      <td>-19.5</td>
+      <td> 67</td>
+      <td> 15</td>
+      <td> 25.0</td>
+      <td> 100.98</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 22:00:00</th>
+      <td>-16.3</td>
+      <td>-20.2</td>
+      <td> 72</td>
+      <td>  7</td>
+      <td> 25.0</td>
+      <td> 100.98</td>
+      <td> Mostly Cloudy</td>
+    </tr>
+    <tr>
+      <th>2013-01-01 23:00:00</th>
+      <td>-15.4</td>
+      <td>-19.8</td>
+      <td> 69</td>
+      <td> 11</td>
+      <td> 25.0</td>
+      <td> 100.99</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 00:00:00</th>
+      <td>-14.0</td>
+      <td>-18.4</td>
+      <td> 69</td>
+      <td> 11</td>
+      <td> 19.3</td>
+      <td> 100.96</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 01:00:00</th>
+      <td>-14.1</td>
+      <td>-18.3</td>
+      <td> 70</td>
+      <td> 11</td>
+      <td> 25.0</td>
+      <td> 100.91</td>
+      <td> Mostly Cloudy</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 02:00:00</th>
+      <td>-14.3</td>
+      <td>-18.3</td>
+      <td> 72</td>
+      <td> 13</td>
+      <td> 25.0</td>
+      <td> 100.94</td>
+      <td>  Snow Showers</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 03:00:00</th>
+      <td>-14.7</td>
+      <td>-18.0</td>
+      <td> 76</td>
+      <td>  9</td>
+      <td> 19.3</td>
+      <td> 100.91</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 04:00:00</th>
+      <td>-14.2</td>
+      <td>-17.1</td>
+      <td> 79</td>
+      <td>  6</td>
+      <td>  9.7</td>
+      <td> 100.83</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2013-01-02 05:00:00</th>
+      <td>-14.3</td>
+      <td>-17.0</td>
+      <td> 80</td>
+      <td>  0</td>
+      <td>  6.4</td>
+      <td> 100.81</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 18:00:00</th>
+      <td>-12.6</td>
+      <td>-16.0</td>
+      <td> 76</td>
+      <td> 24</td>
+      <td> 25.0</td>
+      <td> 101.36</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 19:00:00</th>
+      <td>-13.4</td>
+      <td>-16.5</td>
+      <td> 77</td>
+      <td> 26</td>
+      <td> 25.0</td>
+      <td> 101.47</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 20:00:00</th>
+      <td>-13.8</td>
+      <td>-16.5</td>
+      <td> 80</td>
+      <td> 24</td>
+      <td> 25.0</td>
+      <td> 101.52</td>
+      <td>         Clear</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 21:00:00</th>
+      <td>-13.8</td>
+      <td>-16.5</td>
+      <td> 80</td>
+      <td> 20</td>
+      <td> 25.0</td>
+      <td> 101.50</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 22:00:00</th>
+      <td>-13.7</td>
+      <td>-16.3</td>
+      <td> 81</td>
+      <td> 19</td>
+      <td> 25.0</td>
+      <td> 101.54</td>
+      <td>  Mainly Clear</td>
+    </tr>
+    <tr>
+      <th>2012-12-30 23:00:00</th>
+      <td>-12.1</td>
+      <td>-15.1</td>
+      <td> 78</td>
+      <td> 28</td>
+      <td> 25.0</td>
+      <td> 101.52</td>
+      <td> Mostly Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 00:00:00</th>
+      <td>-11.1</td>
+      <td>-14.4</td>
+      <td> 77</td>
+      <td> 26</td>
+      <td> 25.0</td>
+      <td> 101.51</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 01:00:00</th>
+      <td>-10.7</td>
+      <td>-14.0</td>
+      <td> 77</td>
+      <td> 15</td>
+      <td> 25.0</td>
+      <td> 101.50</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 02:00:00</th>
+      <td>-10.1</td>
+      <td>-13.4</td>
+      <td> 77</td>
+      <td>  9</td>
+      <td> 25.0</td>
+      <td> 101.45</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 03:00:00</th>
+      <td>-11.8</td>
+      <td>-14.4</td>
+      <td> 81</td>
+      <td>  6</td>
+      <td> 25.0</td>
+      <td> 101.42</td>
+      <td> Mostly Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 04:00:00</th>
+      <td>-10.5</td>
+      <td>-12.8</td>
+      <td> 83</td>
+      <td> 11</td>
+      <td> 25.0</td>
+      <td> 101.34</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 05:00:00</th>
+      <td>-10.2</td>
+      <td>-12.4</td>
+      <td> 84</td>
+      <td>  6</td>
+      <td> 25.0</td>
+      <td> 101.28</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 06:00:00</th>
+      <td> -9.7</td>
+      <td>-11.7</td>
+      <td> 85</td>
+      <td>  4</td>
+      <td> 25.0</td>
+      <td> 101.23</td>
+      <td>        Cloudy</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 07:00:00</th>
+      <td> -9.3</td>
+      <td>-11.3</td>
+      <td> 85</td>
+      <td>  0</td>
+      <td> 19.3</td>
+      <td> 101.19</td>
+      <td>  Snow Showers</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 08:00:00</th>
+      <td> -8.6</td>
+      <td>-10.3</td>
+      <td> 87</td>
+      <td>  4</td>
+      <td>  3.2</td>
+      <td> 101.14</td>
+      <td>  Snow Showers</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 09:00:00</th>
+      <td> -8.1</td>
+      <td> -9.6</td>
+      <td> 89</td>
+      <td>  4</td>
+      <td>  2.4</td>
+      <td> 101.09</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 10:00:00</th>
+      <td> -7.4</td>
+      <td> -8.9</td>
+      <td> 89</td>
+      <td>  4</td>
+      <td>  6.4</td>
+      <td> 101.05</td>
+      <td>      Snow,Fog</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 11:00:00</th>
+      <td> -6.7</td>
+      <td> -7.9</td>
+      <td> 91</td>
+      <td>  9</td>
+      <td>  9.7</td>
+      <td> 100.93</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 12:00:00</th>
+      <td> -5.8</td>
+      <td> -7.5</td>
+      <td> 88</td>
+      <td>  4</td>
+      <td> 12.9</td>
+      <td> 100.78</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 13:00:00</th>
+      <td> -4.6</td>
+      <td> -6.6</td>
+      <td> 86</td>
+      <td>  4</td>
+      <td> 12.9</td>
+      <td> 100.63</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 14:00:00</th>
+      <td> -3.4</td>
+      <td> -5.7</td>
+      <td> 84</td>
+      <td>  6</td>
+      <td> 11.3</td>
+      <td> 100.57</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 15:00:00</th>
+      <td> -2.3</td>
+      <td> -4.6</td>
+      <td> 84</td>
+      <td>  9</td>
+      <td>  9.7</td>
+      <td> 100.47</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 16:00:00</th>
+      <td> -1.4</td>
+      <td> -4.0</td>
+      <td> 82</td>
+      <td> 13</td>
+      <td> 12.9</td>
+      <td> 100.40</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 17:00:00</th>
+      <td> -1.1</td>
+      <td> -3.3</td>
+      <td> 85</td>
+      <td> 19</td>
+      <td>  9.7</td>
+      <td> 100.30</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 18:00:00</th>
+      <td> -1.3</td>
+      <td> -3.1</td>
+      <td> 88</td>
+      <td> 17</td>
+      <td>  9.7</td>
+      <td> 100.19</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 19:00:00</th>
+      <td>  0.1</td>
+      <td> -2.7</td>
+      <td> 81</td>
+      <td> 30</td>
+      <td>  9.7</td>
+      <td> 100.13</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 20:00:00</th>
+      <td>  0.2</td>
+      <td> -2.4</td>
+      <td> 83</td>
+      <td> 24</td>
+      <td>  9.7</td>
+      <td> 100.03</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 21:00:00</th>
+      <td> -0.5</td>
+      <td> -1.5</td>
+      <td> 93</td>
+      <td> 28</td>
+      <td>  4.8</td>
+      <td>  99.95</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 22:00:00</th>
+      <td> -0.2</td>
+      <td> -1.8</td>
+      <td> 89</td>
+      <td> 28</td>
+      <td>  9.7</td>
+      <td>  99.91</td>
+      <td>          Snow</td>
+    </tr>
+    <tr>
+      <th>2012-12-31 23:00:00</th>
+      <td>  0.0</td>
+      <td> -2.1</td>
+      <td> 86</td>
+      <td> 30</td>
+      <td> 11.3</td>
+      <td>  99.89</td>
+      <td>          Snow</td>
+    </tr>
+  </tbody>
+</table>
+<p>8784 rows × 7 columns</p>
+</div>
+</div>
+
+## 5.4 Saving to a CSV
+
+It's slow and unnecessary to download the data every time, so let's save our dataframe for later use!
+
+```python
+weather_2012.to_csv('weather_2012.csv')
+```
+
+And we're done!
