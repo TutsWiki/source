@@ -1631,7 +1631,7 @@ weather_mar2012.columns = [
 
 You'll notice in the summary above that there are a few columns which are are either entirely empty or only have a few values in them. Let's get rid of all of those with dropna.
 
-The argument axis=1 to dropna means "drop columns", not rows", and how='any' means "drop the column if any value is null".
+The argument `axis=1` to `dropna` means "drop columns", not rows", and `how='any'` means "drop the column if any value is null".
 
 This is much better now -- we only have columns with real data.
 
@@ -1851,3 +1851,5 @@ Output:
 </div>
 
 Awesome! We now only have the relevant columns, and it's much more manageable.
+
+## 5.2 Plotting the temperature by hour of day
