@@ -235,3 +235,125 @@ Output:
 
 
 So now we know! In 2012, December was the snowiest month. Also, this graph suggests something that I feel -- it starts snowing pretty abruptly in November, and then tapers off slowly and takes a long time to stop, with the last snow usually being in April or May.
+
+## 6.3 Plotting temperature and snowiness stats together
+
+We can also combine these two statistics (temperature, and snowiness) into one dataframe and plot them together:
+
+```python
+temperature = weather_2012['Temp (C)'].resample('M', how=np.median)
+is_snowing = weather_2012['Weather'].str.contains('Snow')
+snowiness = is_snowing.astype(float).resample('M', how=np.mean)
+
+# Name the columns
+temperature.name = "Temperature"
+snowiness.name = "Snowiness"
+```
+
+We'll use concat again to combine the two statistics into a single dataframe.
+
+```python
+stats = pd.concat([temperature, snowiness], axis=1)
+stats
+```
+
+Output:
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Temperature</th>
+      <th>Snowiness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2012-01-31</th>
+      <td> -7.05</td>
+      <td> 0.240591</td>
+    </tr>
+    <tr>
+      <th>2012-02-29</th>
+      <td> -4.10</td>
+      <td> 0.162356</td>
+    </tr>
+    <tr>
+      <th>2012-03-31</th>
+      <td>  2.60</td>
+      <td> 0.087366</td>
+    </tr>
+    <tr>
+      <th>2012-04-30</th>
+      <td>  6.30</td>
+      <td> 0.015278</td>
+    </tr>
+    <tr>
+      <th>2012-05-31</th>
+      <td> 16.05</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-06-30</th>
+      <td> 19.60</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-07-31</th>
+      <td> 22.90</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-08-31</th>
+      <td> 22.20</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-09-30</th>
+      <td> 16.10</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-10-31</th>
+      <td> 11.30</td>
+      <td> 0.000000</td>
+    </tr>
+    <tr>
+      <th>2012-11-30</th>
+      <td>  1.05</td>
+      <td> 0.038889</td>
+    </tr>
+    <tr>
+      <th>2012-12-31</th>
+      <td> -2.85</td>
+      <td> 0.251344</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 2 columns</p>
+</div>
+</div>
+
+```python
+stats.plot(kind='bar')
+```
+
+Output:
+
+<div>
+<img src="/img/temp_snow.png" alt="Plot which borough has the most noise complaints" />
+</div>
+
+Uh, that didn't work so well because the scale was wrong. We can do better by plotting them on two separate graphs:
+
+```python
+stats.plot(kind='bar', subplots=True, figsize=(15, 10))
+```
+
+Output:
+
+<div>
+<img src="/img/temp_snow_subplots.png" alt="Plot which borough has the most noise complaints" />
+</div>
