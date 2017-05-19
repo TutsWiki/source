@@ -13,6 +13,7 @@ description: String Operations
 keywords:
   - pandas
   - string
+  - subplots
 ---
 
 ```python
