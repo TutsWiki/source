@@ -159,3 +159,79 @@ Output:
 <img src="/img/snow_plot.png" alt="Plot which borough has the most noise complaints" />
 </div>
 
+## 6.2 Use resampling to find the snowiest month
+
+If we wanted the median temperature each month, we could use the [resample()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html) method like this:
+
+```python
+weather_2012['Temp (C)'].resample('M', how=np.median).plot(kind='bar')
+```
+
+Output:
+
+<div>
+<img src="/img/resample_plot.png" alt="Plot which borough has the most noise complaints" />
+</div>
+
+Unsurprisingly, July and August are the warmest.
+
+So we can think of snowiness as being a bunch of 1s and 0s instead of Trues and Falses:
+
+```python
+is_snowing.astype(float)[:10]
+```
+
+Output:
+
+```bash
+Date/Time
+2012-01-01 00:00:00    0
+2012-01-01 01:00:00    0
+2012-01-01 02:00:00    0
+2012-01-01 03:00:00    0
+2012-01-01 04:00:00    0
+2012-01-01 05:00:00    0
+2012-01-01 06:00:00    0
+2012-01-01 07:00:00    0
+2012-01-01 08:00:00    0
+2012-01-01 09:00:00    0
+Name: Weather, dtype: float64
+```
+
+and then use resample to find the percentage of time it was snowing each month
+
+```python
+is_snowing.astype(float).resample('M', how=np.mean)
+```
+
+Output:
+
+```bash
+Date/Time
+2012-01-31    0.240591
+2012-02-29    0.162356
+2012-03-31    0.087366
+2012-04-30    0.015278
+2012-05-31    0.000000
+2012-06-30    0.000000
+2012-07-31    0.000000
+2012-08-31    0.000000
+2012-09-30    0.000000
+2012-10-31    0.000000
+2012-11-30    0.038889
+2012-12-31    0.251344
+Freq: M, Name: Weather, dtype: float64
+```
+
+```python
+is_snowing.astype(float).resample('M', how=np.mean).plot(kind='bar')
+```
+
+Output:
+
+<div>
+<img src="/img/astype_resample_plot.png" alt="Plot which borough has the most noise complaints" />
+</div>
+
+
+So now we know! In 2012, December was the snowiest month. Also, this graph suggests something that I feel -- it starts snowing pretty abruptly in November, and then tapers off slowly and takes a long time to stop, with the last snow usually being in April or May.
