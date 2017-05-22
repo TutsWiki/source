@@ -309,3 +309,7 @@ Output:
 Okay, cool, it says that I I installed ddd recently. And postgresql! I remember installing those things. Neat.
 
 The whole message here is that if you have a timestamp in seconds or milliseconds or nanoseconds, then you can just "cast" it to a `datetime64[the-right-thing]` and pandas/numpy will take care of the rest.
+
+## Where from here?
+
+This was an attempt to provide concise cookbook with real life examples. We suggest you to have a look at the [official cookbook](http://pandas.pydata.org/pandas-docs/version/0.15.2/cookbook.html#cookbook) also.
