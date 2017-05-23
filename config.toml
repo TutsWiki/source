@@ -14,3 +14,8 @@ disableHugoGeneratorInject = true
     name = "Pandas Cookbook"
     identifier = "pandas"
     weight = -100
+
+[[menu.main]]
+    name = "Web Scraping with Python"
+    identifier = "webscraping"
+    weight = -100
