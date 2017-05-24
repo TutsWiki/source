@@ -1,9 +1,12 @@
-
+<div class="row">
+                        <div class="footer-panel">
+			  <p>Last revision: {{ if .Lastmod.IsZero }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/spf13/hugo/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
+                          <span style="float: right;">TutsWiki Beta</span>
+                        </p>
+                        </div>
+                    </div>
                     </div>
                     </section>
-                    <div style="font-size: medium; font-style: italic; text-align: right;">
-                      <span style="font-size: medium; font-style: italic; text-align: left;">Last revision: {{ .Lastmod.Format "January 2, 2006" }}</span>
-                    </div>
 
                     </div>
 

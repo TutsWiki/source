@@ -1,5 +1,5 @@
 ---
-date: 2017-05-25
+date: 2017-05-24
 linktitle: What is main function
 title: What is if __name__ == "__main__" in Python?
 weight: 10
