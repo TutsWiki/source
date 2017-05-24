@@ -4,9 +4,14 @@ linktitle: What is main function
 title: What is if __name__ == "__main__" in Python?
 weight: 10
 url: /if-name-main-in-python
-description: 
+description: If you are new to Python then you may have noticed if __name__ == "__main__" line in some python codes.
 keywords:
-  - pandas
+  - python
+  - name
+  - main
+  - built in
+  - module
+  - import
 ---
 
 If you are new to Python then you may have noticed ```if __name__ == "__main__"``` line in some python codes. 
