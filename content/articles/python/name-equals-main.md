@@ -79,5 +79,5 @@ Value of __name__ attribute is main
 
 ### References
 
-- [__main__ — Top-level script environment](https://docs.python.org/3/library/__main__.html)
+- [\_\_main\_\_ — Top-level script environment](https://docs.python.org/3/library/__main__.html)
 - [What does if \_\_name\_\_ == “\_\_main\_\_”: do?](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
