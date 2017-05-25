@@ -12,10 +12,8 @@ keywords:
   - built in
   - module
   - import
-topics: [articles, python]
 tags: [python]
 ---
-
 If you are new to Python then you may have noticed ```if __name__ == "__main__"``` line in some python codes. 
 
 You may be wondering:
