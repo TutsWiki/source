@@ -74,11 +74,6 @@ $ python
 
 Output:
 
-{ {< highlight python >}}
-Not directly called
-Value of __name__ attribute is main
-{ {< /highlight >}}
-
 ```sh
 Not directly called
 Value of __name__ attribute is main
