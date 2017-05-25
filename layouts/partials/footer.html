@@ -10,10 +10,7 @@
       {{ end }}
     </ul>-->
     <div class="footer-panel">
-        <p>Words: {{ .FuzzyWordCount }}, Read in about {{ .ReadingTime }} minutes | Last revision: {{ if .Lastmod.IsZero
-            }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end
-            }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/TutsWiki/source/commit/{{ .Hash }}">{{
-                .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
+        <p>Words: {{ .FuzzyWordCount }}, Read in about {{ .ReadingTime }} minutes | Last revision: {{ if .Lastmod.IsZero }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/TutsWiki/source/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
             <span style="float: right;">TutsWiki Beta</span>
         </p>
     </div>

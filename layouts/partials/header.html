@@ -3,13 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{{ delimit .Keywords " ,
-    " }}">
-    <meta name="description"
-          content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    {{ with .Site.Params.author }}
-    <meta name="author" content="{{ . }}">
-    {{ end }}
+    <meta name="keywords" content="{{ delimit .Keywords " , " }}">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">{{ with .Site.Params.author }}
+    <meta name="author" content="{{ . }}">{{ end }}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
     <title>{{.Title}}</title>
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
