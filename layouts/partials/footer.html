@@ -1,50 +1,53 @@
 <div class="row">
-        <!--<ul id="categories">
-          {{ range .Params.topics }}
-            <li><a href="/topics/{{ . | urlize }}">{{ . }}</a> </li>
-          {{ end }}
-        </ul>
-        <ul id="tags">
-          {{ range .Params.tags }}
-            <li> <a href="/tags/{{ . | urlize }}">{{ . }}</a> </li>
-          {{ end }}
-        </ul>-->
-                        <div class="footer-panel">
-			  <p>Words: {{ .FuzzyWordCount }}, Read in about {{ .ReadingTime }} minutes | Last revision: {{ if .Lastmod.IsZero }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/TutsWiki/source/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
-                          <span style="float: right;">TutsWiki Beta</span>
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                    </section>
+    <!--<ul id="categories">
+      {{ range .Params.topics }}
+        <li><a href="/topics/{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    <ul id="tags">
+      {{ range .Params.tags }}
+        <li> <a href="/tags/{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>-->
+    <div class="footer-panel">
+        <p>Words: {{ .FuzzyWordCount }}, Read in about {{ .ReadingTime }} minutes | Last revision: {{ if .Lastmod.IsZero
+            }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end
+            }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/TutsWiki/source/commit/{{ .Hash }}">{{
+                .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
+            <span style="float: right;">TutsWiki Beta</span>
+        </p>
+    </div>
+</div>
+</div>
+</section>
 
-                    </div>
+</div>
 
-                <div class="col-md-1">
-                    {{ if .IsPage }}
-                    {{ with .GetParam "next" }}
-                    <a class="navigation next" href="{{.}}">
-                        <i class="fa fa-angle-right"> </i>
-                    </a>
-                    {{ end }}
-                    {{ end }}
-                </div>
-              </div>
-              <!-- page start-->
-          </section>
-      </section>
-     <!--main content end-->
-  </section>
-  <!-- container section end -->
-    <!-- javascripts -->
-    <script src="/js/jquery-2.1.1.min.js"></script>
-    <script src="/js/jquery.scrollTo.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <!--custom script for all page-->
-    <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/scripts.js"></script>
-    <script async defer id="github-bjs" src="/js/buttons.js"></script>
-    {{ template "partials/analytics.html" . }}
-  </body>
+<div class="col-md-1">
+    {{ if .IsPage }}
+    {{ with .GetParam "next" }}
+    <a class="navigation next" href="{{.}}">
+        <i class="fa fa-angle-right"> </i>
+    </a>
+    {{ end }}
+    {{ end }}
+</div>
+</div>
+<!-- page start-->
+</section>
+</section>
+<!--main content end-->
+</section>
+<!-- container section end -->
+<!-- javascripts -->
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!--custom script for all page-->
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/scripts.js"></script>
+<script async defer id="github-bjs" src="/js/buttons.js"></script>
+{{ template "partials/analytics.html" . }}
+</body>
 </html>

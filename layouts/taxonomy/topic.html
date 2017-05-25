@@ -2,14 +2,14 @@
 <body lang="en">
 
 <section id="main">
-  <div>
-   <h1 id="title">{{ .Title }} articles:</h1>
-    {{ range .Data.Pages }}
+    <div>
+        <h1 id="title">{{ .Title }} articles:</h1>
+        {{ range .Data.Pages }}
         {{ .Render "summary"}}
-    {{ end }}
-  </div>
+        {{ end }}
+    </div>
 </section>
 
-<aside id="meta"> </aside>
+<aside id="meta"></aside>
 
 {{ partial "footer.html" . }}
