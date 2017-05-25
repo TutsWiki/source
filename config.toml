@@ -8,7 +8,7 @@ disableHugoGeneratorInject = true
 
 [taxonomies]
   tag = "tags"
-  group = "groups"
+  category = "categories"
 
 [[menu.main]]
     name = "Pandas Cookbook"

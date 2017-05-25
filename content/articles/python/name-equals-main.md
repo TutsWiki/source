@@ -12,6 +12,8 @@ keywords:
   - built in
   - module
   - import
+categories: [development, publishing]
+tags: [hugo,content,static site generator]
 ---
 
 If you are new to Python then you may have noticed ```if __name__ == "__main__"``` line in some python codes. 
@@ -71,6 +73,11 @@ $ python
 ```
 
 Output:
+
+{ {< highlight python >}}
+Not directly called
+Value of __name__ attribute is main
+{ {< /highlight >}}
 
 ```sh
 Not directly called
