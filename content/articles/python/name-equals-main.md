@@ -12,7 +12,7 @@ keywords:
   - built in
   - module
   - import
-categories: [development, publishing]
+topics: [articles, python]
 tags: [python]
 ---
 
