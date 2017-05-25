@@ -13,7 +13,7 @@ keywords:
   - module
   - import
 categories: [development, publishing]
-tags: [hugo,content,static site generator]
+tags: [python]
 ---
 
 If you are new to Python then you may have noticed ```if __name__ == "__main__"``` line in some python codes. 
