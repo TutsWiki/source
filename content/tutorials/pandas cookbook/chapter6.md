@@ -1,5 +1,5 @@
 ---
-date: 2017-05-18
+date: 2017-05-31
 linktitle: Chapter 6
 menu:
   main:
@@ -165,7 +165,7 @@ Output:
 If we wanted the median temperature each month, we could use the [resample()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html) method like this:
 
 ```python
-weather_2012['Temp (C)'].resample('M', how=np.median).plot(kind='bar')
+weather_2012['Temp (C)'].resample('M').apply(np.median).plot(kind='bar')
 ```
 
 Output:
@@ -202,7 +202,7 @@ Name: Weather, dtype: float64
 and then use resample to find the percentage of time it was snowing each month
 
 ```python
-is_snowing.astype(float).resample('M', how=np.mean)
+is_snowing.astype(float).resample('M').apply(np.mean)
 ```
 
 Output:
@@ -225,7 +225,7 @@ Freq: M, Name: Weather, dtype: float64
 ```
 
 ```python
-is_snowing.astype(float).resample('M', how=np.mean).plot(kind='bar')
+is_snowing.astype(float).resample('M').apply(np.mean).plot(kind='bar')
 ```
 
 Output:
@@ -242,9 +242,9 @@ So now we know! In 2012, December was the snowiest month. Also, this graph sugge
 We can also combine these two statistics (temperature, and snowiness) into one dataframe and plot them together:
 
 ```python
-temperature = weather_2012['Temp (C)'].resample('M', how=np.median)
+temperature = weather_2012['Temp (C)'].resample('M').apply(np.median)
 is_snowing = weather_2012['Weather'].str.contains('Snow')
-snowiness = is_snowing.astype(float).resample('M', how=np.mean)
+snowiness = is_snowing.astype(float).resample('M').apply(np.mean)
 
 # Name the columns
 temperature.name = "Temperature"
