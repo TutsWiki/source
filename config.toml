@@ -5,6 +5,7 @@ disableHugoGeneratorInject = true
 [params]
   description = "Collaborative tutorials for the internet"
   author = "Chankey Pathak (@chankeypathak)"
+  addThis = "ra-592ea8316bf3165f"
 
 [taxonomies]
   tag = "tags"

@@ -9,6 +9,8 @@
         <li> <a href="/tags/{{ . | urlize }}">{{ . }}</a> </li>
       {{ end }}
     </ul>-->
+    {{ partial "addthis" . }}
+    {{ partial "addthis-script" . }}
     <div class="footer-panel">
         <p>Last revision: {{ if .Lastmod.IsZero }}{{ .Site.LastChange.Format "January 2, 2006" }}{{ else }}{{ .Lastmod.Format "January 2, 2006" }}{{ end }}{{ if .IsPage }}{{ with .GitInfo }} | <a href="https://github.com/TutsWiki/source/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}{{ end }}
             <span style="float: right;">TutsWiki Beta</span>
