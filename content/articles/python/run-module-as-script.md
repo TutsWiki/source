@@ -1,6 +1,6 @@
 ---
 date: 2017-05-31
-linktitle: What is main function
+linktitle: How to run a Python module as script?
 title: How to run a Python module as script?
 weight: 10
 url: /run-module-as-script-python
