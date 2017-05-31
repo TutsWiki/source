@@ -3,7 +3,6 @@
 
 <section id="main">
     <div>
-        <h1 id="title">{{ .Title }} articles:</h1>
         {{ range .Data.Pages }}
         {{ .Render "summary"}}
         {{ end }}
