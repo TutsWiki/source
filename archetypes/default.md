@@ -1,6 +1,6 @@
-+++
-weight = 5
-[menu]
-  [menu.main]
-    parent = "x"
-+++
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+---
+
