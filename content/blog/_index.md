@@ -1,13 +1,7 @@
 ---
-date: 2017-05-31
 title: Blog
+weight: 5
+pre: "<b></b>"
 description: Programming articles on Tuts Wiki
-keywords:
-  - python
-  - tutorials
+chapter: false
 ---
-<div class="grid-item">
-    <figure class="effect-bubba">
-        <a href="/tags/python"><img src="/img/python.png">Articles on Python</a>
-    </figure>
-</div>
