@@ -1,6 +1,6 @@
 ---
 date: 2017-05-24
-linktitle: What is main function
+linktitle: What is if __name__ == "__main__" in Python?
 title: What is if __name__ == "__main__" in Python?
 weight: 10
 url: /if-name-main-in-python
