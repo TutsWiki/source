@@ -98,7 +98,7 @@ An Atlassian product which is the most popular alternative to GitHub.
 ![BitBucket vs GitHub](/images/BitBucket-vs-GitHub.png "BitBucket vs GitHub")
 
 # 3. [Gitea](https://gitea.io/en-US/)
-A lightweight GitHub clone (forked from [GoGs](https://tutswiki.com/github-alternatives/#10-gogs-https-gogs-io-self-hosted)) written in Go lang.
+A lightweight GitHub clone (forked from [GoGs](https://tutswiki.com/github-alternatives/#9-gogs-https-gogs-io-self-hosted)) written in Go lang.
 
 #### Features:
  - GitHub clone
