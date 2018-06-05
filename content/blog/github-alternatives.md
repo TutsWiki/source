@@ -24,9 +24,7 @@ keywords:
   - aws codecommit
   - gitkraken 
 ---
-	<meta property="og:image" content="https://tutswiki.com/images/gitea.png" />"
-	{{ with .Site.Language }}<meta property="og:locale" content="{{ .Lang }}" />{{ end }}
-	{{ with .Site.Params.facebook.appid }}<meta property="fb:app_id" content="{{ . }}" />{{ end }}
+<meta property="og:image" content="https://tutswiki.com/images/gitea.png" />"
 The trending news of yesterday was the [acquisition of GitHub](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/) (the world's leading software development platform) by [Microsoft](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/). This is a great deal for Microsoft which might put it in the position it was about 10 years ago in the software market. But a lot of open-source fans are unhappy with this. 
 
 A couple of years ago Microsoft was anti-open-source.
