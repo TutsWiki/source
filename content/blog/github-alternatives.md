@@ -97,8 +97,25 @@ An Atlassian product which is the most popular alternative to GitHub.
 
 ![BitBucket vs GitHub](/images/BitBucket-vs-GitHub.png "BitBucket vs GitHub")
 
+# 3. [Gitea](https://gitea.io/en-US/)
+A lightweight GitHub clone (forked from [GoGs](https://tutswiki.com/github-alternatives/#10-gogs-https-gogs-io-self-hosted)) written in Go lang.
 
-# 3. [SourceForge](https://sourceforge.net/)
+#### Features:
+ - GitHub clone
+ - Runs on Windows, Mac and Linux
+ - Lightweight (Even supports Raspberry Pi)
+ - Install from binary
+ - Ship with docker, vagrant or as a package
+ - Repo viewer
+ - Issue tracker
+ - Wiki
+ - API support
+ - Help (Support Forum and Chat)
+
+![Gitea](/images/gitea.png "Gitea")
+
+
+# 4. [SourceForge](https://sourceforge.net/)
 One of the oldest (since 1999) to offer free services to open source projects.
 
 #### Features:
@@ -116,7 +133,7 @@ One of the oldest (since 1999) to offer free services to open source projects.
 
 ![Sourceforge Features](/images/sourceforge-features.png "Sourceforge Features")
 
-# 4. [Launchpad](https://launchpad.net/)
+# 5. [Launchpad](https://launchpad.net/)
 A Canonical product, which is quite famous for hosting Ubuntu projects.
 
 #### Features:
@@ -131,7 +148,7 @@ A Canonical product, which is quite famous for hosting Ubuntu projects.
 
 ![Launchpad Features](/images/launchpad-features.png "Launchpad Features")
 
-# 5. [Cloud Source Repositories](https://cloud.google.com/source-repositories/) (Paid)
+# 6. [Cloud Source Repositories](https://cloud.google.com/source-repositories/) (Paid)
 A Google product which is a part of Google Cloud. 
 
 #### Features:
@@ -148,7 +165,7 @@ A Google product which is a part of Google Cloud.
 #### Pricing:
 ![Cloud Source Repo Pricing](/images/cloud-source-repo.png "Cloud Source Repo Pricing")
 
-# 6. [AWS CodeCommit](https://aws.amazon.com/codecommit/) (Paid)
+# 7. [AWS CodeCommit](https://aws.amazon.com/codecommit/) (Paid)
 An Amazon product which is similar to Cloud Source Repo, if you already have an AWS account you get it for free (Maximum 5 users allowed per month).
 
 #### Features:
@@ -164,7 +181,7 @@ An Amazon product which is similar to Cloud Source Repo, if you already have an 
 #### Pricing:
 ![AWS Commit Pricing](/images/aws-commit.png "AWS Commit pricing")
 
-# 7. [Phabricator](https://phacility.com/phabricator/) (Self-hosted)
+# 8. [Phabricator](https://phacility.com/phabricator/) (Self-hosted)
 
 #### Features:
  - Source code hosting
@@ -182,7 +199,7 @@ An Amazon product which is similar to Cloud Source Repo, if you already have an 
 #### Pricing:
 ![phabricator pricing](/images/phabricator-pricing.png "phabricator pricing")
 
-# 8. [GitBucket](https://gitbucket.github.io) (Self-hosted)
+# 9. [GitBucket](https://gitbucket.github.io) (Self-hosted)
 A git platform on JVM.
 
 #### Features:
@@ -196,7 +213,7 @@ A git platform on JVM.
 
 ![GitBucket](/images/GitBucket.png "GitBucket")
 
-# 9. [GoGs](https://gogs.io/) (Self-hosted)
+# 10. [GoGs](https://gogs.io/) (Self-hosted)
 An issue to install and lightweight GitHub clone written in Go. 
 
 #### Features:
@@ -211,7 +228,7 @@ An issue to install and lightweight GitHub clone written in Go.
  
 ![GoGs](/images/GoGs.png "GoGs")
 
-# 10. [GitPrep](http://gitprep.yukikimoto.com) (Self-hosted)
+# 11. [GitPrep](http://gitprep.yukikimoto.com) (Self-hosted)
 A GitHub clone written in Perl.
 
 #### Features:
@@ -225,7 +242,7 @@ A GitHub clone written in Perl.
 
 ![GitPrep](/images/gitprep.png "GitPrep")
 
-# 11. [Allura](https://allura.apache.org) (Self-hosted)
+# 12. [Allura](https://allura.apache.org) (Self-hosted)
 A product from Apache. Sourceforge runs on Allura.
 
 #### Features:
