@@ -68,6 +68,10 @@ Most of the users on Social Media seem to be choosing [GitLab](https://about.git
 
 ![GitLab Features](/images/GitLab-Features.png "GitLab Features")
 
+{{% notice info %}}
+[GitLab statistics](https://monitor.gitlab.net/dashboard/db/github-importer?orgId=1) shows that a lot of repos have been imported from GitHub in past few hours.
+{{% /notice %}}
+
 # 2. [BitBucket](https://bitbucket.org/)
 An Atlassian product which is the most popular alternative to GitHub.
 
