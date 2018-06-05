@@ -17,7 +17,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Description of the site, will be used in meta information
   description = "TutsWiki :: Collaborative tutorials for the internet"
   # Shows a checkmark for visited pages on the menu
-  showVisitedLinks = true
+  showVisitedLinks = false
   # Disable search function. It will hide search bar
   disableSearch = false
   # Javascript and CSS cache are automatically busted when new version of site is generated. 
