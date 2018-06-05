@@ -239,3 +239,14 @@ A product from Apache. Sourceforge runs on Allura.
 {{% notice note %}}
 Do let us know which alternative do you like the most?
 {{% /notice %}}
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- tutswiki-single-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="1203265687"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
