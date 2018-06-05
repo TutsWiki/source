@@ -138,7 +138,7 @@ A Canonical product, which is quite famous for hosting Ubuntu projects.
 
 #### Features:
  - Issue tracking
- - Code hosting (uses Bazaar)
+ - Code hosting (supports both Git and Bazaar)
  - Code reviews
  - Build and host Ubuntu projects
  - Mailing lists
