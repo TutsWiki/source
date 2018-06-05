@@ -312,4 +312,4 @@ The whole message here is that if you have a timestamp in seconds or millisecond
 
 ## Where from here?
 
-This was an attempt to provide concise cookbook with real life examples. We suggest you to have a look at the [official cookbook](http://pandas.pydata.org/pandas-docs/version/0.15.2/cookbook.html#cookbook) also.
+This was an attempt to provide concise cookbook with real life examples. We suggest you to have a look at the [official cookbook](http://pandas.pydata.org/pandas-docs/stable/cookbook.html) also.
