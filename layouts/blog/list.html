@@ -1,14 +1,14 @@
 {{ partial "header.html" . }}
 
 {{ .Content }}
-
-<section>
-  <ul id="all-taxonomies">
-    {{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
-                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
-                {{ end }}
-  </ul>
-</section>
+<ul>
+    {{ range .Data.Pages }}
+        <li>
+            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+            <!--<time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>-->
+        </li>
+    {{ end }}
+</ul>
 <footer class=" footline" >
 	{{with .Params.LastModifierDisplayName}}
 	    <i class='fa fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fa fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
