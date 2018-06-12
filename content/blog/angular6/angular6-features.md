@@ -26,19 +26,19 @@ keywords:
 
 ## Angular 6 Features:
  - New CLI commands
-	- ng update
-	- ng add
+    - ng update
+    - ng add
  - Referencing providers
  - Angular Elements
  - Angular Material + CDK Components
     - Tree
-	- Badge
-	- Bottom-Sheet
-	- Overlay
+    - Badge
+    - Bottom-Sheet
+    - Overlay
  - Starter Components
     - Dashboard
-	- Side-Nav
-	- Datatable
+    - Side-Nav
+    - Datatable
  - Library Support
  - CLI Workspaces
  - RxJS v6
@@ -78,7 +78,7 @@ Before this update we used to reference services from module but with Angular 6 
 
 ### Angular Elements
 
-[@angular/elements](https://angular.io/guide/elements) creates a custom element which acts as a bridge between Angular component interface and change detection functionality to the built in DOM API. You can bootstrap Angular components with your application and they will be registered as Angular Elements. One of the benefit that you get from this is that it'll dynamically insert HTML code holding Angular components after your application is compiled.
+[@angular/elements](https://angular.io/guide/elements) creates a custom element which acts as a bridge between Angular component interface and change detection functionality to the built-in DOM API. You can bootstrap Angular components with your application and they will be registered as Angular Elements. One of the benefits that you get from this is that it'll dynamically insert HTML code holding Angular components after your application is compiled.
 
 ### Angular Material + CDK Components
 
@@ -88,11 +88,11 @@ Below are some new components that have been added in Angular 6.
 
 ![cdk mat tree in Angular 6](/images/cdktree-matree-Angular.png "Nested Tree")
 
-  - **Badge:** This component can be used to display small piece of information such as notification count on notification drawer, unread emails count over the email icon etc.
+  - **Badge:** This component can be used to display a small piece of information such as notification count on notification drawer, unread emails count over the email icon etc.
 
 ![Badges in Angular 6](/images/Badges-Angular-6.png "Badges")
 
-  - **Bottom-Sheet:** This component is mobile centric which can be used to present a list of options for a particular action. It appears from the bottom of the viewport (with slide-up animation). 
+  - **Bottom-Sheet:** This component is mobile-centric which can be used to present a list of options for a particular action. It appears from the bottom of the viewport (with slide-up animation). 
 
 ![Bottom Sheet Angular 6](/images/Bottom-Sheet-Angular-6.png "Bottom-Sheet")
 
@@ -100,7 +100,7 @@ Below are some new components that have been added in Angular 6.
   
 ### Starter Components
 
-With Angular 6 you get 3 new starter components after running ```ng add @angular/material```. With this update in place it's very easy to create simple UI.
+With Angular 6 you get 3 new starter components after running ```ng add @angular/material```. With this update in place, it's very easy to create simple UI.
 
   - Create a dashboard
 
@@ -133,17 +133,17 @@ ng generate library <name>
 
 ### CLI Workspaces
 
-CLI can now support workspaces with multiple projects. ```angular-cli.json``` has been renamed to ```angular.json```. Each workspace can have multiple projects, each project can have targets and each target can have configuration.
+CLI can now support workspaces with multiple projects. ```angular-cli.json``` has been renamed to ```angular.json```. Each workspace can have multiple projects, each project can have targets and each target can have a configuration.
 
 ![CLI workspaces in Angular 6](/images/cli-workspaces.png "CLI workspaces")
 
 ### RxJS v6
 
-Angular 6 supports [RxJS v6](https://rxjs-dev.firebaseapp.com/). RxJS v6 ensures that only those modules are bundled in production that are being used by your application. If you are moving from previous version to Angular 6 then you have to change import statements and operator usage to make your application work. But if you don't want to change then you can use this new package ```rxjs-compat``` which provides backward compatibility.
+Angular 6 supports [RxJS v6](https://rxjs-dev.firebaseapp.com/). RxJS v6 ensures that only those modules are bundled in production that are being used by your application. If you are moving from the previous version to Angular 6 then you have to change import statements and operator usage to make your application work. But if you don't want to change then you can use this new package ```rxjs-compat``` which provides backward compatibility.
 
 ### Long Term Support
 
-Angular team announced to provide long term support for all major releases starting from version 4. LTS will include 6 months of active development + 12 months of security patches and critical bug fixes.
+Angular team announced to provide long-term support for all major releases starting from version 4. LTS will include 6 months of active development + 12 months of security patches and critical bug fixes.
 
 ### Other Changes:
 
@@ -151,7 +151,7 @@ Angular team announced to provide long term support for all major releases start
  - ```@angular/http``` is deprecated, ```@angular/common/http``` is the recommended alternative.
 
 {{% notice note %}}
-If above listed features look promising to you and you want to use Angular 6 for your existing project, then follow https://update.angular.io/.
+If above-listed features look promising to you and you want to use Angular 6 for your existing project, then follow https://update.angular.io/.
 {{% /notice %}}
 
 <!-- AddToAny BEGIN -->
