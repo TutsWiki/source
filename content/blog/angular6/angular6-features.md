@@ -4,7 +4,7 @@ linktitle: Angular 6 features
 title: What's new in Angular 6 (Features List)
 weight: 10
 url: /angular6-features
-description: Popular Alternatives to GitHub for Web, Linux, Windows, Self-Hosted and more.
+description: List of major changes in Angular 6. ng-add, ng-update, material, cdk and starter components.
 keywords:
   - angular 6
   - angular 6 features
