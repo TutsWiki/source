@@ -19,8 +19,10 @@ keywords:
   - release notes
   - components
 ---
-<meta property="og:image" content="https://tutswiki.com/images/gitea.png"/>
+<meta property="og:image" content="https://tutswiki.com/images/Angular6.png"/>
 [Angular 6](https://angular.io/) is out with all new features. It is a major release in which Angular team has synchronized many of the important framework packages to make most out of cross compatibility. All the major framework packages like [@angular/core](https://angular.io/api/core), [@angular/compiler](https://angular.io/api/core/Compiler), [@angular/common](https://angular.io/api/common) etc. are reworked and released as version 6.0.0. Below is the list of major changes in Angular 6, let's explore them one by one.
+
+![Angular version 6](/images/Angular6.png "Angular 6.0.0")
 
 ## Angular 6 Features:
  - New CLI commands
@@ -148,4 +150,30 @@ Angular team announced to provide long term support for all major releases start
  - template tag has been removed so now you have to use ```ng-template``` instead.
  - ```@angular/http``` is deprecated, ```@angular/common/http``` is the recommended alternative.
 
+{{% notice note %}}
 If above listed features look promising to you and you want to use Angular 6 for your existing project, then follow https://update.angular.io/.
+{{% /notice %}}
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_hacker_news"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- tutswiki-single-post -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="1203265687"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
