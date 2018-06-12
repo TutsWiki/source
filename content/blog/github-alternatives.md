@@ -214,7 +214,7 @@ A git platform on JVM.
 ![GitBucket](/images/GitBucket.png "GitBucket")
 
 # 10. [GoGs](https://gogs.io/) (Self-hosted)
-An issue to install and lightweight GitHub clone written in Go. 
+An easy to install and lightweight GitHub clone written in Go. 
 
 #### Features:
  - GitHub clone
