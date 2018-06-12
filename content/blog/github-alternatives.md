@@ -256,27 +256,3 @@ A product from Apache. Sourceforge runs on Allura.
 {{% notice note %}}
 Do let us know which alternative do you like the most?
 {{% /notice %}}
-
-<!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-<a class="a2a_button_reddit"></a>
-<a class="a2a_button_hacker_news"></a>
-<a class="a2a_button_twitter"></a>
-<a class="a2a_button_facebook"></a>
-<a class="a2a_button_linkedin"></a>
-<a class="a2a_button_google_plus"></a>
-</div>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- tutswiki-single-post -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9878675755379402"
-     data-ad-slot="1203265687"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
