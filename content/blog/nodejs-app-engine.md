@@ -14,14 +14,13 @@ keywords:
   - gcloud
   - deploy
 ---
-<meta property="og:image" content="https://tutswiki.com/images/gitea.png"/>
-
+<meta property="og:image" content="https://tutswiki.com/images/nodejs-google-cloud.png"/>
 [Google App Engine](https://cloud.google.com/appengine/) is part of the Google Cloud Suite which provides a cloud platform for developers where they can develope and host their apps. It provides easily configurable, fast and secure programming environments/tools with the help of which developers can setup a development environment in just a few minutes. Therefore developers don't need to worry about configuring the enviroment, they can just focus on writing code. It supports all the popular programming languages Java, PHP, Node.js, Python, C#, .Net, Ruby and Go.
 
 {{< youtube id="2PRciDpqpko" >}}
 
 Till now there was no support for Node.js, but Google has just [announced](https://cloudplatform.googleblog.com/2018/06/Now-you-can-deploy-your-Node-js-app-to-App-Engine-standard-environment.html) that developers will now be able to deploy their Node.js apps to App Engine.
-
+![NodeJS on Google Cloud App Engine](/images/nodejs-google-cloud.png "NodeJs on Google Cloud")
 ## Steps to deploy Node.js web service on App Engine
 
 ### Prerequisites
