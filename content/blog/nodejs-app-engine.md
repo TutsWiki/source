@@ -19,13 +19,13 @@ keywords:
 
 {{< youtube id="2PRciDpqpko" >}}
 
-Till now there was no support for Node.js, but Google has just [announced](https://cloudplatform.googleblog.com/2018/06/Now-you-can-deploy-your-Node-js-app-to-App-Engine-standard-environment.html) that developers will now be able to deploy their [Node.js apps to App Engine](https://cloud.google.com/nodejs/).
+Till now there was no support for Node.js, but Google has just [announced](https://cloudplatform.googleblog.com/2018/06/Now-you-can-deploy-your-Node-js-app-to-App-Engine-standard-environment.html) that developers will now be able to deploy their [Node.js apps to the App Engine](https://cloud.google.com/nodejs/).
 ![NodeJS on Google Cloud App Engine](/images/nodejs-google-cloud.png "NodeJs on Google Cloud")
 ## Steps to deploy Node.js web service on App Engine
 
 ### Prerequisites
 
-   1. You must have a project on Google Cloud Platform. If you don't, create one using the [GCP Console](https://console.cloud.google.com/projectselector/appengine/create?lang=nodejs&st=true&_ga=2.136419507.-245729952.1528854239).
+   1. You must have a project on the Google Cloud Platform. If you don't, create one using the [GCP Console](https://console.cloud.google.com/projectselector/appengine/create?lang=nodejs&st=true&_ga=2.136419507.-245729952.1528854239).
 
    2. The development environment should be configured. You have 2 options here.
       * Configure it on the cloud using [Cloud Shell](https://console.cloud.google.com/appengine?cloudshell=true&_ga=2.72119440.-245729952.1528854239)
@@ -76,7 +76,7 @@ Since we have verified that our Hello World program is working fine, it's time t
     <!-- language: lang-sh -->
         gcloud app browse   
    
-That's it. You have successfully deployed your sample Node.js app on Google App Engine.
+That's it. You have successfully deployed your sample Node.js app on the Google App Engine.
 
 {{% notice tip %}}
 Refer Google's official guide on [Building a Node.js App on App Engine](https://cloud.google.com/appengine/docs/standard/nodejs/building-app/)
