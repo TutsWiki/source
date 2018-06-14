@@ -258,6 +258,19 @@ footer a:hover {
     background: aliceblue;
 }
 
+.btn-primary:hover{
+    color:#337ab7;
+}
+
+.btn-success:hover{
+    color:#5cb85c;
+}
+
+.btn-danger:hover{
+    color:#c9302c;
+    background: aliceblue;
+}
+
 .owl-carousel blockquote {
     border-left: 0px;
 }
