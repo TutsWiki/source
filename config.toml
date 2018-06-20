@@ -45,6 +45,11 @@ name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
 url = "https://github.com/TutsWiki/source/graphs/contributors"
 weight = 30
 
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-facebook'></i> Facebook"
+url = "https://www.facebook.com/TutsWiki/"
+weight = 30
+
 [privacy]
   [privacy.disqus]
     disable = false
