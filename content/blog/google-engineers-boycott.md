@@ -1,6 +1,6 @@
 ---
 date: 2018-06-22
-linktitle: Google Engineers Boycott
+linktitle: Google engineers boycott
 title: Google Engineers Boycott Against Security Tool for Military
 weight: 10
 url: /google-engineers-boycott-security-tool-military
