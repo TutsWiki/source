@@ -1,7 +1,7 @@
 ---
 date: 2018-06-27
-linktitle: Deep Learning helps reducing variability in Cardiovascular Imaging
-title: New Study Demonstrates Deep learning Helps Reducing Variability In Cardiovascular Imaging
+linktitle: Deep Learning Helped reducing variability in Cardiovascular Imaging
+title: How Deep learning Helped Reducing Variability In Cardiovascular Imaging
 weight: 10
 url: /deep-learning-cardiovascular-imaging
 description: New software based on deep learning algorithms automatically and accurately calculates LVEF
@@ -17,7 +17,7 @@ keywords:
 ---
 <meta property="og:image" content="https://tutswiki.com/images/deep-learning-cardiovascular.png"/>
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Deep Learning helps reducing variability in Cardiovascular Imaging" />
+<meta name="twitter:title" content="Deep Learning helped reducing variability in Cardiovascular Imaging" />
 <meta name=”twitter:description” content="New software based on deep learning algorithms automatically and accurately calculates LVEF" />
 
 [Bay Labs](https://baylabs.io/), a San Francisco-based medical technology company which focuses on using artificial intelligence to improve cardiovascular imaging, has released a new software EchoMD AutoEF. It is being claimed that this software will help to reduce the variability in cardiovascular imaging.
@@ -32,7 +32,7 @@ During each pumping cycle of our heart, it contracts and relaxes. When it contra
 ## Measuring EF
 There are various methods available to measure LVEF, out of which [Simpson’s biplane method](http://web.stanford.edu/group/ccm_echocardio/cgi-bin/mediawiki/index.php/Left_ventricle_systolic_function) is used widely. This method has about `9.2%` average variability. The EchoMD AutoEF software by Bay Labs has an average variability of `8.2%`. Moreover, EchoMD AutoEF doesn't require any user intervention, it's fully automatic. It calculates LVEF from complete echocardiographic patient studies, automatically.
 
-## How Deep Learning Helps?
+## How Deep Learning Helped?
 At present Human intervention is required to calculate LVEF. Medical professionals have to go through the recorded clips. They watch them carefully and pick the best ones then they manipulate them for quantification. This is a very time consuming and prone-to-error process (as it is done by humans). The deep learning algorithms helped in this case by totally eliminating the need to do all of the above manually. The training set included 4,000,000 images from about 9,000 patients.
 
 Quoting Richard Bae, who is the Director of the [Echocardiography Laboratory](https://www.nhlbi.nih.gov/science/echocardiography-laboratory) at the Minneapolis Heart Institute:
