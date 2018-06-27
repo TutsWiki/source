@@ -20,7 +20,7 @@ keywords:
 <meta name="twitter:title" content="Deep Learning helped reducing variability in Cardiovascular Imaging" />
 <meta name=”twitter:description” content="New software based on deep learning algorithms automatically and accurately calculates LVEF" />
 
-[Bay Labs](https://baylabs.io/), a San Francisco-based medical technology company which focuses on using artificial intelligence to improve cardiovascular imaging, has released a new software EchoMD AutoEF. It is being claimed that this software will help to reduce the variability in cardiovascular imaging.
+[Bay Labs](https://baylabs.io/), a San Francisco-based medical technology company which focuses on using artificial intelligence to improve cardiovascular imaging, has released a new software [EchoMD AutoEF](https://www.businesswire.com/news/home/20180619005552/en/Bay-Labs%E2%80%99-EchoMD-AutoEF-Software-Receives-FDA). It is being claimed that this software will help to reduce the variability in cardiovascular imaging.
 
 The software uses deep learning techniques to accurately calculate the `left ventricular ejection fraction`. 
 
