@@ -1,6 +1,6 @@
 ---
 date: 2018-06-27
-linktitle: Deep Learning Helped reducing variability in Cardiovascular Imaging
+linktitle: Deep Learning helped reducing variability in Cardiovascular Imaging
 title: How Deep Learning Helped Reducing Variability in Cardiovascular Imaging
 weight: 10
 url: /deep-learning-cardiovascular-imaging
