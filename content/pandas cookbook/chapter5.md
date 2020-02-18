@@ -57,14 +57,14 @@ Here we're going to get the data for March 2012, and clean it up
 Here's an URL template you can use to get data in Montreal.
 
 ```python
-url_template = "http://climate.weather.gc.ca/climateData/bulkdata_e.html?format=csv&stationID=5415&Year={year}&Month={month}&timeframe=1&submit=Download+Data"
+url_template = "http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID=5415&Year={year}&Month={month}&timeframe=1&submit=Download+Data"
 ```
 
 To get the data for March 2013, we need to format it with month=3, year=2012.
 
 ```python
 url = url_template.format(month=3, year=2012)
-weather_mar2012 = pd.read_csv(url, skiprows=15, index_col='Date/Time', parse_dates=True, encoding='latin1', header=True)
+weather_mar2012 = pd.read_csv(url, index_col='Date/Time', parse_dates=True)
 ```
 
 This is super great! We can just use the same read_csv function as before, and just give it a URL as a filename. Awesome.
