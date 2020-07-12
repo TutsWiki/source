@@ -71,3 +71,7 @@ weight = 30
   [privacy.youtube]
     disable = false
     privacyEnhanced = false
+  [params.adsense]
+    client = "ca-pub-9878675755379402"
+    inArticleSlot = "5842766387"
+    
