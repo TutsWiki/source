@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ .Content }}
+{{ replace .Content "<!--adsense-->" (partial "adsense-inarticle.html" .) | safeHTML }}
 <!--<footer class=" footline" >
 	{{with .Params.LastModifierDisplayName}}
 	    <i class='fa fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fa fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
