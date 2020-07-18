@@ -23,6 +23,17 @@ Python is a very flexible language. One facet of this flexibility is the possibi
 
 It makes no sense to use both at the same time, and therefore each programmer must determine for himself which tool to use when designing applications.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Abstract base classes (abc)
 
 Starting from version 2.6 of the language, the `abc` module is included in the standard library, which adds abstract base classes (hereinafter ABC) to the language.
