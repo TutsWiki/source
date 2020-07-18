@@ -19,6 +19,17 @@ Imagine if you migrate your server to a new host and suddenly your application s
   
 Let's see how can we create and read config files in Python.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Creating config file in Python
 
 In Python we have [configparser](https://docs.python.org/3/library/configparser.html) module which can help us with creation of config files (.ini format).
