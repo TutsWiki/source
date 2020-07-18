@@ -80,11 +80,11 @@ Details and considerations for using ABC can be found in [PEP-3119](http://www.p
 
 ## Interfaces (zope.interfaces)
 
-The implementation of the Zope project in work on Zope3 decided to focus on component architecture; the framework has evolved into a set of almost independent components. The glue that holds the components together is the interfaces and the adapters based on them.
+The Zope Toolkit (ZTK) is a set of libraries intended for reuse by projects to develop web applications or web frameworks. It is developed by the contributors of the Zope Foundation. The zope framework has evolved into a set of almost independent components. The glue that holds the components together is the interfaces and the adapters based on them.
 
 The zope.interfaces module is the result of this work.
 
-In the simplest case, using interfaces is like trying on ABK:
+In the simplest case, using interfaces is similar to ABC:
 
 ```python
 import zope.interface
@@ -110,52 +110,49 @@ assert IVehicle.implementedBy (Car)
 assert IVehicle.providedBy (Car ())
 ```
 
-The interface declaratively shows what attributes and methods the object should have. Moreover, the class implements (implements) the interface, and the object of the class provides (provides). You should pay attention to the difference between these concepts!
+The interface declaratively shows what attributes and methods the object should have. Moreover, the class implements the interface, and the object of the class provides. You should pay attention to the difference between these concepts!
 
-“Implementing” an interface means that only the “produced” entity will have the required properties; and “providing” an interface speaks of the specific capabilities of the entity being evaluated. Accordingly, in Python, classes, by the way, can both implement and provide an interface.
+"Implementing" an interface means that only the "produced" entity will have the required properties; and "providing" an interface speaks of the specific capabilities of the entity being evaluated. Accordingly, in Python, classes, by the way, can both implement and provide an interface.
 
-In fact, the implementation declaration (IVehicle) is a convention; just a promise that a given class and its objects behave that way. No real checks will be made
+In fact, the implementation declaration (IVehicle) is a convention; just a promise that a given class and its objects behave that way. No real checks will be made.
 
 ```python
 class IVehicle (zope.interface.Interface):
     """Any moving thing"""
-    speed = zope.interface.Attribute ("""Movement speed""")
+    speed = zope.interface.Attribute("""Movement speed""")
 
     def move():
         """Make a single step"""
 
 class Car(object):
-    zope.interface.implements (IVehicle)
+    zope.interface.implements(IVehicle)
 
-assert IVehicle.implementedBy (Car)
-assert IVehicle.providedBy (Car ())
+assert IVehicle.implementedBy(Car)
+assert IVehicle.providedBy(Car())
 ```
 
-It can be seen that in the simplest cases, the interfaces only complicate the code, as, however, the ABK.
-
-The component architecture of Zope includes another important concept - adapters. Generally speaking, this is a simple design pattern that corrects one class for use somewhere where a different set of methods and attributes is required. So,
+The component architecture of Zope includes another important concept - adapters. Generally speaking, this is a simple design pattern that corrects one class for use somewhere where a different set of methods and attributes is required.
 
 ## Adapters
 
-Consider, greatly simplifying, an example from the Comprehensive Guide to Zope Component Architecture.
+Consider a simple an example from the [Comprehensive Guide to Zope Component Architecture](https://bluebream.zope.org/doc/1.0/manual/componentarchitecture.html).
 
 Suppose there are a couple of classes, Guest and Desk. Let's define interfaces to them, plus a class that implements the Guest interface:
 
 ```python
 import zope.interface
 from zope.interface import implements
-
 from zope.component import adapts, getGlobalSiteManager
 
-class IDesk (zope.interface.Interface):
-    def register ():
+class IDesk(zope.interface.Interface):
+    def register():
         "Register a person"
 
-class IGuest (zope.interface.Interface):
-    name = zope.interface.Attribute ("" "Person`s name" "")
+class IGuest(zope.interface.Interface):
+    name = zope.interface.Attribute ("""Person`s name""")
 
 class Guest (object):
-    implements (IGuest)
+    implements(IGuest)
 
     def __init __ (self, name):
         self.name = name
@@ -165,8 +162,8 @@ The adapter must account for the anonymous guest by registering in the list of n
 
 ```python
 class GuestToDeskAdapter (object):
-    adapts (IGuest)
-    implements (IDesk)
+    adapts(IGuest)
+    implements(IDesk)
     
     def __init __ (self, guest):
         self.guest = guest
@@ -202,7 +199,7 @@ Upon closer inspection, it turns out that interfaces and abstract base classes a
 
 Abstract classes basically hardcode the required front-end part. Checking an object against the interface of an abstract class is checked using the built-in isinstance function; class - issubclass. An abstract base class should be included in the hierarchy as a base class or mixin.
 
-The downside is the semantics of checks issubclass, isinstance, which intersect with ordinary classes (their inheritance hierarchy). No additional abstractions are built on the ABK.
+The downside is the semantics of checks issubclass, isinstance, which intersect with ordinary classes (their inheritance hierarchy). No additional abstractions are built on the ABC.
 
 Interfaces are a declarative entity, they do not set any boundaries; simply asserts that the class implements and its object provides the interface. Semantically, the statements implementedBy, providedBy are more correct. On such a simple basis, it is convenient to build a component architecture using adapters and other derived entities, which is what the large Zope and Twisted frameworks do.
 
