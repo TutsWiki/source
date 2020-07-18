@@ -195,3 +195,7 @@ The downside is the semantics of checks issubclass, isinstance, which intersect 
 Interfaces are a declarative entity, they do not set any boundaries; simply asserts that the class implements and its object provides the interface. Semantically, the statements implementedBy, providedBy are more correct. On such a simple basis, it is convenient to build a component architecture using adapters and other derived entities, which is what the large Zope and Twisted frameworks do.
 
 It should be understood that the use of both tools makes sense only when building and using relatively large OOP systems - frameworks and libraries, in small programs they can only confuse and complicate the code with unnecessary abstractions.
+
+## Help improve this content
+
+Please fix any typos or add more insights by [editing this page](https://github.com/TutsWiki/source/edit/master/content/blog/abstract-classes-and-interfaces-in-python.md).
