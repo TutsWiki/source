@@ -199,3 +199,14 @@ It should be understood that the use of both tools makes sense only when buildin
 ## Help improve this content
 
 Please fix any typos or add more insights by [editing this page](https://github.com/TutsWiki/source/edit/master/content/blog/abstract-classes-and-interfaces-in-python.md).
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
