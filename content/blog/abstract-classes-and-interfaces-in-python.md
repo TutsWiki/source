@@ -4,18 +4,20 @@ linktitle: Abstract classes and interfaces in Python
 title: Abstract classes and interfaces in Python
 weight: 10
 url: /abstract-classes-and-interfaces-in-python
-description: New software based on deep learning algorithms automatically and accurately calculates LVEF
+description: Abstract classes, methods and Zope interfaces, adapters in Python
 keywords:
   - python
   - abs
   - abstract base class
   - interfaces
+  - zope
+  - adapters
   - programming
 ---
-<meta property="og:image" content="https://tutswiki.com/images/deep-learning-cardiovascular.png"/>
+<meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Abstract classes and interfaces in Python" />
-<meta name=”twitter:description” content="New software based on deep learning algorithms automatically and accurately calculates LVEF" />
+<meta name=”twitter:description” content="Abstract classes, methods and Zope interfaces, adapters in Python" />
 
 Abstract base classes and interfaces are entities that are similar in purpose and meaning. Both the first and second are a peculiar way of documenting the code and help to limit (decouple) the interaction of individual abstractions in the program (classes).
 
