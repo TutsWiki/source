@@ -43,6 +43,17 @@ Let's continue with our NYC 311 service requests example.
 complaints = pd.read_csv('311-service-requests.csv')
 ```
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## 3.1 Selecting only noise complaints
 
 I'd like to know which borough has the most noise complaints. First, we'll take a look at the data to see what it looks like:
