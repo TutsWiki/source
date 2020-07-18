@@ -72,6 +72,8 @@ Output:
 <p>3 rows × 1 columns</p>
 </div>
 
+<!--adsense-->
+
 You'll notice that this is totally broken! read_csv has a bunch of options that will let us fix that, though. Here we'll
 
 - Change the column separator to a `;`
