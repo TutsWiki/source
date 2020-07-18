@@ -28,7 +28,18 @@ Let me try to explain the above to you.
 In Python all modules have some built-in attributes. `__name__` is one of them. Now the question is what does `__name__` contain?
 
 Well, that depends actually. It depends on how you use the module. 
- 
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Case 1: Running the module directly
 
 If you run the module directly in a standalone program then in that case the value of `__name__` attribute is set to `__main__`.
