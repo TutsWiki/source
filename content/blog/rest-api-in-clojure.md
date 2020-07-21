@@ -156,7 +156,7 @@ We import C3P0’s `ComboPooledDataSource`, a plain Java class. Next, we fetch t
        :user ""
        :password ""})
 ```	   
-Note, we use a in-memory database. If you’d like to keep your database between restarts, you could use :subname "/tmp/documents" for example.
+Note, we use a in-memory database. If you’d like to keep your database between restarts, you could use `:subname "/tmp/documents"` for example.
 
 Next we open a pool of connections. C3P0 has no Clojure wrapper, so we deal with Java classes and objects directly (hence a bit more code).
 ```clojure
