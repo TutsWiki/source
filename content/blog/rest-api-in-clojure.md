@@ -40,6 +40,17 @@ A document looks like this (JSON encoded):
 - A PUT to /documents/[ID] should update the document with the given id and replace title and text with those from the document in the uploaded body.
 - A DELETE to /documents/[ID] should delete the document with the given id and return 204 (NO CONTENT) in any case.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Creating the project scaffolding
 We’re going to use <a href="https://leiningen.org/">Leiningen</a>, the defacto build system and dependency manager for Clojure projects. Download and install it, then execute:
 
@@ -313,9 +324,15 @@ Yeah, the whole program with connection pooling, JSON de/encoding in roughly 90 
 To sum it up: Clojure is fun, concise, and very powerful. Together with the excellent Java integration it ranks very high on my “languages I adore” list.
 
 ## Help improve this content
-Feel free to <div id="top-github-link">
-                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fa fa-code-fork"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
-                    </a>
-                  </div> to fix any typos or add more insights by
+Feel free to <a href="https://github.com/TutsWiki/source/edit/master/content/blog/rest-api-in-clojure.md">edit this page</a> to fix any typos or add more insights.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
