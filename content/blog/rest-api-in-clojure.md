@@ -28,9 +28,9 @@ A document looks like this (JSON encoded):
 
 ```json
 {
-      "id" : "some id"
-      , "title" : "some title"
-      , "text" : "some text"
+      "id" : "some id",
+      "title" : "some title"
+      "text" : "some text"
 }
 ```
 
@@ -47,7 +47,7 @@ We’re going to use <a href="https://leiningen.org/">Leiningen</a>, the defacto
 lein new compojure clojure-rest
 ```
 
-We’re creating a new <a href="https://compojure.org/">Compojure</a> project called clojure-rest. Compojure is the library that maps URLs to functions in our program. Compojure (and our project) builds on Ring is the basic Server API. To start the new project run:
+We’re creating a new <a href="https://github.com/weavejester/compojure/wiki">Compojure</a> project called clojure-rest. Compojure is the library that maps URLs to functions in our program. Compojure (and our project) builds on Ring is the basic Server API. To start the new project run:
 
 ```bash
 lein ring server
@@ -57,7 +57,7 @@ This starts the server on localhost:3000 and automatically restarts the server i
 
 The `new` command generates two very important files for us:
 
-`project.clj` is the project configuration. It states dependencies, the entry point etc. (read the whole documentation on <a href="Leiningen.org">Leiningen.org</a>, and `src/clojure_rest/handler.clj` which contains a starting point for our application.
+`project.clj` is the project configuration. It states dependencies, the entry point etc. (read the whole documentation on <a href="https://leiningen.org">Leiningen.org</a>, and `src/clojure_rest/handler.clj` which contains a starting point for our application.
 
 ## Project configuration (project.clj)
 ```clojure
