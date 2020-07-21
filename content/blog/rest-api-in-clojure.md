@@ -311,3 +311,11 @@ To round the post up, here is the whole program:
 Yeah, the whole program with connection pooling, JSON de/encoding in roughly 90 lines of (admittedly dense) code.
 
 To sum it up: Clojure is fun, concise, and very powerful. Together with the excellent Java integration it ranks very high on my “languages I adore” list.
+
+## Help improve this content
+Feel free to <div id="top-github-link">
+                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                      <i class="fa fa-code-fork"></i>
+                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
+                    </a>
+                  </div> to fix any typos or add more insights by
