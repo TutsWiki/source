@@ -41,13 +41,13 @@ A document looks like this (JSON encoded):
 - A DELETE to /documents/[ID] should delete the document with the given id and return 204 (NO CONTENT) in any case.
 
 ## Creating the project scaffolding
-We’re going to use <a href="http://leiningen.org/">Leiningen</a>, the defacto build system and dependency manager for Clojure projects. Download and install it, then execute:
+We’re going to use <a href="https://leiningen.org/">Leiningen</a>, the defacto build system and dependency manager for Clojure projects. Download and install it, then execute:
 
 ```bash
 lein new compojure clojure-rest
 ```
 
-We’re creating a new <a href="http://compojure.org/">Compojure</a> project called clojure-rest. Compojure is the library that maps URLs to functions in our program. Compojure (and our project) builds on Ring is the basic Server API. To start the new project run:
+We’re creating a new <a href="https://compojure.org/">Compojure</a> project called clojure-rest. Compojure is the library that maps URLs to functions in our program. Compojure (and our project) builds on Ring is the basic Server API. To start the new project run:
 
 ```bash
 lein ring server
@@ -74,7 +74,7 @@ Update the file to look like this:
 
 (defproject clojure-rest "0.1.0-SNAPSHOT"
       :description "REST service for documents"
-      :url "http://blog.interlinked.org"
+      :url "https://tutswiki.com"
       :dependencies [[org.clojure/clojure "1.4.0"]
                      [compojure "1.1.1"]
                      [ring/ring-json "0.1.2"]
@@ -88,7 +88,7 @@ Update the file to look like this:
       {:dev {:dependencies [[ring-mock "0.1.3"]]}})
 ```
 
-Besides the JSON parsing library <a href="https://web.archive.org/web/20180627154136/https://github.com/dakrone/cheshire">Cheshire</a>, we added the <a href="https://web.archive.org/web/20180627154136/http://sourceforge.net/projects/c3p0/">C3P0 Connection Pool</a>, the <a href="https://web.archive.org/web/20180627154136/http://h2database.com/">H2 Database</a> JDBC driver and Clojure’s <a href="https://web.archive.org/web/20180627154136/https://github.com/clojure/java.jdbc">java.jdbc</a> contrib-library.
+Besides the JSON parsing library <a href="https://github.com/dakrone/cheshire">Cheshire</a>, we added the <a href="https://sourceforge.net/projects/c3p0/">C3P0 Connection Pool</a>, the <a href="https://h2database.com/">H2 Database</a> JDBC driver and Clojure’s <a href="https://github.com/clojure/java.jdbc">java.jdbc</a> contrib-library.
 
 I also updated the `:url` and `:description` fields.
 
@@ -131,7 +131,7 @@ Next let’s define the routes for our application:
           (DELETE "/" [] (delete-document id))))))
       (route/not-found "Not Found"))
 ```
-We define GET and POST for the context "/documents, and GET, PUT, DELETE for the context ":id" on top of that. :id is a placeholder and can then be injected into our parameter vector. The POST and PUT request have a special parameter body for the parsed body (this parameter is provided by the wrap-json-body middleware. For more on routes, take a look at <a href="https://web.archive.org/web/20180627154136/https://github.com/weavejester/compojure/wiki/Routes-In-Detail">Compojure’s documentation</a>.
+We define GET and POST for the context "/documents, and GET, PUT, DELETE for the context ":id" on top of that. :id is a placeholder and can then be injected into our parameter vector. The POST and PUT request have a special parameter body for the parsed body (this parameter is provided by the wrap-json-body middleware. For more on routes, take a look at <a href="https://github.com/weavejester/compojure/wiki/Routes-In-Detail">Compojure’s documentation</a>.
 
 Before we define the functions to carry out the requests, let’s fix the imports and open a pool of database connections to work with.
 
