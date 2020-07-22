@@ -36,7 +36,8 @@ sudo ln -s /path.to/your/home/local/bin/npm /usr/local/bin/
 ```
 
 And now...
-<img src="http://weknowmemes.com/wp-content/uploads/2012/01/fap-now-kiss.png" alt="now kiss">
+
+![now kiss meme](/images/now-kiss.png "now kiss meme")
 
 Also see: [install node and npm without having to sudo](https://gist.github.com/isaacs/579814#file-node-and-npm-in-30-seconds-sh)
 
