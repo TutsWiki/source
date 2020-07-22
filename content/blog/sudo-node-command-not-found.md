@@ -1,7 +1,7 @@
 ---
 date: 2020-07-22
 linktitle: sudo and node
-title: How to fix sudo: node: command not found error
+title: How to fix sudo node command not found error
 weight: 10
 url: /how-to-fix-sudo-node-command-not-found-error
 description: To fix this, we need to “pass the environment” of the calling thread to the computation thread.
