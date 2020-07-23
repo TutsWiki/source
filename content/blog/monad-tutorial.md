@@ -29,7 +29,7 @@ I'm not a big fan of monads, but I understand them. They're not rocket science. 
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-1) If a function has type `A → B`, and another function has type `B → C`, then we can "compose" them into a new function of type A → C.
+1) If a function has type `A → B`, and another function has type `B → C`, then we can "compose" them into a new function of type `A → C`.
 
 2) Let's talk about functions that can return multiple values. We can model these as functions of type `A → List<B>`. There is a natural way to "compose" two such functions. If one function has type `A → List<B>`, and another function has type `B → List<C>`, then we can "compose" them into a new function of type `A → List<C>`. The "composition" works by joining together all the intermediate lists of values into one. This is similar to MapReduce, which also collects together lists of results returned by individual workers.
 
