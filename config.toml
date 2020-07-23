@@ -6,7 +6,8 @@ disqusShortname = "tutswiki"
 # For search functionnality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
+[markup]
+  defaultMarkdownHandler = "blackfriday"
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
   # Useful to give opportunity to people to create merge request for your doc.
