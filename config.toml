@@ -70,4 +70,4 @@ weight = 30
     simple = false
   [privacy.youtube]
     disable = false
-    privacyEnhanced = false    
+    privacyEnhanced = false
