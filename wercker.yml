@@ -2,7 +2,7 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-        version: "0.41"
+        version: "0.69.2"
         config: config.toml
         flags: --buildDrafts=true
 deploy:
