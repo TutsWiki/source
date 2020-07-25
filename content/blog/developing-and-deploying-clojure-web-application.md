@@ -395,6 +395,7 @@ The site will not run on port `8080` in production, so we'll need a way to speci
   (run-jetty #'adder.core/app {:port port}))
 ```
 
+### Deploying to Amazon EC2
 Now we’re ready to put this app into production. I'll walk through the steps needed for to deploying to EC2 using the standard [EC2 command line tools](https://aws.amazon.com/cli/), but the process would be similar for other hosting providers.
 
 Start be allocating by setting up a security group and SSH keypair for the application:
