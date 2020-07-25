@@ -27,6 +27,17 @@ Our sample app performs addition for the user. The user enters a value in each o
 
 Before beginning on the app, make sure that you have [Leiningen](https://leiningen.org/) installed.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 We’ll start with a minimal first version of the app. In a new directory `adder`, create a file `project.clj` with the following contents:
 
 ```clojure
