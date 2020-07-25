@@ -67,6 +67,7 @@ fe80::1%lo0     localhost
 If you haven't tried an `/etc/hosts` hack like this, I suggest giving it a try. You may be surprised by how much time you save.
 
 Also see
+
  - [get-shit-done](https://github.com/viccherubini/get-shit-done)
  - [noprocrast (ruby gem)](https://github.com/rfwatson/noprocrast)
  
