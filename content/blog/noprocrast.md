@@ -4,7 +4,7 @@ linktitle: noprocrast
 title: noprocrast
 weight: 10
 url: /noprocrast
-description: I wrote a command line script called noprocrast. This script updates /etc/hosts to make distracting websites unreachable from my machine:
+description: I wrote a command line script called noprocrast. This script updates /etc/hosts to make distracting websites unreachable from my machine.
 keywords:
   - noprocrast
   - productivity
