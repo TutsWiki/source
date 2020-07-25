@@ -38,7 +38,7 @@ Before beginning on the app, make sure that you have [Leiningen](https://leining
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-We’ll start with a minimal first version of the app. In a new directory `adder`, create a file `project.clj` with the following contents:
+We'll start with a minimal first version of the app. In a new directory `adder`, create a file `project.clj` with the following contents:
 
 ```clojure
 (defproject adder "0.0.1"
@@ -55,7 +55,7 @@ We’ll start with a minimal first version of the app. In a new directory `adder
     [[lein-run "1.0.0-SNAPSHOT"]])
 ```
 
-We’ll put the main app logic in the namespace `adder.core`. Create a file at `src/adder/core.clj` with this code:
+We'll put the main app logic in the namespace `adder.core`. Create a file at `src/adder/core.clj` with this code:
 
 ```clojure
 (ns adder.core
@@ -109,7 +109,7 @@ Also, put the following in `script/run.clj`:
 (run-jetty #'adder.core/app {:port 8080})
 ```
 
-Now you’re ready to test the first version of the app:
+Now you're ready to test the first version of the app:
 
 ```clojure
 lein deps
@@ -119,7 +119,7 @@ open http://localhost:8080/
 
 Check out your app in the browser. You should be to perform the simple addition described above.
 
-As you use the app you’ll probably notice changes that you'd like to make. You might also notice that errors like giving `foo` as an input are not handled well. To fix this let's apply some reloading and stacktrace middleware.
+As you use the app you'll probably notice changes that you'd like to make. You might also notice that errors like giving `foo` as an input are not handled well. To fix this let's apply some reloading and stacktrace middleware.
 
 Start by including the appropriate Ring middlewares into the `adder.core` namespace definition:
 
@@ -128,7 +128,7 @@ Start by including the appropriate Ring middlewares into the `adder.core` namesp
 (:use ring.middleware.stacktrace)
 ```
 
-We’ll want to separate out the main app logic that we wrote earlier from the full, middleware wrapped application, so change (defroutes app to (defroutes handler and add the following at the bottom of the file:
+We'll want to separate out the main app logic that we wrote earlier from the full, middleware wrapped application, so change (defroutes app to (defroutes handler and add the following at the bottom of the file:
 
 ```clojure
 (def app
@@ -186,6 +186,17 @@ and then add a catchall route to the bottom of the routes list:
 
 Now when you visit e.g. `/foo`, you should be redirected back to the app's main page at `/`.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 Our app is starting to shape up, but we’re missing some necessary application infrastructure. For one, the application is not doing any logging, which makes it hard to understand what it is doing. Lets fix that with some request logging middleware. Create a new file `src/adder/middleware.clj` with these contents:
 
 ```clojure
@@ -237,7 +248,7 @@ As soon as you try out the logging you'll probably notice requests to `/favicon.
 
 and then include it in the middleware stack by adding (`wrap-bounce-favicon`) immediately above (`wrap-stacktrace`).
 
-Now let’s add a bit of styling to our utilitarian app. To do this we’ll create and apply a CSS file that is served statically by the application. Put the following in public/adder.css:
+Now let's add a bit of styling to our utilitarian app. To do this we'll create and apply a CSS file that is served statically by the application. Put the following in public/adder.css:
 
 ```css
 .math {
@@ -320,7 +331,7 @@ We should also write a few tests for our newly developed application. Create a f
 
 You can verify that they all pass by running `lein test`.
 
-Now that we have some tests we’re ready to start thinking about deploying this app to production. We’ll want the app to behave slightly differently in production and development, so we’ll need a way to differentiate between the two environments. I'll use the environment variable `APP_ENV` to define `production?` and `development?` vars in the `adder.core` namespace:
+Now that we have some tests we're ready to start thinking about deploying this app to production. We'll want the app to behave slightly differently in production and development, so we'll need a way to differentiate between the two environments. I'll use the environment variable `APP_ENV` to define `production?` and `development?` vars in the `adder.core` namespace:
 
 ```clojure
 (def production?
@@ -345,7 +356,7 @@ Use this var to update the middleware stack to look like:
     (wrap-if development? wrap-stacktrace)))
 ```
 
-This code will enable a public-facing failsafe middleware in production while keeping the stacktrace middleware in development. We’ll also limit code reloading to development. Finally, we’ll add exception logging in both cases for additional visibility. This updated stack relies on several new functions in `adder.middleware`. Add the following to the `adder.middleware` namespace declaration:
+This code will enable a public-facing failsafe middleware in production while keeping the stacktrace middleware in development. We'll also limit code reloading to development. Finally, we'll add exception logging in both cases for additional visibility. This updated stack relies on several new functions in `adder.middleware`. Add the following to the `adder.middleware` namespace declaration:
 
 ```clojure
 (:require [clj-stacktrace.repl :as strp])
@@ -460,7 +471,7 @@ test
 classes
 ```
 
-Now install the app’s files on the server with:
+Now install the app's files on the server with:
 
 ```bash
 rsync --rsh='ssh -i '$ADDER_PEM \
