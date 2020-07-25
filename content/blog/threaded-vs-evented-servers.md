@@ -33,14 +33,18 @@ If a server is CPU bound then it will be able to respond to at most
 
 requests per second. For example, if each requests takes 2 ms of CPU time then the CPU can only handle
 
+```
 (/ 1000 2)
 => 500
+```
 
 requests per second.
 
 If the server is thread bound then it can handle at most
 
+```
 (* t (/ 1000 w))
+```
 
 requests per second. This expression is similar to the one for CPU time, but here we multiply the result by `t` to account for the `t` concurrent threads.
 
