@@ -1,3 +1,24 @@
+---
+date: 2020-07-25
+linktitle: Threaded vs Evented Servers
+title: Threaded vs Evented Servers
+weight: 10
+url: /threaded-vs-evented-servers
+description: Threaded servers use multiple concurrently-executing threads that each handle one client request, while evented servers run a single event loop that handles events for all connected clients.
+keywords:
+  - clojure
+  - deploy
+  - develop
+  - programming
+  - webapp
+  - aws
+  - ec2
+---
+<meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Threaded vs Evented Servers" />
+<meta name=”twitter:description” content="Threaded servers use multiple concurrently-executing threads that each handle one client request, while evented servers run a single event loop that handles events for all connected clients." />
+
 Broadly speaking, there are two ways to handle concurrent requests to a server. *Threaded* servers use multiple concurrently-executing threads that each handle one client request, while *evented* servers run a single event loop that handles events for all connected clients.
 
 To chose between the threaded and evented approaches you need to consider the load profile of the server. This post describes a simple mathematical model for reasoning about these load profiles and their implications for server design.
