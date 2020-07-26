@@ -29,7 +29,7 @@ A document looks like this (JSON encoded):
 ```json
 {
       "id" : "some id",
-      "title" : "some title"
+      "title" : "some title",
       "text" : "some text"
 }
 ```
