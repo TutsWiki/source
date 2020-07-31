@@ -39,9 +39,9 @@ This means one simple thing. Stop repeating yourself and let Grunt do stuff for 
 
 You can find plugins for almost everything. Examples of tasks could be:
 
-- compile [CoffeeScript](https://npmjs.org/package/grunt-contrib-coffee), [Jade](ttps://npmjs.org/package/grunt-contrib-jade), [Sass](https://npmjs.org/package/grunt-contrib-sass), [Stylus](https://npmjs.org/package/grunt-contrib-stylus), [Mustache](https://npmjs.org/package/grunt-mustache),…
-- [optimize](https://npmjs.org/package/grunt-imagemin) images
-- [run jshint](https://npmjs.org/package/grunt-jshint) on your code
+- compile [CoffeeScript](https://npmjs.org/package/grunt-contrib-coffee), [Jade](https://npmjs.org/package/grunt-contrib-jade), [Sass](https://npmjs.org/package/grunt-contrib-sass), [Stylus](https://npmjs.org/package/grunt-contrib-stylus), [Mustache](https://npmjs.org/package/grunt-mustache),…
+- [optimize](https://www.npmjs.com/package/grunt-contrib-imagemin) images
+- [run jshint](https://www.npmjs.com/package/grunt-contrib-jshint) on your code
 - [uglify](https://npmjs.org/package/grunt-contrib-uglify) your code
 
 This allows you to optimize your workflow to the limit.
@@ -94,7 +94,7 @@ This will concate all `.js` files inside the `/js` folder and concatenate them t
 The only thing you need to do is run `grunt` inside your project.
 
 ```bash
-    $ grunt
+$ grunt
 ```
 
 ## Multiple tasks
