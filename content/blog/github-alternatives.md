@@ -45,6 +45,16 @@ Nobody knows whether they are doing this because they accepted that open-source 
 
 Below is a list of some popular services similar to GitHub:
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 # 1. [GitLab](https://about.gitlab.com/)
 Most of the users on Social Media seem to be choosing [GitLab](https://about.gitlab.com/) as a replacement for GitHub.

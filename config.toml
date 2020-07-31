@@ -6,7 +6,8 @@ disqusShortname = "tutswiki"
 # For search functionnality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
+[markup]
+  defaultMarkdownHandler = "blackfriday"
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
   # Useful to give opportunity to people to create merge request for your doc.
@@ -24,7 +25,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false
   # Set this to true to disable copy-to-clipboard button for inline code.
-  disableInlineCopyToClipBoard = false
+  disableInlineCopyToClipBoard = true
   # A title for shortcuts in menu is set by default. Set this to true to disable it. 
   disableShortcutsTitle = false
   # When using mulitlingual website, disable the switch language button.
@@ -70,4 +71,4 @@ weight = 30
     simple = false
   [privacy.youtube]
     disable = false
-    privacyEnhanced = false    
+    privacyEnhanced = false
