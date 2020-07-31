@@ -16,6 +16,8 @@ keywords:
 <meta name="twitter:title" content="Grunt Tutorial with Live Example" />
 <meta name=”twitter:description” content="So, what is this thing called Grunt and how can it help you?" />
 
+So, what is this thing called Grunt and how can it help you?
+
 From the [grunt documentation](http://gruntjs.com/):
 > “A task-based command line build tool for JavaScript projects”
 
