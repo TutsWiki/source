@@ -13,6 +13,7 @@ keywords:
   - zope
   - adapters
   - programming
+tags: [python]  
 ---
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
