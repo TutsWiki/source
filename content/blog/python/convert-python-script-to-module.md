@@ -81,13 +81,13 @@ Python scripts can be simple to write. Indeed, it's often too simple to create a
 1) Identify the statements that do the work of the script: we'll distinguish between definition and action. Statements such as `import`, `def`, and `class` are clearly definitional—they support the work but they don't do the work. Almost all other statements take action. In our example, we have four assignment statements that are more definition than action. The distinction is entirely one of intent. All statements, by definition, take an action. These actions, though, are more like the action of the def statement than they are like the action of the `with` statement later in the script. Here are the generally definitional statements:
 
 ```python
-    MI= 3959 
-    NM= 3440 
-    KM= 6373 
+MI= 3959 
+NM= 3440
+KM= 6373 
     
-    def haversine( lat_1: float, lon_1: float, 
-    	lat_2: float, lon_2: float, *, R: float ) -> float: 
-    	... and more ... 
+def haversine( lat_1: float, lon_1: float, 
+    lat_2: float, lon_2: float, *, R: float ) -> float: 
+    ... and more ... 
     
     nm_haversine = partial(haversine, R=NM) 
 ```
