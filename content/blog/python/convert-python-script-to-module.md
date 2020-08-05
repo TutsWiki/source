@@ -80,7 +80,7 @@ Python scripts can be simple to write. Indeed, it's often too simple to create a
 
 1) Identify the statements that do the work of the script: we'll distinguish between definition and action. Statements such as `import`, `def`, and `class` are clearly definitional—they support the work but they don't do the work. Almost all other statements take action. In our example, we have four assignment statements that are more definition than action. The distinction is entirely one of intent. All statements, by definition, take an action. These actions, though, are more like the action of the def statement than they are like the action of the `with` statement later in the script. Here are the generally definitional statements:
 
-    ```python
+```python
     MI= 3959 
     NM= 3440 
     KM= 6373 
@@ -90,47 +90,47 @@ Python scripts can be simple to write. Indeed, it's often too simple to create a
     	... and more ... 
     
     nm_haversine = partial(haversine, R=NM) 
-    ```
+```
 
 The rest of the statements clearly take an action toward producing the printed results.
 
 2) Wrap the actions into a function:
 
-    ```python
-    def analyze(): 
-    	source_path = pathlib.Path("waypoints.csv") 
-    	with source_path.open() as source_file: 
-    		reader= csv.DictReader(source_file) 
-    		start = next(reader) 
-    		for point in reader: 
-    			d = nm_haversine( 
-    				float(start['lat']), float(start['lon']), 
-    				float(point['lat']), float(point['lon']) 
-    				) 
-    			print(start, point, d) 
-    			start= point 
-    ```
+```python
+def analyze(): 
+    source_path = pathlib.Path("waypoints.csv") 
+    with source_path.open() as source_file: 
+    	reader= csv.DictReader(source_file) 
+    	start = next(reader) 
+    	for point in reader: 
+    		d = nm_haversine( 
+    			float(start['lat']), float(start['lon']), 
+    			float(point['lat']), float(point['lon']) 
+    			) 
+    		print(start, point, d) 
+    		start= point 
+```
 
 3) Where possible, extract literals and make them into parameters. This is often a simple movement of the literal to a parameter with a default value. From this:
 
-    ```python
-    def analyze(): 
-    	source_path = pathlib.Path("waypoints.csv") 
-    ```
+```python
+def analyze(): 
+    source_path = pathlib.Path("waypoints.csv") 
+```
 
 To this:
 
-    ```python
-    def analyze(source_name="waypoints.csv"): 
-        source_path = pathlib.Path(source_name) 
-    ```
+```python
+def analyze(source_name="waypoints.csv"): 
+    source_path = pathlib.Path(source_name) 
+```
 
 4) Include the following as the only high-level action statements in the script file:
 
-    ```python        
-    if __name__ == "__main__": 
-        analyze() 
-    ```
+```python        
+if __name__ == "__main__": 
+    analyze() 
+```
 
 We've packaged the action of the script as a function. The top-level action script is now wrapped in an if statement so that it isn't executed during import.
 
