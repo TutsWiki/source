@@ -89,7 +89,7 @@ def haversine( lat_1: float, lon_1: float,
     lat_2: float, lon_2: float, *, R: float ) -> float: 
     ... and more ... 
     
-    nm_haversine = partial(haversine, R=NM) 
+nm_haversine = partial(haversine, R=NM) 
 ```
 
 The rest of the statements clearly take an action toward producing the printed results.
