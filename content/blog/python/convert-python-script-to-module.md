@@ -78,7 +78,7 @@ How can we import this module without it printing a display of distances between
 
 Python scripts can be simple to write. Indeed, it's often too simple to create a working script. Here's how we transform a simple script into a reusable library:
 
-1. Identify the statements that do the work of the script: we'll distinguish between definition and action. Statements such as `import`, `def`, and `class` are clearly definitional—they support the work but they don't do the work. Almost all other statements take action. In our example, we have four assignment statements that are more definition than action. The distinction is entirely one of intent. All statements, by definition, take an action. These actions, though, are more like the action of the def statement than they are like the action of the `with` statement later in the script. Here are the generally definitional statements:
+1) Identify the statements that do the work of the script: we'll distinguish between definition and action. Statements such as `import`, `def`, and `class` are clearly definitional—they support the work but they don't do the work. Almost all other statements take action. In our example, we have four assignment statements that are more definition than action. The distinction is entirely one of intent. All statements, by definition, take an action. These actions, though, are more like the action of the def statement than they are like the action of the `with` statement later in the script. Here are the generally definitional statements:
 
     ```python
     MI= 3959 
@@ -94,7 +94,7 @@ Python scripts can be simple to write. Indeed, it's often too simple to create a
 
 The rest of the statements clearly take an action toward producing the printed results.
 
-2. Wrap the actions into a function:
+2) Wrap the actions into a function:
 
     ```python
     def analyze(): 
@@ -111,7 +111,7 @@ The rest of the statements clearly take an action toward producing the printed r
     			start= point 
     ```
 
-3. Where possible, extract literals and make them into parameters. This is often a simple movement of the literal to a parameter with a default value. From this:
+3) Where possible, extract literals and make them into parameters. This is often a simple movement of the literal to a parameter with a default value. From this:
 
     ```python
     def analyze(): 
@@ -125,7 +125,7 @@ To this:
         source_path = pathlib.Path(source_name) 
     ```
 
-4. Include the following as the only high-level action statements in the script file:
+4) Include the following as the only high-level action statements in the script file:
 
     ```python        
     if __name__ == "__main__": 
