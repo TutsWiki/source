@@ -30,7 +30,7 @@ During each pumping cycle of our heart, it contracts and relaxes. When it contra
 ![Cardiovascular Imaging with Deep Learning](/images/deep-learning-cardiovascular.png "Cardiovascular Imaging with Deep Learning")
 
 ## Measuring EF
-There are various methods available to measure LVEF, out of which [Simpson’s biplane method](http://web.stanford.edu/group/ccm_echocardio/cgi-bin/mediawiki/index.php/Left_ventricle_systolic_function) is used widely. This method has about `9.2%` average variability. The EchoMD AutoEF software by Bay Labs has an average variability of `8.2%`. Moreover, EchoMD AutoEF doesn't require any user intervention, it's fully automatic. It calculates LVEF from complete echocardiographic patient studies, automatically.
+There are various methods available to measure LVEF, out of which [Simpson’s biplane method](https://web.stanford.edu/group/ccm_echocardio/cgi-bin/mediawiki/index.php/Left_ventricle_systolic_function) is used widely. This method has about `9.2%` average variability. The EchoMD AutoEF software by Bay Labs has an average variability of `8.2%`. Moreover, EchoMD AutoEF doesn't require any user intervention, it's fully automatic. It calculates LVEF from complete echocardiographic patient studies, automatically.
 
 ## How Deep Learning Helped?
 At present Human intervention is required to calculate LVEF. Medical professionals have to go through the recorded clips. They watch them carefully and pick the best ones then they manipulate them for quantification. This is a very time consuming and prone-to-error process (as it is done by humans). The deep learning algorithms helped in this case by totally eliminating the need to do all of the above manually. The training set included 4,000,000 images from about 9,000 patients.
