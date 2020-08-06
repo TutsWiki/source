@@ -18,11 +18,11 @@ keywords:
 
 So, what is this thing called Grunt and how can it help you?
 
-From the [grunt documentation](http://gruntjs.com/):
+From the [grunt documentation](https://gruntjs.com/):
 
 > “A task-based command line build tool for JavaScript projects”
 
-This means one simple thing. Stop repeating yourself and let Grunt do stuff for you. The [Grunt ecosystem](http://gruntjs.com/plugins) is constantly growing and being improved by open source contributors.
+This means one simple thing. Stop repeating yourself and let Grunt do stuff for you. The [Grunt ecosystem](https://gruntjs.com/plugins) is constantly growing and being improved by open source contributors.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
