@@ -123,7 +123,7 @@ Output:
 
 You'll see that the 'Weather' column has a text description of the weather that was going on each hour. We'll assume it's snowing if the text description contains "Snow".
 
-pandas provides vectorized string functions, to make it easy to operate on columns containing text. There are some great [examples](http://pandas.pydata.org/pandas-docs/stable/basics.html#vectorized-string-methods) in the documentation.
+pandas provides vectorized string functions, to make it easy to operate on columns containing text. There are some great [examples](https://pandas.pydata.org/pandas-docs/stable/basics.html#vectorized-string-methods) in the documentation.
 
 ```python
 weather_description = weather_2012['Weather']
@@ -162,7 +162,7 @@ Output:
 
 ## 6.2 Use resampling to find the snowiest month
 
-If we wanted the median temperature each month, we could use the [resample()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html) method like this:
+If we wanted the median temperature each month, we could use the [resample()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html) method like this:
 
 ```python
 weather_2012['Temp (C)'].resample('M').apply(np.median).plot(kind='bar')
