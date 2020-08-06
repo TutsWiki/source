@@ -238,7 +238,7 @@ An easy to install and lightweight GitHub clone written in Go.
  
 ![GoGs](/images/GoGs.png "GoGs")
 
-# 11. [GitPrep](http://gitprep.yukikimoto.com) (Self-hosted)
+# 11. [GitPrep](https://gitprep.yukikimoto.com) (Self-hosted)
 A GitHub clone written in Perl.
 
 #### Features:
