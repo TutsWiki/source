@@ -41,9 +41,9 @@ plt.rcParams['figure.figsize'] = (15, 5)
 
 ## 1.1 Reading data from a CSV file
 
-You can read data from a CSV file using the [read_csv](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html) function. By default, it assumes that the fields are comma-separated.
+You can read data from a CSV file using the [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html) function. By default, it assumes that the fields are comma-separated.
 
-We're going to be looking some cyclist data from Montréal. Here's the [original page](http://donnees.ville.montreal.qc.ca/dataset/velos-comptage) (in French). We're using the data from 2012. Download the [bikes.csv](/bikes.csv) file to try out the below examples.
+We're going to be looking some cyclist data from Montréal. Here's the [original page](https://donnees.ville.montreal.qc.ca/dataset/velos-comptage) (in French). We're using the data from 2012. Download the [bikes.csv](/bikes.csv) file to try out the below examples.
 
 This dataset is a list of how many people were on 7 different bike paths in Montreal, each day.
 
