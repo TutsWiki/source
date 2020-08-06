@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     {{ .Hugo.Generator }}
     {{ partial "meta.html" . }}
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
     {{ partial "favicon.html" . }}
 	<meta property="og:title" content="{{ .Title }}" />
 	<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
