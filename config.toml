@@ -1,4 +1,4 @@
-baseURL = "http://tutswiki.com/"
+baseURL = "https://tutswiki.com/"
 languageCode = "en-us"
 title = "TutsWiki Beta"
 theme = "tutswiki-theme"
