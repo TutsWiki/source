@@ -21,7 +21,7 @@ keywords:
 
 It's not obvious how to deal with Unix timestamps in pandas -- it took me quite a while to figure this out. The file we're using here is a popularity-contest file I found on my system at [/var/log/popularity-contest](/popularity-contest).
 
-Here's an [explanation of how this file works](http://popcon.ubuntu.com/README).
+Here's an [explanation of how this file works](https://popcon.ubuntu.com/README).
 
 I'm going to hope that nothing in it is sensitive :)
 
