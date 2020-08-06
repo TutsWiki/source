@@ -23,7 +23,7 @@ You have to remove any trace of node on your system, and reinstall it. It will s
 echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
 . ~/.bashrc
 mkdir ~/local && ~/node-latest-install && ~/node-latest-install
-curl http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
+curl https://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
 ./configure --prefix=~/local && make install
 curl https://npmjs.org/install.sh | sh
 rm -rf ~/node-latest-install
