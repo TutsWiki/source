@@ -9,7 +9,7 @@ prev: /pandas-cookbook/chapter6
 title: Chapter 7 - Cleanup messy data
 weight: 40
 url: /pandas-cookbook/chapter7
-description: Cleanup messy data using Pandas
+description: Cleanup messy data using Pandas. Fix NaN and empty values, convert data types and put it all together.
 keywords:
   - pandas
   - cleanup
