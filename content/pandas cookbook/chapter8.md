@@ -8,7 +8,7 @@ prev: /pandas-cookbook/chapter7
 title: Chapter 8 - Parsing Unix timestamps
 weight: 45
 url: /pandas-cookbook/chapter8
-description: Parsing Unix timestamps
+description: How to parse Unix timestamps in pandas using pandas to_datetime method.
 keywords:
   - pandas
   - parsing time
