@@ -9,7 +9,7 @@ prev: /pandas-cookbook/chapter4
 title: Chapter 5 - Web scraping with Pandas
 weight: 30
 url: /pandas-cookbook/chapter5
-description: Web scraping with Pandas
+description: Web scraping with Pandas. Download weather data, clean it and plot temperature by hour of day.
 keywords:
   - pandas
   - Groupby
