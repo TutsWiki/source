@@ -8,6 +8,8 @@ next: /pandas-cookbook/chapter2
 title: Chapter 1 - Reading from a CSV
 weight: 10
 url: /pandas-cookbook/chapter1
+aliases:
+    - /Pandas-cookbook/chapter1
 description: Read data from a CSV using pandas dataframe
 keywords:
   - pandas
