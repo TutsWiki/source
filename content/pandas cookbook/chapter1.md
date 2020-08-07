@@ -10,7 +10,7 @@ weight: 10
 url: /pandas-cookbook/chapter1
 aliases:
     - /Pandas-cookbook/chapter1
-description: Read data from a CSV using pandas dataframe
+description: Read data from a CSV using pandas dataframe, filter required columns and plot those columns.
 keywords:
   - pandas
   - csv
