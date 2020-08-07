@@ -6,7 +6,7 @@ menu:
     parent: pandas
 next: /pandas-cookbook/chapter7
 prev: /pandas-cookbook/chapter5
-title: Chapter 6 - String Operations
+title: Chapter 6 - String Operations in pandas. Using resampling and plotting temperature. 
 weight: 35
 url: /pandas-cookbook/chapter6
 description: String Operations
