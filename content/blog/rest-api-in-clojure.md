@@ -4,7 +4,7 @@ linktitle: A REST API in Clojure
 title: A REST API in Clojure
 weight: 10
 url: /rest-api-in-clojure
-description: A newbie friendly introduction to REST API in Clojure.
+description: A newbie friendly introduction to REST API in Clojure. Project configuration and request handler.
 keywords:
   - clojure
   - restapi
