@@ -4,7 +4,7 @@ linktitle: Yet another lousy monad tutorial
 title: Yet another lousy monad tutorial
 weight: 10
 url: /yet-another-lousy-monad-tutorial
-description: I'm not a big fan of monads, but I understand them.
+description: I'm not a big fan of monads, but I understand them. Let me try to write a monad tutorial that would've helped my past self understand what the fuss was about.
 keywords:
   - monad
   - fp
