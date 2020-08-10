@@ -1,7 +1,7 @@
 baseURL = "https://tutswiki.com/"
 languageCode = "en-us"
 title = "TutsWiki Beta"
-theme = "tutswiki-theme"
+theme = "tutswiki-theme-v2"
 disqusShortname = "tutswiki"
 # For search functionnality
 [outputs]
