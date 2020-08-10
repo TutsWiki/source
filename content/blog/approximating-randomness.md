@@ -4,10 +4,7 @@ linktitle: Approximating Randomness
 title: Approximating Randomness
 weight: 10
 url: /approximating-randomness
-description: Generating random numbers from computers is essential to the development
-of certain kinds of software. Anything from modelling the environment, to a
-lottery machine, to determining the value of loot in a chest in an RPG, will
-require random number generation.
+description: Generating random numbers from computers is essential to the development of certain kinds of software. Anything from modelling the environment, to a lottery machine, to determining the value of loot in a chest in an RPG, will require random number generation.
 keywords:
   - random
   - programming
