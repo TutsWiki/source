@@ -90,5 +90,7 @@ PRNG's. It is because of their convenience, there is no need for any extra
 devices, or input, all it needs is a sequence of numbers that it later
 transforms into a pseudo-random sequence.
 
+{{% notice info %}}
 1: Link to the implementation of Mersenne Twister. This is the latest version from the original creators: 
 http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c
+{{% /notice %}}
