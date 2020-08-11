@@ -4,7 +4,7 @@ build:
     - arjen/hugo-build:
         version: "0.72.0"
         config: config.toml
-        flags: --buildDrafts=true
+        flags: --buildDrafts=true --minify
 deploy:
   steps:
     - install-packages:
