@@ -87,23 +87,23 @@ One more thing:
 To add dependencies, add a `deps` section in its provider. Example:
 
 ```js
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: initialize,
+providers: [{
+  provide: APP_INITIALIZER,
+  useFactory: initialize,
 	deps: [
-        HttpClient,
-		UserInfoService,
-        ConfigService
-      ],
-    multi: true
-  }],
+      HttpClient,
+      UserInfoService,
+      ConfigService
+    ],
+  multi: true
+}],
 ```
 
 and add them as parameter to our initialize method.
 
 ```js
 function initialize(http: HttpClient, userInfoService: UserInfoService, config: ConfigService) {
-	return (): Promise<boolean> => {
+    return (): Promise<boolean> => {
     return new Promise<boolean>((resolve: (a: boolean) => void): void => {
       resolve(true);
     });
