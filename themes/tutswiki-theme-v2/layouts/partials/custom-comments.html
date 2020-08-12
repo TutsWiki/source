@@ -1,11 +1,3 @@
 <!-- import your comments system 
 {{ template "_internal/disqus.html" . }}
 -->
-<div class="notices note"><p>
-Help us improve this content by {{ if .Site.Params.editURL }}
-	<a class="github-link" title='{{T "Edit-this-page-footer"}}' href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank">
-	  <span id="top-github-link-text">{{T "Edit-this-page-footer"}}</span>
-	  <i class="fas fa-code-branch"></i>
-	</a>
-{{ end }}</p>
-</div>

@@ -1,10 +1,15 @@
         {{ if .Params.chapter }}
             </div> <!-- end chapter-->
         {{ end }}
+		{{if ne .File.LogicalName "_index.md"}}
+		<div class="notices note">
+			<p>Help us improve this content by 
+			<a class="github-link" title='{{T "Edit-this-page-footer"}}' href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><span id="top-github-link-text">{{T "Edit-this-page-footer"}}</span><i class="fas fa-code-branch"></i></a></p>
+		</div>
+		{{ end }}
         </div> 
         {{ partial "custom-comments.html" . }}
       </div>
-
     <div id="navigation">
         <!-- Next prev page -->
         {{ $currentNode := . }}
