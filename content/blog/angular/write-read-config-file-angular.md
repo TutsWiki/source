@@ -1,5 +1,5 @@
 ---
-date: 2017-06-05
+date: 2020-08-12
 linktitle: Writing and Reading config files in Angular
 title: Writing and Reading config files in Angular
 weight: 10
@@ -32,15 +32,22 @@ Then where to store your config?
 
 One thing is certain - store them outside of your code. But where? One option can be to have a static json file in assets or dist and use it to get and set the configurations. But this sounds hacky.
 
-So let's move to our actual solution which is - **APP_INITIALIZER**
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+So let's move to our actual solution which is:
+
+## APP_INITIALIZER
 
 Sounds awesome right? It will specify a `factory` and that will return a `promise`, the `promise` will load the config for the application. After loading the configs you can resolve the `promise`. It looks like this:
-
-`useFactory` will have the function which will return a function which will return a promise.
-
-`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
-
-Let's take an example:
 
 ```js
 import { APP_INITIALIZER } from '@angular/core';
@@ -67,11 +74,17 @@ function initialize() {
 export class AppModule { }
 ```
 
-In this code sample we have added APP_INITIALIZER to app.module.ts. It will call the initialize method. You can use this method to load configurations and initialize your app. As told above, this will return a promise. You can replace resolve(true) with your code or can write a new promise.
+`useFactory` will have the function which will return a function which will return a promise.
 
-One more thing - how to add dependencies in this method?
+`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
 
-To add dependencies, add a deps section in its provider. Example:
+In this code sample we have added `APP_INITIALIZER` to `app.module.ts`. It will call the initialize method. You can use this method to load configurations and initialize your app. As told above, this will return a `promise`. You can replace `resolve(true)` with your code or can write a new `promise`.
+
+One more thing:
+
+### How to add dependencies in this method?
+
+To add dependencies, add a `deps` section in its provider. Example:
 
 ```js
   providers: [{
