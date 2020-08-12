@@ -208,10 +208,6 @@ Interfaces are a declarative entity, they do not set any boundaries; simply asse
 
 It should be understood that the use of both tools makes sense only when building and using relatively large OOP systems - frameworks and libraries, in small programs they can only confuse and complicate the code with unnecessary abstractions.
 
-## Help improve this content
-
-Please fix any typos or add more insights by [editing this page](https://github.com/TutsWiki/source/edit/master/content/blog/abstract-classes-and-interfaces-in-python.md).
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"

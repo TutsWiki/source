@@ -323,9 +323,6 @@ Yeah, the whole program with connection pooling, JSON de/encoding in roughly 90 
 
 To sum it up: Clojure is fun, concise, and very powerful. Together with the excellent Java integration it ranks very high on my “languages I adore” list.
 
-## Help improve this content
-Feel free to <a href="https://github.com/TutsWiki/source/edit/master/content/blog/rest-api-in-clojure.md">edit this page</a> to fix any typos or add more insights.
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"

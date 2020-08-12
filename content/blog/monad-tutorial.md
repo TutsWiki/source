@@ -114,9 +114,6 @@ Monads first became popular as a nice way to deal with IO instructions in a pure
 
 Some people think that monads are about side effects, like some sort of escape hatch for Haskell. That's wrong, because you could always do IO without monads, and in fact the first version of Haskell didn't use them. In any case, only two of my five examples involve side effects. Monads are more like a design pattern for composing functions, which shows up in many places. I think the jury is still out on whether imperative/OO languages need to use monads explicitly, but it might be useful to notice them when they appear in your code implicitly.
 
-## Help improve this content
-Feel free to <a href="https://github.com/TutsWiki/source/edit/master/content/blog/monad-tutorial.md">edit this page</a> to fix any typos or add more insights.
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
