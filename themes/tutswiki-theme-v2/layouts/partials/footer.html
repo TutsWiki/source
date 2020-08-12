@@ -1,7 +1,7 @@
         {{ if .Params.chapter }}
             </div> <!-- end chapter-->
         {{ end }}
-		{{ if and (ne .File.LogicalName "_index.md") (ne .Kind "taxonomy") }}
+		{{ if .Params.keywords }}
 		<div class="notices note">
 			<p>Help us improve this content by 
 			<a class="github-link" title='{{T "Edit-this-page-footer"}}' href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><span id="top-github-link-text">{{T "Edit-this-page-footer"}}</span><i class="fas fa-code-branch"></i></a></p>
