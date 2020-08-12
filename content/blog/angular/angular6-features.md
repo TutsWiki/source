@@ -18,6 +18,7 @@ keywords:
   - material
   - release notes
   - components
+tags: [angular]
 ---
 <meta property="og:image" content="https://tutswiki.com/images/Angular6.png"/>
 [Angular 6](https://angular.io/) is out with all new features. It is a major release in which Angular team has synchronized many of the important framework packages to make most out of cross compatibility. All the major framework packages like [@angular/core](https://angular.io/api/core), [@angular/compiler](https://angular.io/api/core/Compiler), [@angular/common](https://angular.io/api/common) etc., are reworked and released as version 6.0.0. Below is the list of major changes in Angular 6, let's explore them one by one.
