@@ -46,6 +46,17 @@ Now we have `config.json` but we will need a place for it. One option is to have
 
 So let's move to our actual solution which is:
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## APP_INITIALIZER
 
 Sounds awesome right? It will specify a `factory` and that will return a `promise`, the `promise` will load the config for the application. After loading the configs you can resolve the `promise`. It looks like this:
