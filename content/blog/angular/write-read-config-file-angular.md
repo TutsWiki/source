@@ -18,11 +18,15 @@ tags: [angular]
 <meta name="twitter:title" content="Writing and Reading config files in Angular" />
 <meta name=”twitter:description” content="Learn how to write and read config files in Angular using APP_INITIALIZER." />
 
-Ever wondered where to store configurations in your code? The most common case is to store environment configurations which are required when you have multiple environments - local, dev, qa, uat and prod. Well this article will tell you how to write and read config files in Angular. There is a defined place for storing them and you should make most use of it. But before going to that let's check out the wrong places to store the configs.
+Every app has some configurations to load. The most common is environment configuration which are required when you have multiple environments - local, dev, qa, uat and prod. Well this article will tell you where to store configurations and how to read them in Angular. 
 
-## Environment.ts
+## Storing config in Angular
 
-Wrong!
+Let's say we need to store the baseUrl of our app. Where do you think this should be added? There is a defined place for storing config in Angular and you should make most use of it. But before going to that let's check out the wrong places to store the configs.
+
+### Environment.ts
+
+**Wrong!**
 
 I know this comes as first option in our mind but can you see "config" in it's name? No, right? Cause it was never meant to store configuration in this file. The sole purpose of this is to tell the run time what version of the code you want to run.
 
@@ -30,24 +34,27 @@ Now you may argue that we can create different environment.ts files for differen
 
 Then where to store your config?
 
-One thing is certain - store them outside of your code. But where? One option can be to have a static json file in assets or dist and use it to get and set the configurations. But this sounds hacky.
+One thing is certain that we need a static json file to store our configs so let's first create a config file and name it `config.json`. It will look something like this:
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-9878675755379402"
-     data-ad-slot="5842766387"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+```js
+{
+    "baseUrl": "https://tutswiki.com/"
+}
+```
+
+Now we have `config.json` but we will need a place for it. One option is to have it in `assets` or `dist` and use it to get and set the configurations. But is this recommended? **No!**
 
 So let's move to our actual solution which is:
 
 ## APP_INITIALIZER
 
 Sounds awesome right? It will specify a `factory` and that will return a `promise`, the `promise` will load the config for the application. After loading the configs you can resolve the `promise`. It looks like this:
+
+`useFactory` will have the function which will return a function which will return a promise.
+
+`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
+
+Let's take an example.
 
 ```js
 import { APP_INITIALIZER } from '@angular/core';
@@ -74,40 +81,70 @@ function initialize() {
 export class AppModule { }
 ```
 
-`useFactory` will have the function which will return a function which will return a promise.
-
-`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
-
-In this code sample we have added `APP_INITIALIZER` to `app.module.ts`. It will call the initialize method. You can use this method to load configurations and initialize your app. As told above, this will return a `promise`. You can replace `resolve(true)` with your code or can write a new `promise`.
-
-One more thing:
+In this code sample we have added `APP_INITIALIZER` to `app.module.ts`. It will call the `initialize` method. You can use this method to load configurations and initialize your app. As told above, this will return a promise. You can replace `resolve(true)` with your code or can write a new `promise`.
 
 ### How to add dependencies in this method?
 
-To add dependencies, add a `deps` section in its provider. Example:
+To add dependencies, add a `deps` section in its `provider`. Example:
 
 ```js
 providers: [{
   provide: APP_INITIALIZER,
   useFactory: initialize,
-	deps: [
+  deps: [
       HttpClient,
-      UserInfoService,
+	  UserInfoService,
       ConfigService
     ],
   multi: true
 }],
 ```
-
-and add them as parameter to our initialize method.
+  
+and add them as parameter to our `initialize` method.
 
 ```js
 function initialize(http: HttpClient, userInfoService: UserInfoService, config: ConfigService) {
-    return (): Promise<boolean> => {
+	return (): Promise<boolean> => {
     return new Promise<boolean>((resolve: (a: boolean) => void): void => {
       resolve(true);
     });
 };
 ```
 
-Hope this will guide you on how to read and write config in Angular.
+## Reading config file in Angular
+
+First we will need a service to save the configs we are getting from `config.json` so let's create a `ConfigService`.
+
+```js
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ConfigService {
+  baseUrl: string;
+  constructor() { }
+}
+```
+
+We have already added this in `deps` of `APP_INITIALIZER`.
+
+Now let's use `initialize` method to read our config file and set the necessary details for our app. 
+
+```js
+function initialize(http: HttpClient, config: ConfigService): (() => Promise<boolean>) {
+  return (): Promise<boolean> => {
+    return new Promise<boolean>((resolve: (a: boolean) => void): void => {
+       http.get('./config.json')
+         .pipe(
+           map((x: ConfigService) => {
+             config.baseUrl = x.baseUrl;
+             resolve(true);
+           })
+         ).subscribe();
+    });
+  };
+}
+```
+
+And that's how we deal with config in Angular.
