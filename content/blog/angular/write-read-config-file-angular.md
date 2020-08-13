@@ -16,19 +16,19 @@ tags: [angular]
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki.png"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Writing and Reading config files in Angular" />
-<meta name=”twitter:description” content="Learn how to write and read config files in Angular using APP_INITIALIZER." />
+<meta name=â€twitter:descriptionâ€ content="Learn how to write and read config files in Angular using APP_INITIALIZER." />
 
-Every app has some configurations to load. The most common is environment configuration which are required when you have multiple environments - local, dev, qa, uat and prod. Well this article will tell you where to store configurations and how to read them in Angular. 
+Every app has some configurations to load. The most common is environment configurations which are required when you have multiple environments - local, dev, qa, uat and prod. Well this article will tell you where to store configurations and how to read them in Angular. 
 
 ## Storing config in Angular
 
-Let's say we need to store the baseUrl of our app. Where do you think this should be added? There is a defined place for storing config in Angular and you should make most use of it. But before going to that let's check out the wrong places to store the configs.
+Let's say we need to store the baseUrl of our app. Where do you think this should be added? There is a defined place for storing config in Angular and you should make most use of it. But before going to that let's check out the wrong place to store the configs.
 
 ### Environment.ts
 
 **Wrong!**
 
-I know this comes as first option in our mind but can you see "config" in it's name? No, right? Cause it was never meant to store configuration in this file. The sole purpose of this is to tell the run time what version of the code you want to run.
+I know this comes as first option in our mind but can you see "config" in it's name? No, right? Cause it was never meant to store configurations in this file. The sole purpose of this is to tell the run time what version of the code you want to run.
 
 Now you may argue that we can create different environment.ts files for different versions, yes you can but again this is not the purpose of this file.
 
@@ -59,11 +59,7 @@ So let's move to our actual solution which is:
 
 ## APP_INITIALIZER
 
-Sounds awesome right? It will specify a `factory` and that will return a `promise`, the `promise` will load the config for the application. After loading the configs you can resolve the `promise`. It looks like this:
-
-`useFactory` will have the function which will return a function which will return a promise.
-
-`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
+Sounds awesome right? It will specify a `factory` and that will return a `promise`, the `promise` will load the config for the application. After loading the configs you can resolve the `promise`.
 
 Let's take an example.
 
@@ -91,6 +87,9 @@ function initialize() {
 })
 export class AppModule { }
 ```
+`useFactory` will have the function which will return a function which will return a promise.
+
+`multi: true` will allow to have multiple instances of the provider. They are all able to run simultaneously but the code will be stopped here until we get all the promises resolved.
 
 In this code sample we have added `APP_INITIALIZER` to `app.module.ts`. It will call the `initialize` method. You can use this method to load configurations and initialize your app. As told above, this will return a promise. You can replace `resolve(true)` with your code or can write a new `promise`.
 
