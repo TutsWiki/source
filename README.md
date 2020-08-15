@@ -5,6 +5,10 @@ Collaborative tutorials for the internet
 
 ![collaborate](https://github.com/TutsWiki/source/blob/master/static/img/collaborate.png "Collaborate")
 
+# Video Tutorials
+- [Git Fundamentals](https://www.youtube.com/playlist?list=PLndX_e9bdotV7vq2NoTwR0OPCNaA9jBEN)
+- [Linux](https://www.youtube.com/playlist?list=PLndX_e9bdotUfb2CczZRcQmnCFPsfQZpO)
+
 # Tutorials
 - [Pandas Cookbook](https://tutswiki.com/pandas-cookbook/)
 
