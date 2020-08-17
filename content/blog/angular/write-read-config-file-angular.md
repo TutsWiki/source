@@ -4,7 +4,7 @@ linktitle: Writing and Reading config files in Angular
 title: Writing and Reading config files in Angular
 weight: 10
 url: /read-write-config-files-in-angular
-description: Learn how to write and read config files in Angular using configparser module.
+description: Learn how to write and read config files in Angular using APP_INITIALIZER.
 keywords:
   - angular
   - config
