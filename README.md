@@ -26,12 +26,15 @@ Collaborative tutorials for the internet
 - [Angular](https://tutswiki.com/tags/angular/)
   - [Angular 6 Features](https://tutswiki.com/angular6-features/)
   - [Writing and Reading config files in Angular](https://tutswiki.com/read-write-config-files-in-angular/)
-  
+
+- [Linux](https://tutswiki.com/tags/linux/)
+  - [How to install software in Linux](https://tutswiki.com/install-software-linux-yum-rpm-apt-dpkg/)
+  - [noprocrast](https://tutswiki.com/noprocrast/)
+  - [sudo node command not found](https://tutswiki.com/how-to-fix-sudo-node-command-not-found-error/)
+
 - [Other](https://tutswiki.com/blog/)
   - [Approximating Randomness](https://tutswiki.com/approximating-randomness/)
   - [Grunt Tutorial with Live Example](https://tutswiki.com/grunt-tutorial-example/)
-  - [noprocrast](https://tutswiki.com/noprocrast/)
-  - [sudo node command not found](https://tutswiki.com/how-to-fix-sudo-node-command-not-found-error/)
   - [monad tutorial](https://tutswiki.com/yet-another-lousy-monad-tutorial/)
   - [Ruby enumerable](https://tutswiki.com/ruby-enumerable/)
   - [Rest API in clojure](https://tutswiki.com/rest-api-in-clojure/)
