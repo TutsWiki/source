@@ -6,9 +6,13 @@ weight: 10
 url: /install-software-linux-yum-rpm-apt-dpkg
 description: In this tutorial we'll be covering packages, package managers and how to find, install and remove software for most popular Linux distributions. RPM/DEB based.
 keywords:
-  - noprocrast
-  - productivity
-  - procastination
+  - install
+  - yum
+  - rpm
+  - apt
+  - dpkg
+  - software
+  - linux
 tags: [Linux] 
 ---
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
