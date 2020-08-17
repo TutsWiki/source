@@ -9,6 +9,7 @@ keywords:
   - noprocrast
   - productivity
   - procastination
+tags: [Linux]  
 ---
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
