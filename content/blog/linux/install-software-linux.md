@@ -20,13 +20,13 @@ tags: [Linux]
 <meta name="twitter:title" content="How to install software in Linux (RPM/DEB systems)" />
 <meta name=”twitter:description” content="In this tutorial we'll be covering packages, package managers and how to find, install and remove software for most popular Linux distributions. RPM/DEB based." />
 
-In this tutorial we'll be covering packages, package managers and how to find, install and remove software for most popular Linux distributions.
+In this tutorial, we'll be covering packages, package managers and how to find, install and remove software for most popular Linux distributions.
 
 ## Package
-Typically when you install software in a Linux system you do so with a package. A package is just a collection of files that make up an application. Addtionaly, a package contains data about the application as well as any steps required to succesfully install and remove that applciation. 
+Typically when you install software in a Linux system you do so with a package. A package is just a collection of files that make up an application. Additionally, a package contains data about the application as well as any steps required to successfully install and remove that application. 
 
 ### Data / Metadata
-The data or metadata that is contained within a package can include such information as the description of the application, the version and the list of dependencies that or other package that this partiicular application needs in order to function.
+The data or metadata that is contained within a package can include such information as the description of the application, the version and the list of dependencies or other packages that this particular application needs in order to function.
 
 ## Package Manager
 A package manager is used to install, upgrade and remove packages. The package manager uses a package's metadata to automatically install any required dependencies. Package managers keep track of what files belong to what packages, what packages are installed and what versions of those packages are installed.
@@ -41,9 +41,9 @@ Here's a list of distributions that are based on the RPM package format. RPM sta
 - Scientific Linux
 
 ### yum
-The `yum` command line utilitiy is a package management program for those Linux distributions that use rpm packages. 
+The `yum` command-line utility is a package management program for those Linux distributions that use `rpm` packages. 
 
-**Note:** Installing or removing software requires root or super user privileges.
+**Note:** Installing or removing software requires `root` or `superuser` privileges.
 
 #### Find packages to install using yum
 ```bash
@@ -70,7 +70,7 @@ yum remove [package]
 ```
 
 ### rpm
-In addition to the yum command you can also use the rpm command to interact with the package manager.  
+In addition to the `yum` command, you can also use the `rpm` command to interact with the package manager.  
 
 #### List installed packages using rpm
 ```bash
@@ -94,7 +94,7 @@ rpm -ql [package]
 rpm -ivh package.rpm
 ```
 
-#### Erase(uninstall) pacakge using rpm
+#### Erase (uninstall) pacakge using rpm
 ```bash
 rpm -e [package]
 ```
@@ -111,14 +111,14 @@ rpm -e [package]
 </script>
 
 ## Installing Software on DEB Distros
-Another popular package format is the debian package format i.e. DEB. In addition to Debian, distributions like Mint and Ubuntu use deb packages.
+Another popular package format is the Debian package format. In addition to Debian, distributions like Mint and Ubuntu use deb packages.
 
 - Debian
 - Linux Mint
 - Ubuntu
 
 ### apt - Advanced Packacking Tool
-The debian based distributions use a package manager called apt (advanced packaging tool). apt is comprised of a few small utilities with the two most commonly used being `apt-cache` and `apt-get`.
+The Debian-based distributions use a package manager called `apt` (advanced packaging tool). `apt` is comprised of a few small utilities with the two most commonly used being `apt-cache` and `apt-get`.
 
 #### Find packages to install using apt-cache
 ```bash
@@ -146,7 +146,7 @@ apt-cache show [package]
 ```
 
 ### dpkg
-In addition to the app utilities you can use the dpkg command to interact with the package manager.
+In addition to the app utilities, you can use the dpkg command to interact with the package manager.
 
 #### List installed packages using dpkg
 ```bash
@@ -169,9 +169,9 @@ dpkg -i package.deb
 ```
 
 {{% notice tip %}}
-Watch the video for live examples of searching, installing and removing some actual software like Dropbox using above mentioned methods.
+Watch the video for live examples of searching, installing and removing some actual software like Dropbox using the above mentioned methods.
 {{% /notice %}}
 {{< youtube K3tdWIJhg8I >}}
 
 ## Summary
-Packages are used to install software on Linux system. You can manipulate packages with a package manager. Two of the most popular package formats are RPM and Debian. For RPM based distributions use the yum and rpm commands to manage packages. For debian based distributions use apt and dpkg to manage packages.
+Packages are used to install software on Linux system. You can manipulate packages with a package manager. Two of the most popular package formats are RPM and Debian. For RPM-based distributions use the `yum` and `rpm` commands to manage packages. For Debian-based distributions use `apt` and `dpkg` to manage packages.
