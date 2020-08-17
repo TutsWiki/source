@@ -48,8 +48,6 @@ The `yum` command line utilitiy is a package management program for those Linux 
 #### Find packages to install using yum
 ```bash
 yum search string
-export
-ls -l
 ```
 
 #### Display information about a package using yum
