@@ -9,6 +9,7 @@ keywords:
   - sudo
   - node
   - debugging
+tags: [Linux]  
 ---
 
 Getting permission errors when installing a module?
