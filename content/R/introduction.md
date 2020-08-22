@@ -11,6 +11,7 @@ url: /r/introduction
 description: A gentle introduction to R programming language.
 keywords:
   - R
+tags: [R]  
 ---
 ## What is R?
 R is a programming language that is gaining its importance in software development, machine learning and data sciences. R is free and open source software under GNU General public license and pre-compiled binary versions and libraries are also provided for various operating systems like MAC, Linux and Windows. R provides a software environment for Statistical Modeling of data, Exploratory data analysis, Graphics Representation and Reproducible Researches.
