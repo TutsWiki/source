@@ -14,7 +14,7 @@ keywords:
 tags: [R]  
 ---
 ## What is R?
-R is a programming language that is gaining its importance in software development, machine learning and data sciences. R is free and open source software under GNU General public license and pre-compiled binary versions and libraries are also provided for various operating systems like MAC, Linux and Windows. R provides a software environment for Statistical Modeling of data, Exploratory data analysis, Graphics Representation and Reproducible Researches.
+R is a programming language that is gaining its importance in software development, machine learning and data science. R is free and open source software under GNU General public license and pre-compiled binary versions and libraries are also provided for various operating systems like MAC, Linux and Windows. R provides a software environment for Statistical Modeling of data, Exploratory Data Analysis, Graphics Representation and Reproducible Researches.
 
 ## Evolution of R
 R is considered to be the dialect of S language. S language was founded in 1976 by John Chambers and later on at Bell Laboratories as an Internal Statistical Analysis Environment with its implementation of Fortran Libraries. Earlier versions of the language failed in containing various useful functions for Statistical Modeling which led to the development of R language. R Language was founded in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and is currently developed by R Development Core Team.
@@ -22,21 +22,20 @@ R is considered to be the dialect of S language. S language was founded in 1976 
 ## Features of R
 
 1. R is a well developed, simple and most interactive programming language which includes conditional and looping statements, user defined functions and libraries.
-2. R contains a variety of atomic data types like Numeric, Characters, Logical, Integer and Complex, thereby providing integrated and coherent collection of tools for data analysis.
+2. R contains a variety of atomic data types like Numeric, Characters, Logical, Integer and Complex and thereby providing integrated and coherent collection of tools for data analysis.
 3. R provides a suite of operators for manipulations of array, data frames, vectors, matrices, strings and lists.
 4. Functionality is divided into various modular packages available in R.
 5. Graphics capabilities are more sophisticated and contain more Stat Packages for Base plotting system, Lattice systems and ggplots systems.
-6. R has its very largely Active, and Vibrant User Community.
+6. R has its very largely active and vibrant user community.
 
 ## Overview of its applications
-R has its majority of applications in the field of data sciences and machine learning algorithms. Some of its applications include:
+R has its majority of applications in the field of data science and machine learning algorithms. Some of its applications include:
 
-- Descriptive analysis of data
-- Exploratory data analysis
+- Descriptive Analysis 
+- Exploratory Data Analysis
 - Statistical Inferences
 - Predictive Modeling
 - Causal and Random Analysis
-- Mechanistic Analysis and Reproducible Research.
+- Mechanistic Analysis and Reproducible Research
 
-As a conclusion, R is proving to be world’s most widely used Statistical Programming Language. It is
-always the first choice of Data Scientists and also deployed in various critical Business Applications.
+As a conclusion, R is proving to be world’s most widely used Statistical Programming Language. It is always the first choice of Data Scientists and also deployed in various critical Business Applications.
