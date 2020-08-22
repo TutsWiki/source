@@ -22,7 +22,7 @@ R is considered to be the dialect of S language. S language was founded in 1976 
 
 1. R is a well developed, simple and most interactive programming language which includes conditional and looping statements, user defined functions and libraries.
 2. R contains a variety of atomic data types like Numeric, Characters, Logical, Integer and Complex, thereby providing integrated and coherent collection of tools for data analysis.
-3. R provides a suite of operators for manipulations of array, data frames, vectors, matrices, stringsand lists.
+3. R provides a suite of operators for manipulations of array, data frames, vectors, matrices, strings and lists.
 4. Functionality is divided into various modular packages available in R.
 5. Graphics capabilities are more sophisticated and contain more Stat Packages for Base plotting system, Lattice systems and ggplots systems.
 6. R has its very largely Active, and Vibrant User Community.
