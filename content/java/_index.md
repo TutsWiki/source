@@ -5,7 +5,7 @@ pre: "<b></b>"
 chapter: true
 ---
 
-### Java Tutorials
+### Java
 
 # Introduction
 
