@@ -20,12 +20,12 @@ tags: [Android, Linux]
 <meta name=”twitter:description” content="Find out how to connect your Linux machine to internet using Android's data via USB, WiFi or Bluetooth." />
 
 ## What is Tethering?
-It's been over 30 years, since the World Wide Web was introduced to the world. Over time, the internet took its toll and now has roughly around 45 million web pages compared to 10,000 websites earlier. We really do have come a long way.
+It's been over 30 years since the World Wide Web was introduced to the world. Over time, the internet took its toll and now has roughly around 45 million web pages compared to 10,000 websites earlier. We really do have come a long way.
 
 Emerging from the primitive world of 2G signals we are now living in the era where mostly every device has an internet connection and if not of its own, gets one from another system. The technical term for sharing your phone’s internet connection to another phone or system is known as Tethering.
 
 ## Tethering on Linux
-The best part about Android Tethering is that your cell phone is completely compatible with your Linux Desktop. Tethering the internet through your phone to your Linux desktop can be done mainly via three simple ways.
+Tethering the internet through your phone to your Linux desktop can be done mainly via three simple ways.
 
 Let's check them out!
 
@@ -36,7 +36,7 @@ The connection is automatically established by plugging in your USB cable to bot
 
 ![usb tether connect device](/images/usb_tether.png "Notification on connecting Android to USB")
 
-Now, Under the `Settings` Application in your phone select `Wireless and Network` (or `Network and Internet`).
+Now, Under the `Settings` in your phone select `Wireless and Network` (or `Network and Internet`).
 Click on the `More` tab and choose `Tethering & Portable Hotspot` and `Enable USB Tethering`. On the top right corner of your Linux machine, bring down the `Network Connections` toolbar as shown, where a tab `Ethernet Connected` is visible.
 
 ![usb tether Ethernet Connected](/images/usb_tether_2.png "Ethernet Connected")
@@ -52,7 +52,7 @@ Click on `Profile 1`
 ![usb tether IP address](/images/usb_tether_4.png "IP address")
 
 ### Wifi Tethering
-Following the same process as mentioned above, in your Android phone, open `Settings` and go to `Network & Internet`. Next, select `Mobile hotspot and Tethering` and turn on the `Mobile Hotspot`. In your Linux system, again under the `Network Connections`, turn `Wifi On`
+Following the same process as mentioned above, in your Android phone, open `Settings` and go to `Network & Internet`. Next, select `Mobile Hotspot and Tethering` and turn on the `Mobile Hotspot`. In your Linux system, again under the `Network Connections`, turn `Wifi On`
 
 ![wifi tether turn on wifi](/images/wifi_tether.png "Turn On Wifi")
 
