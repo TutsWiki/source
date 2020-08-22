@@ -1,6 +1,6 @@
 ---
 title: Pandas Cookbook
-weight: 5
+weight: 14
 pre: "<b></b>"
 chapter: true
 ---
