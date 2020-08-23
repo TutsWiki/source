@@ -28,7 +28,8 @@ To create object of generic class or methods we follow the below syntax:
 
 Here `Type` can be replaced with any data type but remember that it cannot have primitive data types like int, double, etc. It should be of object type like `Integer`, `Double`, `String`, `Float`, `Employee` etc.
 
-There is a general convention for this 'Type' parameter like:
+There is a general convention for this `Type` parameter:
+
 - T is used for type.
 - E is used for an element.
 - N is used for numbers.
