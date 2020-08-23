@@ -46,7 +46,7 @@ public class test {
   public static void main(String[] args) {
     test Obj = new test();
     String name[] = new String[] {
-	  "ravi",
+	  "sachin",
       "virat",
       "dhoni"
     };
@@ -63,7 +63,7 @@ public class test {
 
 Output: 
 ```bash
-ravi
+sachin
 virat
 dhoni
 10
