@@ -216,7 +216,7 @@ Three
 
 The above code worked well for both types of lists i.e. integer and string. This is the advantage of unbounded wildcard
 
-### Lower bound wildcards
+### Lower-bound Wildcards
 
 We use lower bound wildcards when we want to work on a specific type or superclass of that type like integers and its superclass numbers. It is used by declaring wildcard symbol `?` followed by the `super` keyword. Consider the following example:
 
