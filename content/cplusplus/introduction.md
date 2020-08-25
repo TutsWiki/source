@@ -8,7 +8,7 @@ next: /cplusplus/installation
 title: Introduction
 weight: 25
 url: /cplusplus/introduction
-description: A gentle introduction to C++ programming language.
+description: A gentle introduction to C++ programming language. History, Popularity and Applications.
 keywords:
   - cplusplus
 tags: [C++]  
