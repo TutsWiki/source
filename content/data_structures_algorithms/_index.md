@@ -1,5 +1,5 @@
 ---
-title: Data Structures & Algorithms
+title: DSA
 weight: 15
 pre: "<b></b>"
 chapter: true
