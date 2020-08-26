@@ -1,3 +1,6 @@
+---
+description: Programming guides on Python, Java, R, C++, Linux, Clojure, NodeJS, GitHub and more.
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
