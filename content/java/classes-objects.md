@@ -76,7 +76,7 @@ We use the `.` operator in Java to access methods or variables of the class via 
 ### Object Creation
 The line `Car myCar = new Car(10);` creates a new Car object out of the Car class blueprint and initialises it or we can say myCar is an object of the type Car. During object creation, when we use the above syntax, it instructs the compiler to create a new object of the class Car by calling a special method which is called as the Constructor of the class. The constructor of the class is a function which has no return type, needs to have the same name as that of the class and is invoked when an object of the class is created. The main purpose of this is to instantiate the data members of the object. A constructor can be parameterized such that we can pass parameters to it to instantiate the data members with specific values rather than default ones. 
 
-Below is an example of parametrized vs non-parameterized constructor. If we do not declare this method in the class, the compiler automatically assigns a non-parameterized constructor to the class. Constructors can also be overloaded according to Java principles. We will learn more about Constructors in next section.
+Below is an example of parametrized vs non-parameterized constructor. If we do not declare this method in the class, the compiler automatically assigns a non-parameterized constructor to the class. Constructors can also be overloaded according to Java principles. We will learn more about [Constructors](/java/constructors/) in the next section.
 
 ```java
 //parameterised
