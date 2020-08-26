@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Description of the site, will be used in meta information
   description = "TutsWiki :: Collaborative tutorials for the internet"
   # Shows a checkmark for visited pages on the menu
-  showVisitedLinks = true
+  showVisitedLinks = false
   # Disable search function. It will hide search bar
   disableSearch = false
   # Javascript and CSS cache are automatically busted when new version of site is generated. 
@@ -29,7 +29,7 @@ home = [ "HTML", "RSS", "JSON"]
   # A title for shortcuts in menu is set by default. Set this to true to disable it. 
   disableShortcutsTitle = false
   # When using mulitlingual website, disable the switch language button.
-  disableLanguageSwitchingButton = false
+  disableLanguageSwitchingButton = true
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
@@ -37,7 +37,7 @@ home = [ "HTML", "RSS", "JSON"]
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-tags'></i> Tags"
-url = "/tags"
+url = "/tags/"
 weight = 5
   
 [[Languages.en.menu.shortcuts]]
@@ -48,7 +48,7 @@ weight = 10
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
-url = "https://github.com/TutsWiki/source/graphs/contributors"
+url = "https://github.com/TutsWiki/source/graphs/contributors/"
 weight = 30
 
 [[Languages.en.menu.shortcuts]]
