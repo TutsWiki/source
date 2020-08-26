@@ -17,7 +17,18 @@ keywords:
 tags: [Java]  
 ---
 ## Object Initialization
-We know that in Java classes are blueprints and objects are the actual entities created by following the design of the blueprint. To create an object we need to initialize it or in simpler terms assign resources like memory, initialize instance variables, load methods, etc. Without doing this Java assigns the object a null value on the declaration of the object. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types. The primitive types are a special case and are not mapped to null values on their declaration. They are assigned the following default values:
+We know that in Java classes are **blueprints** and objects are the **actual entities** created by following the design of the blueprint. To create an object we need to initialize it or in simpler terms assign resources like memory, initialize instance variables, load methods, etc. Without doing this Java assigns the object a null value on the declaration of the object. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types. The primitive types are a special case and are not mapped to null values on their declaration. They are assigned the following default values:
+
+| Type    | Default Value |
+|---------|---------------|
+| boolean | false         |
+| byte    | (byte) 0      |
+| short   | (short) 0     |
+| int     | 0             |
+| long    | 0L            |
+| char    | \u0000        |
+| float   | 0.0f          |
+| double  | 0.0d          |
 
 ```java
 public class square {
@@ -46,7 +57,7 @@ As mentioned above constructors can be considered as special methods which have 
 4. Have the same name as that of the class
 5. Are not members of the class and hence cannot be inherited
 
-There are different types of constructors. Let’s see them one by one. 
+There are different types of constructors. Let's see them one by one. 
 
 ### Non Parameterized Constructor
 It is an explicit constructor which is declared in the class and does not have any parameters passed to it. It is used to initialize the data members with default values. The code above illustrates a non parameterized constructor.
@@ -69,7 +80,7 @@ public class square {
 The code above illustrates a non parameterized constructor.
 
 ### Copy Constructor
-It is a subtype of parameterized constructors. Say we are initializing an object O1. Here in the parameters, we pass an already initialized object, say O2 of the same class to the constructor during the initialization of O1. The required data members associated with O2 are copied into the respective data members of O1. The copy constructor cannot exist by itself. It requires either a traditional parameterized or non-parametrized constructor to be written along with it. This is an example of **constructor overloading**.
+It is a subtype of parameterized constructors. Say we are initializing an object O1. Here in the parameters, we pass an already initialized object, say `O2` of the same class to the constructor during the initialization of `O1`. The required data members associated with `O2` are copied into the respective data members of `O1`. The copy constructor cannot exist by itself. It requires either a traditional parameterized or non-parametrized constructor to be written along with it. This is an example of **constructor overloading**.
 
 ```java
 public class square{
@@ -91,7 +102,6 @@ public square(int val)
  }
 }
 ```
-
 Here when `square_2` is called, the overloaded copy constructor is called and not the parameterized constructor.
 
 ### Default Constructor
@@ -138,5 +148,4 @@ public class square extends shape {
   }
 }
 ```
-
 The above code illustrates this behaviour.
