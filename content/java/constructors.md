@@ -20,7 +20,7 @@ keywords:
 tags: [Java]  
 ---
 ## Object Initialization
-We know that in Java classes are **blueprints** and objects are the **actual entities** created by following the design of the blueprint. To create an object we need to initialize it or in simpler terms assign resources like memory, initialize instance variables, load methods, etc. Without doing this Java assigns the object a null value on the declaration of the object. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types. The primitive types are a special case and are not mapped to null values on their declaration. They are assigned the following default values:
+We know that in Java [classes](/java/class-object/#classes) are **blueprints** and [objects](/java/class-object/#objects) are the **actual entities** created by following the design of the blueprint. To create an object we need to initialize it or in simpler terms assign resources like memory, initialize instance variables, load methods, etc. If we don't do this Java assigns the object a null value on the declaration of the object. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types. The primitive types are a special case and are not mapped to null values on their declaration. They are assigned the following default values:
 
 | Type    | Default Value |
 |---------|---------------|
