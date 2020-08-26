@@ -56,7 +56,7 @@ As mentioned above constructors can be considered as special methods which have 
 
 1. No return type
 2. Are called implicitly during object creation
-3. Cannot have private access
+3. Generally have public access (With some exception which we will discuss in later section)
 4. Have the same name as that of the class
 5. Are not members of the class and hence cannot be inherited
 
@@ -87,25 +87,25 @@ It is a subtype of parameterized constructors. Say we are initializing an object
 
 ```java
 public class square{
-int perimeter;
-public square(int val)
- {
- this.perimeter=val;
- }
- public square(square s1)
- {
- this.perimeter=s1.perimeter;
- }
- public static void main(String []args)
- {
- Square square_1;
- Square square_2;
- square_1=new square(1);
- square_2=new square(square_1);
- }
+  int perimeter;
+  public square(int val)
+    {
+    this.perimeter=val;
+    }
+  public square(square s1)
+    {
+    this.perimeter=s1.perimeter;
+    }
+  public static void main(String []args)
+    {
+    Square square_1;
+    Square square_2;
+    square_1=new square(1);
+    square_2=new square(square_1);
+    }
 }
 ```
-Here when `square_2` is called, the overloaded copy constructor is called and not the parameterized constructor.
+Here when `square_2` is called, the overloaded copy constructor is called.
 
 ### Default Constructor
 If none of the above constructors is declared by the programmer, then Java provides an inbuilt constructor that is implicit and assigns the data members with default values as seen in the table under Object Initialization. 
@@ -134,7 +134,9 @@ public class square {
 For example, in the above code, the parameterized constructor is calling the non-parameterized one.
 
 ## Inheritance and Constructor
-As constructors are not inherited, to access parent class constructors we use super keyword. Hence to access the constructor of the parent class, we have to call it explicitly by using the super keyword if the parent class has a parameterized constructor else the non-parameterized constructor or the default constructor, if it exists, of the parent, class is called by default by Java.
+As constructors are not inherited, to access parent class constructors we use super keyword. Hence to access the constructor of the parent class, we have to call it explicitly by using the super keyword if the parent class has a parameterized constructor else the non-parameterized constructor or the default constructor for the parent class is called by default.
+
+The below code illustrates this behaviour.
 
 ```java
 public class shape {
@@ -151,4 +153,3 @@ public class square extends shape {
   }
 }
 ```
-The above code illustrates this behaviour.
