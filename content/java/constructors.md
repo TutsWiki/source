@@ -8,7 +8,7 @@ next: /java/constructors
 title: Constructors
 weight: 26
 url: /java/constructors
-description: To create an object we need to initialize it or in simpler terms assign resources like memory, initialize instance variables, load methods, etc.
+description: A constructor initializes an object when it is created. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types.
 keywords:
   - java
   - class
@@ -48,7 +48,7 @@ In the above code, the initial declaration of square creates a null object but a
 ### Where does object initialization start?
 The whole process of starting up the initialization happens in the constructor of the class. The constructor is similar to member functions of the class but not completely. When the compiler enters the constructor all the resource allocation for that object happens in the background and its instance variables are given default values if they are of primitive type or a null value if otherwise. Also, we can use the constructor to initialize the instance variables of the class for that object explicitly. In this way, the constructor completely initializes the object.
 
-## Constructor
+## Constructors
 As mentioned above constructors can be considered as special methods which have the following properties:
 
 1. No return type
