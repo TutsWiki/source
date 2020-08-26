@@ -8,7 +8,7 @@ next: /data_structures_algorithms/tree_data_structure
 title: Tree Data Structure
 weight: 25
 url: /data_structures_algorithms/tree_data_structure
-description: A gentle introduction to C++ programming language. History, Popularity and Applications.
+description: Linear and Non-Linear data strcutures. Tree represents the nodes connected by edges. We will discuss binary tree or binary search tree specifically.
 keywords:
   - data_structures_algorithms
 tags: [DSA]  
