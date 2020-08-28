@@ -184,5 +184,5 @@ plt.bar(rawData['timestamp'], rawData['tempF'])
 ```
 ![QuestDB Plot](/images/Python/questdb_plot2.png?width=30pc "QuestDB Plot")
 
-## Link
+## Download notebook
 Check out the complete notebook at [questdb.ipynb](/QuestDB.ipynb)
