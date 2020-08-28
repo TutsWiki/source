@@ -11,7 +11,7 @@ keywords:
   - database
 tags: [Python]  
 ---
-<meta property="og:image" content="/images/Python/questdb.png?width=30pc"/>
+<meta property="og:image" content="https://tutswiki.com/images/Python/questdb.png?width=30pc"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to setup and access QuestDB using Python" />
 <meta name=”twitter:description” content="Complete guide with examples on how to install QuestDB, create new database and query the same in python." />
