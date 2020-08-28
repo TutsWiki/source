@@ -4,17 +4,17 @@ linktitle: QuestDB in Python
 title: How to setup and access QuestDB using Python
 weight: 10
 url: /setup-access-questdb-python-notebook
-description: How can we import the functions (or classes) from a script without having the script start doing something?
+description: Complete guide with examples on how to install QuestDB, create new database and query the same in python.
 keywords:
   - python
   - questdb
   - database
 tags: [python]  
 ---
-<meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
+<meta property="og:image" content="/images/Python/questdb.png?width=30pc"/>
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How to convert a Python script to module" />
-<meta name=”twitter:description” content="How can we import the functions (or classes) from a file without having the script start doing something?" />
+<meta name="twitter:title" content="How to setup and access QuestDB using Python" />
+<meta name=”twitter:description” content="Complete guide with examples on how to install QuestDB, create new database and query the same in python." />
 
 ![QuestDB](/images/Python/questdb.png?width=30pc "QuestDB")
 
