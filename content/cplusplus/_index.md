@@ -1,6 +1,6 @@
 ---
 title: C++
-weight: 15
+weight: 1
 pre: "<b></b>"
 chapter: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Java
-weight: 15
+weight: 3
 pre: "<b></b>"
 chapter: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: DSA
-weight: 15
+weight: 2
 pre: "<b></b>"
 chapter: true
 ---
