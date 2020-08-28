@@ -16,7 +16,7 @@ tags: [DSA]
 Data structures are different ways in which we can store or organise data. They can be classified into broadly two types.
 
 ## 1. Linear Data Structures
-Data structures in which data is stored in the sequential arrangement are called linear data structures. For example `arrays`, `linked lists`, `queues` etc. Please note that this does not imply storing data in consecutive locations. The data can be stored in random locations also as in the linked list. By linear data structures, we mean that when we traverse the data structure then we will always get the values in a sequence.
+Data structures in which data is stored in the sequential arrangement are called linear data structures. For example `arrays`, `linked lists`, `queues` etc. Please note that this does not imply storing data in consecutive locations. Data can be stored anywhere in the memory, though the linked list is a linear data structure, it does not store data in contiguous memory locations. By linear data structures, we mean that when we traverse the data structure then we will always get the values in a sequence.
 
 ## 2. Non-linear Data Structures
 Non-linear data structure does not follow any sequence for storing data. Here data is stored hierarchically in multiple levels. Here computer memory is used more efficiently than linear data structures. E.g. `trees`, `graphs`
@@ -54,9 +54,9 @@ struct tree {
 - Insert: insert a new node
 - Search: search a node with the given key
 - Delete: delete a node
-- Preorder traversing: traverse left subtree, then root and then right subtree
-- Postorder traversing: traverse right subtree, then root and then left subtree
-- In order traversing: traverse left subtree, then root and then right subtree
+- Preorder traversing: Access the root, then traverse the left subtree and later traverse the right subtree
+- Inorder traversing: Traverse left subtree then access root and later traverse right subtree
+- Postorder traversing: Traverse left subtree, then traverse right subtree and visit the root in the end
 
 ### Binary Search Tree (BST)
 These are special types of binary trees where the value of every node in the left subtree is less than the value of the root node as well as the value of every node in the right subtree is greater than the value of the root node. Binary search trees are very efficient for performing search operations. Operations like search, insertion and deletion can be done in trees in `O(h)` time where h is the height of the tree. AVL tree is a special type of binary search tree which maintains the height of a tree equal to `log(n)`. Hence search complexity in case of AVL tree is always `log(n)`.
