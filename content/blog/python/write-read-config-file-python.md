@@ -11,7 +11,7 @@ keywords:
   - read config file
   - write config file
   - configparser
-tags: [python]
+tags: [Python]
 ---
 I'm sure you must be aware about the importance of [configuration files](https://www.wikiwand.com/en/Configuration_file). Config files help creating the initial settings for any project, they help avoiding the hardcoded data. 
 

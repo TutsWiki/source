@@ -12,7 +12,7 @@ keywords:
   - script
   - module
   - import
-tags: [python]
+tags: [Python]
 ---
 Suppose you have a module named `mymath.py`, which has a couple of functions. You can import this module in your script and call these functions.
 

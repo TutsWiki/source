@@ -12,7 +12,7 @@ keywords:
   - built in
   - module
   - import
-tags: [python]
+tags: [Python]
 ---
 If you are new to Python then you may have noticed ```if __name__ == "__main__"``` line in some python codes. 
 

@@ -12,7 +12,7 @@ keywords:
   - script
   - module
   - import
-tags: [python]  
+tags: [Python]  
 ---
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
