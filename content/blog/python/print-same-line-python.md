@@ -8,7 +8,7 @@ keywords:
   - python
   - print
   - python print
-tags: [python]
+tags: [Python]
 ---
 In Python, when you use the print function, it prints a new line at the end.
 

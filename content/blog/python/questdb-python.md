@@ -9,7 +9,7 @@ keywords:
   - python
   - questdb
   - database
-tags: [python]  
+tags: [Python]  
 ---
 <meta property="og:image" content="/images/Python/questdb.png?width=30pc"/>
 <meta name="twitter:card" content="summary" />

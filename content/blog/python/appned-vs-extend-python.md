@@ -11,7 +11,7 @@ keywords:
   - extend
   - combine
   - merge
-tags: ["python"]
+tags: [Python]
 ---
 `append` and `extend` are list methods in Python which can be used to combine multiple lists. But what is the difference between them? When should you use one over another, let's find out.
 

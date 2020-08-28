@@ -11,7 +11,7 @@ keywords:
   - iterables
   - iterators
   - return
-tags: [python]
+tags: [Python]
 ---
 
 
