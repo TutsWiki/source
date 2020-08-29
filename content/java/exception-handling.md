@@ -69,6 +69,11 @@ class test {
   }
 }
 ```
+Output:
+```bash
+AirthmeticException: divide by zero
+hi 
+```
 When you will compile the above code, it will easily get compiled without any warning and will display the exception that has occurred and it will also print hi which shows that our program has not terminated abnormally.
 ## Flow of try and catch
 
@@ -93,6 +98,13 @@ class test {
     System.out.println("hello");
   }
 }
+```
+Output:
+```bash
+hi 
+welcome
+to 
+hello
 ```
 In the above code, the control is first at the print statement present just before try keyword which prints `hi` and then the control goes in try block. The first print statement prints `welcome` and the mathematical expression is evaluated. Since the denominator is non zero number, no exception arises and the control passes to the last print statement in try block which prints `to`. Since no exception occurred, the catch block didn’t get executed and the program terminated normally by printing `hello`.
 
@@ -120,6 +132,15 @@ class test {
   }
 }
 ```
+```bash
+hi 
+welcome
+2
+Tuts
+Wiki
+ArithmeticException: divide by zero
+hello
+```
 Now the value of the denominator in the try block is zero which will cause an exception. The control is first at print statement before try keyword which prints `hi` and then the control goes in try block. The first print statement prints `welcome` and the mathematical expression is evaluated. Since the denominator is zero, an exception arises and at once the control is passed to catch block. All the print statement in the catch block gets executed and the program gets terminated normally by printing `hello`. Note that after the execution of the catch block, control does not pass to try block back. Hence everything written below the occurrence of exception in try block will remain unexecuted.
 
 ## Multiple catch block
@@ -144,7 +165,10 @@ class test {
   }
 }
 ```
-
+```bash
+AirthmeticException: divide by zero
+hi  
+```
 Order of catch block is very important because improper ordering may give you an error. The order of the catch block should be child class (`ArithmeticException`) to parent class (`Exception`), not the parent to the child class. For better understanding, consider below example-
 ### Example
 ```java
@@ -158,11 +182,14 @@ class test {
     catch(Exception e) {
       System.out.println("exception");
     }
-    catch(AirthmeticException e) {
+    catch(ArithmeticException e) {
       System.out.println("ArithmeticException");
     }
   }
 }
+```
+```bash
+Exception ArithmeticException has already been caught catch(ArithmeticException e)
 ```
 The compiler will give an error while compiling the above code. It will tell the user that the exception which has occurred has already been caught by the first catch block and there is no use to re-write the catch block which handles the same exceptions. Therefore, the order of catch block is important and should be from the child class to the parent class, not the parent to the child class. 
 
@@ -184,5 +211,7 @@ class test {
   }
 }
 ```
-
+```bash
+Arithmeticexception
+```
 The above code will execute properly without any error because the proper ordering of the catch block has been done. The first catch block says that if any arithmetic exception arises then it can handle it and if there is any other type of exception other than arithmetic exception then the second catch block will handle it.
