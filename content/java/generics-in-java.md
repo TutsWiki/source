@@ -6,7 +6,7 @@ menu:
     parent: java
 next: /java/class-object
 title: Generics in Java
-weight: 26
+weight: 30
 url: /java/generics
 description: In simple words, generic methods (or classes) are those methods that are written with single method declaration and can be called or accessed with arguments of different type.
 keywords:
