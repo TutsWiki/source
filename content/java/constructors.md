@@ -6,7 +6,7 @@ menu:
     parent: java
 next: /java/constructors
 title: Constructors
-weight: 26
+weight: 2
 url: /java/constructors
 description: A constructor initializes an object when it is created. In Java, we use the new keyword to initialize an object whose class/type is not of the primitive types.
 keywords:

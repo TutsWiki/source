@@ -1,11 +1,11 @@
 ---
-date: 2020-08-22
+date: 2020-08-28
 linktitle: Exceptions
 menu:
   main:
     parent: java
 title: Exceptions in Java
-weight: 26
+weight: 5
 url: /java/exceptions
 description: An exception in Java is defined as an unwanted or unexpected event. Object, Throwable, Exception, Error.
 keywords:

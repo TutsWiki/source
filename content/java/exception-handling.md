@@ -1,12 +1,12 @@
 ---
-date: 2020-08-22
+date: 2020-08-29
 linktitle: Exception Handling
 menu:
   main:
     parent: java
 title: Exception Handling
-weight: 27
-url: /java/exception-handling
+weight: 6
+url: /java/exceptions/exception-handling
 description: Exception handling is the facility provided by Java to handle all the unwanted event or exception that arises in our program to maintain the normal flow of our code. try,catch,throw,finally
 keywords:
   - java
@@ -71,7 +71,7 @@ class test {
 ```
 Output:
 ```bash
-AirthmeticException: divide by zero
+ArithmeticException: divide by zero
 hi 
 ```
 When you will compile the above code, it will easily get compiled without any warning and will display the exception that has occurred and it will also print hi which shows that our program has not terminated abnormally.
@@ -166,7 +166,7 @@ class test {
 }
 ```
 ```bash
-AirthmeticException: divide by zero
+ArithmeticException: divide by zero
 hi  
 ```
 Order of catch block is very important because improper ordering may give you an error. The order of the catch block should be child class (`ArithmeticException`) to parent class (`Exception`), not the parent to the child class. For better understanding, consider below example-
