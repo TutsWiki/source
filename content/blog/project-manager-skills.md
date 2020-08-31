@@ -3,7 +3,7 @@ date: 2020-08-31
 linktitle: Top 4 Must Have Skills For A Project Manager
 title: Top 4 Must Have Skills For A Project Manager
 weight: 10
-url: /project-manager-skills
+url: /project-manager-must-have-skills
 description: Project Managers act as a link between the employer, who needs the project and employees, who work on the project.
 keywords:
   - projectmanagement
