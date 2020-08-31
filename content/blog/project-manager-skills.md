@@ -11,7 +11,7 @@ keywords:
   - software
 ---
 
-<meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
+<meta property="og:image" content="https://tutswiki.com/images/blog/Technical-Skills.jpg"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="A Deeper Look at Ruby's Enumerable" />
 <meta name=”twitter:description” content="Ruby’s Enumerable module gives you a way of iterating over collections in a lazy manner, loading only what you need, when you need it. But it gives us so much more than that." />
