@@ -14,16 +14,16 @@ keywords:
   - regexp
 tags: [Java]  
 ---
-## 1.1 Introduction
+### 1.1 Introduction
 Regular expression in simple terms is a special sequence of symbols and alphanumeric characters that defines a search pattern.
 
-## 1.2 Uses
+### 1.2 Uses
 - These are used to describe what you are looking for when you search for data in text, article etc.    
 - **Data Validation** like checking if the user has inserted a valid e-mail address or not.
 - **Data Scraping/Web scraping** like when you want to scrape particular data from the internet.
 - These are also used in search engines, string processing etc.
 
-### Example
+#### Example
 ```java
 ^[A-Za-z0-9+_.-]+@(.+)$
 ```
@@ -35,37 +35,39 @@ This pattern is used to validate email addresses.
 4. Additionally, email may contain a dot, dash and underscore.
 5. Rest all characters are not allowed
 
-## 2.1 RegExp in Java
+### 2.1 RegExp in Java
 Java Regex is an **API** which is used for searching and manipulating strings from a given text which matches the pattern defined in the API.
 
-## 2.2 Java Regex Package
+### 2.2 Java Regex Package
 Java provides the `java.util.regex` for pattern matching with regular expressions. This package consists of three main classes:
 
 - Matcher Class
 - Pattern Class
 - PatternSyntaxException class
 
-### 2.2.1 Matcher Class
+#### 2.2.1 Matcher Class
 Matcher class interprets the pattern defined by pattern class and is used to perform matching functions on the given char sequence.
 
 Some functions in the matcher class are:
-#### boolean  matches()
-Used to test whether the given string matches the given regex pattern or not.
-#### boolean  find()
-Used to find the next string expression which matches the given regex pattern in the given text.
-#### boolean find(int start)
-Used to search the next expression which matches the given regex pattern from the given start number.
 
-### 2.2.2 Pattern Class
+- boolean  matches()
+  - Used to test whether the given string matches the given regex pattern or not.
+- boolean  find()
+  - Used to find the next string expression which matches the given regex pattern in the given text.
+- boolean find(int start)
+  - Used to search the next expression which matches the given regex pattern from the given start number.
+
+#### 2.2.2 Pattern Class
 It is the compiled form of regular expression which is used to define the pattern for a regex engine.
 One of the functions in Pattern class is:
-#### Pattern.compile(String regex)
-Its job is to compile the given regex pattern and return the instance of a pattern.
 
-### 2.2.3 PatternSyntaxException Class
+- Pattern.compile(String regex)
+  - Its job is to compile the given regex pattern and return the instance of a pattern.
+
+#### 2.2.3 PatternSyntaxException Class
 It is used to find errors in regular expression patterns.
 
-### Example
+#### Example
 ```java
 import java.util.regex. * ;
 public class reg {
@@ -86,7 +88,7 @@ public class reg {
      }
 }
 ```
-## 2.3 REGEX QUANTIFIERS
+### 2.3 REGEX QUANTIFIERS
 Regex quantifiers are used in regular expressions to define how often an element can occur.
 
 - `*`   -   occurrences should be zero or more times.
@@ -96,7 +98,7 @@ Regex quantifiers are used in regular expressions to define how often an element
 - `{X,Y}` - occurrences should be between X and Y number of times.
 - `{X,}` - occurrences should be X or more than X.
 
-## 2.4 REGEX CHARACTER CLASS
+### 2.4 REGEX CHARACTER CLASS
 Java Character Class has predefined sets which can be directly used as regex expressions.
 
 - `[xyz]` - checks occurrence of x, y or z.
@@ -106,7 +108,7 @@ Java Character Class has predefined sets which can be directly used as regex exp
 - `[a-z&&[^xy]]` - check occurrence of characters from a-z except x or y.
 - `[a-z&&[^m-p]]` - check the occurrence of characters from a-z and not m through p.
 
-### Example
+#### Example
 ```java
 import java.util.regex. * ;
 
@@ -131,7 +133,7 @@ This program will only print true under the following conditions:
 - String length is equal to 3.
 - String only contains a b or c.
 
-## 2.5 REGEX METACHARACTERS
+### 2.5 REGEX METACHARACTERS
 These characters have special meaning in computer programs and are used for making regular expressions.
 
 - **\d** - denotes you can enter any digit. It is a short form of [0-9].
@@ -141,7 +143,7 @@ These characters have special meaning in computer programs and are used for maki
 - **\b** - denotes the word boundary.
 - **\B** - denotes a non-word boundary.
 
-### Example
+#### Example
 ```java
 import java.util.regex. * ;
 public class Reg {
