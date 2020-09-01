@@ -13,8 +13,8 @@ keywords:
 
 <meta property="og:image" content="https://tutswiki.com/images/blog/Technical-Skills.jpg"/>
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="A Deeper Look at Ruby's Enumerable" />
-<meta name=”twitter:description” content="Ruby’s Enumerable module gives you a way of iterating over collections in a lazy manner, loading only what you need, when you need it. But it gives us so much more than that." />
+<meta name="twitter:title" content="Top 4 Must Have Skills For A Project Manager" />
+<meta name=”twitter:description” content="Project Managers act as a link between the employer, who needs the project and employees, who work on the project." />
 
 > According to studies conducted by [PWC](https://www.pwc.com/jg/en/publications/ned-presentation-project-management.pdf), 77% of the high performing companies realise the importance of project management but only 2.5% are able to complete all the projects. Despite having all team members on board, the low productivity rate has to be explained by the Project Manager, who couldn't plan the right course of actions or overlooked the breakdown in communications. 
 
