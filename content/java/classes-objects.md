@@ -6,7 +6,7 @@ menu:
     parent: java
 next: /java/constructors
 title: Classes & Objects
-weight: 26
+weight: 1
 url: /java/class-object
 description: In this tutorial, you will learn about object-oriented programming in Java and you will learn about Java classes and objects with the help of examples. A class is a blueprint of objects whereas an object is an instance of a class.
 keywords:

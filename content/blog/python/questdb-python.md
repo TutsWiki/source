@@ -11,7 +11,7 @@ keywords:
   - database
 tags: [Python]  
 ---
-<meta property="og:image" content="/images/Python/questdb.png?width=30pc"/>
+<meta property="og:image" content="https://tutswiki.com/images/Python/questdb.png?width=30pc"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to setup and access QuestDB using Python" />
 <meta name=”twitter:description” content="Complete guide with examples on how to install QuestDB, create new database and query the same in python." />
@@ -75,8 +75,9 @@ q = 'create table weather'\
     'timestamp(timestamp)'
 r = requests.get("http://localhost:9000/exec?query=" + q)
 print(r.status_code)
-400
 ```
+Output: 400
+
 ### Adding data to QuestDB
 In the next code cell, we generate and add 1000 entries of data to our database.
 ```python
@@ -103,8 +104,8 @@ for x in range(1000):
 print("Rows inserted: " + str(success))
 if fail > 0:
     print("Rows Failed: " + str(fail))
-Rows inserted: 1000
 ```
+Output: Rows inserted: 1000
 ### Query data from QuestDB
 ```python
 import requests
@@ -113,6 +114,9 @@ import io
 r = requests.get("http://localhost:9000/exp?query=select * from weather")
 rawData = r.text
 print(rawData)
+```
+Output:
+```bash
 "tempF","rain24H","thunder","timestamp"
 -37,234.0,false,"2020-08-24T11:41:37.191530Z"
 -11,165.52,false,"2020-08-24T11:41:37.195714Z"
@@ -126,6 +130,9 @@ import pandas as pd
 
 pData = pd.read_csv(io.StringIO(rawData), parse_dates=['timestamp'])
 print(pData)
+```
+Output:
+```bash
       tempF  rain24H  thunder                        timestamp
 0       -37   234.00    False 2020-08-24 11:41:37.191530+00:00
 1       -11   165.52    False 2020-08-24 11:41:37.195714+00:00
@@ -155,6 +162,9 @@ r = requests.get("http://localhost:9000/exp?query=" + query)
 queryData = r.content
 rawData = pd.read_csv(io.StringIO(queryData.decode('utf-8')))
 print(rawData)
+```
+Output:
+```bash
       tempF  rain24H                    timestamp
 0       -37   234.00  2020-08-24T11:41:37.191530Z
 1       -11   165.52  2020-08-24T11:41:37.195714Z
@@ -184,5 +194,5 @@ plt.bar(rawData['timestamp'], rawData['tempF'])
 ```
 ![QuestDB Plot](/images/Python/questdb_plot2.png?width=30pc "QuestDB Plot")
 
-## Download notebook
+### Download notebook
 Check out the complete notebook at [questdb.ipynb](https://github.com/TutsWiki/source/blob/master/static/QuestDB.ipynb)
