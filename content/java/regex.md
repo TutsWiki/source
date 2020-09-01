@@ -83,11 +83,10 @@ public class reg {
         Matcher m = p.matcher(email);     // Matcher Object
 
          System.out.println(m.matches());
-
-         // Prints true if the email is valid and false for invalid, here it will print true
      }
 }
 ```
+Output: Prints true if the email is valid and false for invalid, here it will print true
 ### 2.3 REGEX QUANTIFIERS
 Regex quantifiers are used in regular expressions to define how often an element can occur.
 
@@ -122,11 +121,13 @@ public class Reg {
 
 		System.out.println(m.matches());
 		System.out.println(ma.matches());
-
-		//Output - true
-		false
 	}
 }
+```
+Output: 
+```
+true
+false
 ```
 This program will only print true under the following conditions:
 
@@ -155,10 +156,11 @@ public class Reg {
 
 		System.out.println(m.matches());
 		System.out.println(ma.matches());
-
-		//Output - false
-		true
-
 	}
 }
+```
+Output: 
+```
+false
+true
 ```
