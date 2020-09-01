@@ -6,7 +6,7 @@ menu:
     parent: java
 title: Regular Expressions in Java
 weight: 8
-url: /java/exceptions/exception-handling/regex
+url: /java/regex
 description: finally is the block that will always get executed irrespective of the fact whether the exception is handled or not.
 keywords:
   - java
