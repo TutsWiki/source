@@ -18,14 +18,18 @@ tags: [Python]
 
 ![QuestDB](/images/Python/questdb.png?width=30pc "QuestDB")
 
-### Reasons to love QuestDB?
-1. Easily switch to embedded
-2. Cloud-native
-3. Lesser development costs
-4. Lesser hardware requirements
-5. Ability to generate Real-time insights
-6. Easy and secure Enterprise integration
-7. Postgres wire support¶
+### What is QuestDB?
+It is a tremendously fast [NewSQL](https://en.wikipedia.org/wiki/NewSQL) database which is avaiable as Open source software under Apache 2.0 license. It is basically like a superset of a SQL database (with added features and support for `time-varying data` or event data). It is made with the prime focus on performance.
+
+### What makes QuestDB stand apart from other databases?
+1. SIMD aggregations: QuestDB uses vectorized operations to perform many operations on only one CPU procedure which makes it do tasks in a must faster and efficient way.
+2. Easily switch to embedded
+3. Cloud native
+4. Cheaper development costs
+5. Lesser hardware requirements
+6. Can generate Real time insights
+7. Easy and secure Enterprise integration
+8. Postgres wire and Rest API support
 
 ### Install QuestDB using Docker
 **Step 1**: Installing Docker
