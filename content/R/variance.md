@@ -39,4 +39,4 @@ R provides an in-built function `var()` to compute the variance of all data valu
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `var(x)` is displayed using `print`
 
-In the next section we'll look at [Standard Deviation](/r/deviation)
+In the next section we'll look at [Standard Deviation](/r/standard-deviation)
