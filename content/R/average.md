@@ -39,7 +39,7 @@ The Mean in this case would be `X = (3 + 5 + 7 + 9 + 11 + 13 + 15 ) / 7 = 9`
 
 R provides an in-built function `mean()` to compute the mean of all values in the dataset. The function  takes numeric or integer vector as an argument and returns the result.
 
-![Mean in R](/images/R/R-mean.png?width=60pc "Mean")
+![Mean in R](/images/R/R-mean.png "Mean")
 
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `mean(x)` is displayed using `print`
@@ -62,7 +62,7 @@ R does not have an in-built function to compute the mode for a given set of numb
 - The body of the function contains call to `unique(x)` function to filter out all the duplicate elements and in the next step `which.max(tabulate(match(x,u)))` is contained in the body to determine the mode of the given dataset.
 - `mode(x)` function is then invoked and return value is stored in the variable `result`
 
-![Mode in R](/images/R/R-mode.png?width=60pc "Mode")
+![Mode in R](/images/R/R-mode.png "Mode")
 
 ### Median
 Median is defined as the middle value among the set of numbers when all the numbers are sorted. 
@@ -77,7 +77,7 @@ Let us consider an example of dataset containing 9 datapoints `3, 12, 4, 8, 15, 
 
 R provides an in-built function `median()` to compute the median or middle value of all values in the dataset. The function takes numeric or integer vector as an argument and returns the median value.
 
-![Median in R](/images/R/R-median.png?width=60pc "Median")
+![Median in R](/images/R/R-median.png "Median")
 
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `median(x)` is displayed using `print`

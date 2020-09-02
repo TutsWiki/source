@@ -34,7 +34,7 @@ The mean value in this case is `(3 + 5 + 7 + 9 + 11 + 13 + 15 ) / 7 = 9`
 
 R provides an in-built function `var()` to compute the variance of all data values in the dataset with respect to the mean. The function takes numeric or integer vector as an argument and returns the result.
 
-![Variance in R](/images/R/R-var.png?width=60pc "var")
+![Variance in R](/images/R/R-var.png "var")
 
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `var(x)` is displayed using `print`

@@ -32,7 +32,7 @@ Let's take the same example that we used in last section to calculate [variance]
 
 R provides an in-built function `sd()` to compute the standard deviation of all the data in the dataset from the central point. The function takes numeric or integer vector as an argument and returns the standard deviation value.
 
-![Standard Deviation in R](/images/R/R-sd.png?width=60pc "sd")
+![Standard Deviation in R](/images/R/R-sd.png "sd")
 
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `sd(x)` is displayed using `print`
