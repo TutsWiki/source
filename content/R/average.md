@@ -82,4 +82,4 @@ R provides an in-built function `median()` to compute the median or middle value
 - `x` is a variable that takes the integer vectors using `c()` function
 - The result of `median(x)` is displayed using `print`
 
-In the next section we'll look at [Variance](/R/variance)
+In the next section we'll look at [Variance](/r/variance)
