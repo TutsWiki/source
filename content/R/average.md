@@ -1,11 +1,11 @@
 ---
 date: 2020-09-02
-linktitle: Average (Mean, Median, Mode)
+linktitle: Average
 menu:
   main:
     parent: R
 next: /r/mean-median-mode
-title: Average (Mean, Median, Mode) in R
+title: Calculating Average (Mean, Median, Mode) in R
 weight: 26
 url: /r/average-mean-median-mode
 description: In this article we'll look at various measures of central tendencies like mean, median, mode and deviation of various sample values from the central point in the distribution.
