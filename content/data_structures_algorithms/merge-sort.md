@@ -8,7 +8,7 @@ next: /data_structures_algorithms/tree_data_structure
 title: Merge Sort
 weight: 25
 url: /data_structures_algorithms/merge_sort/
-description: 
+description: Merge sort is a popular sorting algorithm which uses divide and conquer algorithm. The heart of the Merge Sort is a procedure called Merge.
 keywords:
   - sorting
   - merge
