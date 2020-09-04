@@ -120,6 +120,8 @@ Using [Master's theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_
 - We see that the total number of function call here is 16.
 - The height of the tree is `floor(log2n) + 1`. Substitute `n = 6`, we get four levels as shown
 
+![Recursive tree](/images/DSA/merge-array-11.png "Recursive tree")
+
 ## Space complexity of merge sort
 - We don't consider the space required for variables `p`, `q`, `r`, `i`, `j` as they require constant space. The input array is already given. Thus, it is not considered in the extra space required category.
 - The procedure Merge requires two new lists of size `n/2` every time it is called on an array of size `n`. Instead of creating two list space every time, we can use as a global array of `O(n)` space for copying of elements. It can be used by every call to procedure Merge one by one.  
