@@ -6,7 +6,7 @@ menu:
     parent: java
 title: Exception Handling
 weight: 6
-url: /java/exceptions/exception-handling
+url: /java/exception-handling
 description: Exception handling is the facility provided by Java to handle all the unwanted event or exception that arises in our program to maintain the normal flow of our code. try,catch,throw,finally
 keywords:
   - java

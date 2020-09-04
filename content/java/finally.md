@@ -6,7 +6,7 @@ menu:
     parent: java
 title: finally
 weight: 8
-url: /java/exceptions/exception-handling/finally
+url: /java/finally
 description: finally is the block that will always get executed irrespective of the fact whether the exception is handled or not.
 keywords:
   - java

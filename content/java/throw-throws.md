@@ -6,7 +6,7 @@ menu:
     parent: java
 title: throw and throws
 weight: 7
-url: /java/exceptions/exception-handling/throw-throws
+url: /java/throw-throws
 description: The keyword throw is employed to throw an exception explicitly. It is mainly used to throw custom exceptions or user-defined exceptions.
 keywords:
   - java
