@@ -69,20 +69,21 @@ It is used to find errors in regular expression patterns.
 
 #### Example
 ```java
-import java.util.regex. * ;
+import java.util.regex.*;
 public class reg {
 	Public static void main(String[] args) {
 
 		String email = "abcd99@gmail.com";
 
-		String pat = " ^ [a - zA - Z0 - 9_ ! #$ % &'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-         // Pattern for email validation with constraints
+		// Pattern for email validation with constraints
+		String pat = " ^ [a - zA - Z0 - 9_ ! #$ % &'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";  
 
-          Pattern p = Pattern.compile(pat);  // Pattern Object
+		Pattern p = Pattern.compile(pat);  // Pattern Object
 
-        Matcher m = p.matcher(email);     // Matcher Object
+		Matcher m = p.matcher(email);     // Matcher Object
 
-         System.out.println(m.matches());
+		System.out.println(m.matches());
+
      }
 }
 ```
@@ -101,7 +102,7 @@ Regex quantifiers are used in regular expressions to define how often an element
 Java Character Class has predefined sets which can be directly used as regex expressions.
 
 - `[xyz]` - checks occurrence of x, y or z.
-- `[^xyz]` - check the occurrence of any character other than x,y or z.
+- `[^xyz]` - check the occurrence of any character other than x, y or z.
 - `[a-zA-Z]` - check occurrence of characters from a-z or A-Z
 - `[a-z&&[xyz]]` - check the occurrence of characters from a-z with x, y or z.
 - `[a-z&&[^xy]]` - check occurrence of characters from a-z except x or y.
@@ -132,14 +133,14 @@ false
 This program will only print true under the following conditions:
 
 - String length is equal to 3.
-- String only contains a b or c.
+- String only contains a, b or c.
 
 ### 2.5 REGEX METACHARACTERS
 These characters have special meaning in computer programs and are used for making regular expressions.
 
 - **\d** - denotes you can enter any digit. It is a short form of [0-9].
-- **\D** - denotes you can enter any non digit .It is short form [^0-9].
-- **\w** - denotes you can enter any word character .It is short form of [a-zA-Z_0-9].
+- **\D** - denotes you can enter any non digit. It is short form [^0-9].
+- **\w** - denotes you can enter any word character. It is short form of [a-zA-Z_0-9].
 - **\W** - denotes you can enter any non-word character. It is short form of [^\w].
 - **\b** - denotes the word boundary.
 - **\B** - denotes a non-word boundary.
