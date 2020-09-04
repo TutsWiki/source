@@ -7,7 +7,7 @@ menu:
 title: Lambda Expressions in Java
 weight: 8
 url: /java/lambda-expressions
-description: finally is the block that will always get executed irrespective of the fact whether the exception is handled or not.
+description: It is an anonymous function which doesn't belong to any class nor a name. It provides a concise way to show a method or interface.
 keywords:
   - java
   - lambda
@@ -17,7 +17,7 @@ tags: [Java]
 
 ### 1.1 Introduction
 - Lambda expression is the fundamental approach to **functional programming** in Java.
-- It is an anonymous function which doesn’t belong to any class nor a name.
+- It is an anonymous function which doesn't belong to any class nor a name.
 - It provides a concise way to show a method or interface.
 - Provides implementation of **functional interface**.
 
