@@ -60,7 +60,7 @@ Accepts two values x, y and returns the product of those two numbers.
              
 ## 2. Functional Interface
 
-### 2.1  INTRODUCTION
+### 2.1  Introduction
 - It is an interface which contains only one abstract method.
 - It can have any number of default or static methods.
 
@@ -107,7 +107,7 @@ interface abst
 }
 
 
-class GFG {
+class TutsWiki {
     public static void main (String[] args) {
    	
    	  String text1 ="bcbcc";  // Local Variable
@@ -121,6 +121,43 @@ class GFG {
 Output:
 ```
 bcbcc
+```
+
+### Instance Variable and Static Variable
+File: Lambda.java
+```java
+import java.io.*;
+
+interface Interf {
+   void print();
+}
+public class Lambda {
+   int x;   // instance variable
+   static int y=100;     // static variable
+   Lambda(int x) {    
+      this.x = x;
+   }
+   void show() {
+      
+      Interf test = () -> {
+        
+         System.out.println("Value of x = "+ x);
+         System.out.println("Value of y = "+ y);
+      };
+      test.print();
+   }
+   public static void main(String arg[]) {
+      Lambda obj = new Lambda(50);
+      obj.show();
+   }
+}
+```
+Output:
+```
+$ javac Lamda.java
+$ java Lamda
+Value of x = 50
+Value of y = 100
 ```
 
 ## 4. Method reference in Lambda
@@ -194,6 +231,39 @@ class Example
 }
 ```
 
+### Example of Constructor Reference
+File : Test.java
+```java
+import java.io.*;
+
+interface Interf
+{  
+   Hello getMessage(String s);  
+}  
+
+class Hello
+{  
+   Hello(String s)
+   {  
+      System.out.println(s);  
+   }  
+}  
+   
+public class Test
+{  
+   public static void main(String[] args)
+   {  
+       Interf obj = Hello::new;  
+       obj.getMessage("Hello World");  
+   }  
+}
+```
+Output:
+```
+$ javac Test.java
+$ java Test
+Hello World
+```
 
 ## Miscellaneous Code Examples
 
