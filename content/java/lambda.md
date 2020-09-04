@@ -103,7 +103,7 @@ interface abst {
 }
 
 
-class TutsWiki {
+class main {
     public static void main(String[] args) {
 
         String text1 = "bcbcc"; // Local Variable
