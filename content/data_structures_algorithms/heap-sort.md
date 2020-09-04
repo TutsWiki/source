@@ -26,7 +26,7 @@ Today we will be discussing Heap Sort. Now before directly jumping to Heap Sort,
 We can define a complete binary tree as a tree in which every level is completely filled except possibly the last, and it is as left as possible.
 
 ## 2. Binary Heap
-A binary heap is a complete binary heap in which the value of parent is greater or lesser than its children.
+A binary heap is a complete binary tree in which the value of parent is greater or lesser than its children.
 
 If the value of parent is greater than its children, then it’s called **max-heap** else we call it **min-heap**.
 
@@ -55,7 +55,7 @@ And the right child will be at `(2 * i) + 2`
 ![Array representation of Heap](/images/DSA/heap-array.png "Array representation of Heap")
 
 ## HeapSort
-Heap sort algorithm is a comparison based sorting technique, itटs basic working is similar to that of insertion sort. It is an **in-place** sorting algorithm but is not stable, that is, the original order of keys is not maintained. 
+Heap sort algorithm is a comparison based sorting technique, it's basic working is similar to that of insertion sort. It is an **in-place** sorting algorithm but is not stable, that is, the original order of keys is not maintained. 
 
 ### Understanding the algorithm
 In the heap sort algorithm, we insert all the elements from the unsorted list or array into a heap. We then create max-heap which brings the largest element at the root of the heap, we exchange this value with the last value and then decrement size of the array. Then, we heapify the first element. This process is continued until there is only one element left in the array.
