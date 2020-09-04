@@ -26,7 +26,7 @@ An average is defined as the number in statistics that measures the central tend
 - Mode
 - Median
 
-Let's have a look at each of these measures of central tendency one by one
+Let's have a look at each of these measures of central tendency one by one.
 
 ### Mean
 Mean is defined as the sum of all the observations divided by total number of sample observations. The basic formula for the mean of all the observations y1, y2, y3,…yn is given by 
