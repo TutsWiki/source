@@ -7,7 +7,7 @@ menu:
 next: /data_structures_algorithms/tree_data_structure
 title: Heap Sort
 weight: 25
-url: /data_structures_algorithms/heap-sort/
+url: /data-structures-algorithms/heap-sort/
 description: Heap sort algorithm is a comparison based sorting technique, it's basic working is similar to that of insertion sort. It is an in-place sorting algorithm.
 keywords:
   - sorting

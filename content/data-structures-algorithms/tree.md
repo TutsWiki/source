@@ -7,7 +7,7 @@ menu:
 next: /data_structures_algorithms/tree-data-structure
 title: Tree Data Structure
 weight: 25
-url: /data_structures_algorithms/tree-data-structure
+url: /data-structures-algorithms/tree-data-structure
 description: Linear and Non-Linear data strcutures. Tree represents the nodes connected by edges. We will discuss binary tree or binary search tree specifically.
 keywords:
   - data_structures_algorithms
