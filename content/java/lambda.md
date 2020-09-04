@@ -71,17 +71,14 @@ Examples: `FileFilter`, `Comparators`, `Runnable` etc.
 import java.util.*;
 
 // Functional Interface
-interface Addition
-{
-	void answer(int x , int y);  // Abstract function
+interface Addition {
+    void answer(int x, int y); // Abstract function
 }
-public class Main
-{
-     public static void main(String args[])
-    {
-       Addition obj = (int x,int y)->System.out.println(x+y);
-           	obj.answer(25,25);
-      }
+public class Main {
+    public static void main(String args[]) {
+        Addition obj = (int x, int y) - > System.out.println(x + y);
+        obj.answer(25, 25);
+    }
 }
 ```
 Output:
@@ -101,20 +98,19 @@ Lambda expressions can access variables declared outside the lambda function und
 import java.io.*;
 
 
-interface abst
-{
-	void local(String s);
+interface abst {
+    void local(String s);
 }
 
 
 class TutsWiki {
-    public static void main (String[] args) {
-   	
-   	  String text1 ="bcbcc";  // Local Variable
+    public static void main(String[] args) {
 
-   	  abst obj = (String a) ->System.out.println(a);
+        String text1 = "bcbcc"; // Local Variable
 
-   		obj.local(text1);
+        abst obj = (String a) - > System.out.println(a);
+
+        obj.local(text1);
     }
 }
 ```
@@ -129,27 +125,27 @@ File: Lambda.java
 import java.io.*;
 
 interface Interf {
-   void print();
+    void print();
 }
 public class Lambda {
-   int x;   // instance variable
-   static int y=100;     // static variable
-   Lambda(int x) {    
-      this.x = x;
-   }
-   void show() {
-      
-      Interf test = () -> {
-        
-         System.out.println("Value of x = "+ x);
-         System.out.println("Value of y = "+ y);
-      };
-      test.print();
-   }
-   public static void main(String arg[]) {
-      Lambda obj = new Lambda(50);
-      obj.show();
-   }
+    int x; // instance variable
+    static int y = 100; // static variable
+    Lambda(int x) {
+        this.x = x;
+    }
+    void show() {
+
+        Interf test = () - > {
+
+            System.out.println("Value of x = " + x);
+            System.out.println("Value of y = " + y);
+        };
+        test.print();
+    }
+    public static void main(String arg[]) {
+        Lambda obj = new Lambda(50);
+        obj.show();
+    }
 }
 ```
 Output:
@@ -172,29 +168,25 @@ Method reference is used to give reference to methods in the functional interfac
 ### Example of Static Method Reference
 ```java
 import java.io.*;
-interface abst
-{
-	void local(int x,int y);        
+interface abst {
+    void local(int x, int y);
 }
 
 public class Test {
-    
-	public static void adding(int x, int y)
-	{
-    	       System.out.println("Sum = "+(x+y));
-	}
+
+    public static void adding(int x, int y) {
+        System.out.println("Sum = " + (x + y));
+    }
 }
 
 
-class Example
-{
-    public static void main (String[] args)
-    {
-   	
-    	     abst ref = Test:: adding;
-    	     ref.local(30,30);
+class Example {
+    public static void main(String[] args) {
 
-           //output - Sum = 60
+        abst ref = Test::adding;
+        ref.local(30, 30);
+
+        //output - Sum = 60
     }
 }
 ```
@@ -204,28 +196,24 @@ class Example
 import java.io.*;
 
 
-interface abst
-{
-	void local(int x,int y);
+interface abst {
+    void local(int x, int y);
 }
 
 public class Test {
-    
-	public void adding(int x, int y)
-	{
-    	      System.out.println("Sum = "+(x+y));
-	}
+
+    public void adding(int x, int y) {
+        System.out.println("Sum = " + (x + y));
+    }
 }
 
 
-class Example
-{
-    public static void main (String[] args)
-    {
-   	
-    	    Test add = new Test();
-    	    abst ref = add::adding;
-    	    ref.local(30,30);
+class Example {
+    public static void main(String[] args) {
+
+        Test add = new Test();
+        abst ref = add::adding;
+        ref.local(30, 30);
 
     }
 }
@@ -236,26 +224,21 @@ File : Test.java
 ```java
 import java.io.*;
 
-interface Interf
-{  
-   Hello getMessage(String s);  
-}  
+interface Interf {
+    Hello getMessage(String s);
+}
 
-class Hello
-{  
-   Hello(String s)
-   {  
-      System.out.println(s);  
-   }  
-}  
-   
-public class Test
-{  
-   public static void main(String[] args)
-   {  
-       Interf obj = Hello::new;  
-       obj.getMessage("Hello World");  
-   }  
+class Hello {
+    Hello(String s) {
+        System.out.println(s);
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Interf obj = Hello::new;
+        obj.getMessage("Hello World");
+    }
 }
 ```
 Output:
@@ -269,20 +252,20 @@ Hello World
 
 #### For each loop in lambda form
 ```java
-import java.util.*;  
-public class Example{  
-    
-	public static void main(String[] args) {  
-         	
-    	List<Integer> list=new ArrayList<Integer>();  
-    	list.add(1);  
-    	list.add(2);  
-    	list.add(3);  
-    	list.add(4);  
-    	list.add(5);
-         	
-    	list.forEach((n)->System.out.println(n));  
-    	}  
+import java.util.*;
+public class Example {
+
+    public static void main(String[] args) {
+
+        List < Integer > list = new ArrayList < Integer > ();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        list.forEach((n) - > System.out.println(n));
+    }
 }
 ```
 Output:
@@ -295,37 +278,35 @@ Output:
 
 #### Filtering Collection Data Using Lambda Expression
 ```
-import java.util.*;  
+import java.util.*;
 import java.util.stream.Stream;
 
 
-class Product{  
- 	
-	String name;  
-	float price;  
-	public Product(String name, float price) {  
-    	super();  
+class Product {
 
-    	this.name = name;  
-    	this.price = price;  
-	}  
-}  
-public class Example  {  
-	public static void main(String[] args)
-	{  
-        	List<Product> list=new ArrayList<Product>();  
-        	list.add(new Product("Asus",17000));  
-        	list.add(new Product("Dell",65000));  
-    	       list.add(new Product("Rogue",25000));  
-    	       list.add(new Product("Mac Book",15000));  
-         	list.add(new Product("Acer",26000));  
-        	list.add(new Product("Lenovo",19000));  
-     	
-Stream<Product> filtered_data = list.stream().filter(p -> p.price > 18000);  
-     	
-filtered_data.forEach(  product -> System.out.println(product.name+": "+product.price)  
-    	);  
-   }  
+    String name;
+    float price;
+    public Product(String name, float price) {
+        super();
+
+        this.name = name;
+        this.price = price;
+    }
+}
+public class Example {
+    public static void main(String[] args) {
+        List < Product > list = new ArrayList < Product > ();
+        list.add(new Product("Asus", 17000));
+        list.add(new Product("Dell", 65000));
+        list.add(new Product("Rogue", 25000));
+        list.add(new Product("Mac Book", 15000));
+        list.add(new Product("Acer", 26000));
+        list.add(new Product("Lenovo", 19000));
+
+        Stream < Product > filtered_data = list.stream().filter(p - > p.price > 18000);
+
+        filtered_data.forEach(product - > System.out.println(product.name + ": " + product.price));
+    }
 }
 ```
 Output:
