@@ -15,6 +15,11 @@ keywords:
   - algorithms
 tags: [DSA]
 ---
+<meta property="og:image" content="https://tutswiki.com/images/DSA/merge-array.png"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Merge Sort" />
+<meta name=”twitter:description” content="Merge sort is a popular sorting algorithm which uses divide and conquer algorithm. The heart of the Merge Sort is a procedure called Merge." />
+
 Merge sort is a popular sorting algorithm which uses **divide and conquer** algorithm. Consider an array A to be sorted. We divide the array A into two parts and sort them individually. The heart of the Merge Sort is a procedure called Merge. Let's see the Merge procedure first and then we will use Merge as a subroutine to implement Merge Sort algorithm.
 
 ## Merge Procedure

@@ -16,6 +16,11 @@ keywords:
   - algorithms
 tags: [DSA]
 ---
+<meta property="og:image" content="https://tutswiki.com/images/DSA/heap-array.png"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Heap Sort" />
+<meta name=”twitter:description” content="Heap sort algorithm is a comparison based sorting technique, it's basic working is similar to that of insertion sort. It is an in-place sorting algorithm." />
+
 Sorting as you might already know is basically an algorithm that is used for arranging elements of a list in a certain order. (Usually ascending or descending). Sorting is one of the most important categories of algorithms, it can significantly reduce the complexity of problems, and is generally used for efficient searching.
 
 There are an ample number of sorting algorithms available like the Bubble sort, Selection sort, Insertion sort, Merge sort, Quick sort, Heap sort, Counting sort and more. The type of algorithm to choose depends on the type of problem. (Generally Merge Sort and Quick sort are used.)
