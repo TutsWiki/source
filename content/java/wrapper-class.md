@@ -41,7 +41,7 @@ void wrapperClassExample1(){
     System.out.println(another);
 }
 ```
-From Java 9, new `Integer()` format is deprecated and `Integer.valueOf()` method is preferred. Here `Integer` could be replaced by any Wrapper Class like `Boolean`, `Float` etc.
+From Java 9, `new Integer()` format is deprecated and `Integer.valueOf()` method is preferred. Here `Integer` could be replaced by any Wrapper Class like `Boolean`, `Float` etc.
 
 ### Example
 Deprecated: `Float deprecated = new Float(1.21);`  
