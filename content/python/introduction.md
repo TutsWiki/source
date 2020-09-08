@@ -6,7 +6,7 @@ menu:
     parent: python
 next: /python/overview
 title: Introduction
-weight: 26
+weight: 1
 url: /python/introduction
 description: Almost every industry worldwide is using Python somehow due to its wide range of applications and easy to understand syntax.
 keywords:
