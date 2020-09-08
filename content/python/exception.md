@@ -7,7 +7,7 @@ menu:
 next: /python/overview
 title: Exceptions in Python
 weight: 5
-url: /python/exceptions
+url: /python/exceptions/
 description: Python Exception is an event that occurs at runtime which disrupts the flow of execution of the program.
 keywords:
   - Python
