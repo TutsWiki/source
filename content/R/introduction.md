@@ -6,7 +6,7 @@ menu:
     parent: R
 next: /r/install-env-setup
 title: Introduction
-weight: 25
+weight: 1
 url: /r/introduction
 description: A gentle introduction to R programming language.
 keywords:
