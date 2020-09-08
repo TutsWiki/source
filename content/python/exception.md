@@ -14,7 +14,6 @@ keywords:
   - Exceptions
 tags: [Python]  
 ---
-# Exception in Python
 In this tutorial, we will be learning about ***Exceptions***. So without further ado, let's get started.
 
 ## What is an Exception?
