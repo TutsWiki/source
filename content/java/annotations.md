@@ -67,7 +67,7 @@ Output:
    
   3. **RetentionPolicy.RUNTIME**: available during runtime and is available to JVM  also.
 
-- **@Documented**: It is used to signal to the JavaDoc tool that your custom annotation should be visible to all classes using that annotation and it should be documented.
+- **@Documented**: It is used for documenting custom annotation by signalling the JavaDoc tool which compiles it and   adds it to the generated document.
 - **@Inherited**: This allows the subclasses to inherit the marked annotations by this annotation from the superclass.   
 
 #### @Target Example
