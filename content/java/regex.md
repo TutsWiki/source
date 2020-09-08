@@ -15,10 +15,10 @@ keywords:
 tags: [Java]  
 ---
 ### 1.1 Introduction
-Regular expression in simple terms is a special sequence of symbols and alphanumeric characters that defines a search pattern.
+Regular Expression in simple terms is a special sequence of symbols and alphanumeric characters that defines a search pattern.
 
 ### 1.2 Uses
-- These are used to describe what you are looking for when you search data in text, article etc.      
+- These are used to describe what you are looking for when you search for data in text, article etc.      
 - It is used for **Data Validation** e.g. checking if the user has inserted a valid e-mail address or not while registering in a website.
 - It is used for **Data Scraping/Web scraping** e.g. when you want to scrape particular data from a website.
 - These are also used in search engines, string processing etc.
@@ -47,13 +47,13 @@ Some functions in the matcher class are:
   - Used to search the next string expression from the given text which matches the given regex pattern from the given start number. It also returns a boolean value.
 
 #### 2.2.2 Pattern Class
-Pattern class job is to compile the given regular expression which is used to define the pattern for a regex engine. This class accepts the pattern input provided by the user and compiles it so that matcher class can perform its tasks. One of the function in Pattern class is
+Pattern class job is to compile the given regular expression which is used to define the pattern for a regex engine. This class accepts the pattern input provided by the user and compiles it so that matcher class can perform its tasks. One of the functions in Pattern class is
 
 - Pattern.compile(String regex)
   - Its job is to compile the given regex pattern and return the instance of a pattern.
 
 #### 2.2.3 PatternSyntaxException Class
-It simply is used to find errors in regular expression patterns which is provided by the user.
+It simply is used to find errors in regular expression patterns which are provided by the user.
 
 #### Example
 ```java
@@ -84,18 +84,18 @@ Some examples are
 - `+` - it symbolizes that occurrences of the element should be one or more times
 - `?` - it symbolizes occurrence of the element should be zero or one.
 - `{X}` - it symbolizes occurrences of the element should be X number of times
-- `{X,Y}` - it symbolizes occurrences of the element should be between `X` and `Y` number of times
+- `{X, Y}` - it symbolizes occurrences of the element should be between `X` and `Y` number of times
 - `{X,}` - it symbolizes occurrences of the element should be `X` or more than `X`
 
 ### 2.4 Regex Character Class
 Java Character Class has predefined sets of expressions which can be directly used as regex expressions and can be used to create our required pattern.
 
 - `[xyz]` - checks occurrence of x, y or z
-- `[^xyz]` - checks occurrence of  any character other than x ,y or z
+- `[^xyz]` - checks occurrence of  any character other than x, y or z
 - `[a-zA-Z]` - checks occurrence of characters from a-z or A-Z
 - `[a-z&&[xyz]]` - checks occurrence of characters from a-z with xor y or z
 - `[a-z&&[^xy]]` - checks occurrence of characters from a-z except x or y or z
-- `[a-z&&[^m-p]]` - checks occurrence of characters from a-z and should not have charcters m through p
+- `[a-z&&[^m-p]]` - checks occurrence of characters from a-z and should not have characters m through p
 
 #### Example
 ```java
@@ -129,10 +129,10 @@ These are ordinary characters which have special meaning in computer programs an
 
 Some examples are:
 
-- **\d** - denotes you can enter any digit. It is a short form of pattern [0-9]
-- **\D** - denotes you can enter any non digit. It is short form of pattern [^0-9]
-- **\w** - denotes you can enter any word character. It is short form of pattern [a-zA-Z_0-9]
-- **\W** - denotes you can enter any non-word character. It is short form of pattern [^\w]
+- **\d** - denotes you can enter any digit. It is a short form of the pattern [0-9]
+- **\D** - denotes you can enter any non-digit. It is a short form of the pattern [^0-9]
+- **\w** - denotes you can enter any word character. It is a short form of the pattern [a-zA-Z_0-9]
+- **\W** - denotes you can enter any non-word character. It is a short form of the pattern [^\w]
 - **\b** - denotes a word boundary which means a position where a word begins or ends
 - **\B** - denotes a non-word boundary same as \b but it is used for non-word characters.
 
