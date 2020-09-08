@@ -91,7 +91,7 @@ Example: `@interface Annotation{ int value1(); String value2() }`
 
 ### 3.1 Rules
 
-- Attach `@` before interface define that this is an annotation.
+- To define an annotation in Java add `@` before the interface keyword.
 - [Throw clauses](/java/throw-throws) should not be present in our method.
 - The parameter list inside the method should be empty.
 - A default value can be assigned to the method based on our requirement.
