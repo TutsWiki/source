@@ -192,4 +192,3 @@ After deleting node with value 100
 !["diagram after deleting 40"](/images/DSA/BST_2.png?width=30pc "BST after deleting 40")
 - After deleting node with value 100
 !["diagram after deleting 100"](/images/DSA/BST_3.png?width=30pc "BST after deleting 100")
-
