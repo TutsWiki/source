@@ -8,7 +8,7 @@ next: /python/overview
 title: Exception Handling in Python
 weight: 6
 url: /python/exception-handling/
-description: Python provides us `try`, `raise`, `except` and `finally` blocks for handling raised exceptions properly. Built-In and User-defined Exceptions are also covered.
+description: Python provides us try, raise, except, finally and else blocks for handling raised exceptions properly. Built-In and User-defined Exceptions are also covered.
 keywords:
   - Python
   - Exceptions
