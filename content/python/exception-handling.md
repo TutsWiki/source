@@ -87,6 +87,8 @@ Thank You
 ```
 
 ### try, except and else
+`else` block with `try` runs only if no exception is raised inside the try block. Here, try block will look for ZeroDivisionError exception if raised and will print the message `Caught ZeroDivisionError`, otherwise the `else` condition will execute. So basically it works as an if...else conditional statement.
+
 ```python
 def myFun(a,b):
     try:
@@ -119,8 +121,6 @@ then output
 ```
 Caught ZeroDivisionError
 ```
-
-Here, try block will look for ZeroDivisionError exception if raised and will print the message `Caught ZeroDivisionError`, otherwise the `else` condition will execute. So basically it works as an if...else conditional statement.
 
 Now that we have learned about `try`, `raise`, `except` and `finally` statements, let's use them with Built-in and User-defined exceptions.
 
