@@ -86,47 +86,43 @@ Number not less than 10
 Thank You
 ```
 
-Now that we have learned about `try`, `raise`, `except` and `finally` blocks, let's use them with Built-in and User-defined exceptions.
-
-### try and else
-
-```python
-def myFun():
-   try:
-       1/0
-   except:
-         print("Exception caught")
-   else:
-       print("No exception raised")
-   finally:
-         print("Bye")
-         
-myFun()
-```
-
-Output:
-```
-Exception caught
-Bye
-```
-
 ### try, except and else
 ```python
-def myFun():
+def myFun(a,b):
     try:
-       1/2
-    except (TypeError, ZeroDivisionError):
-       print("Caught TypeError or ZeroDivisionError")
+       a/b
+    except ZeroDivisionError:
+       print("Caught ZeroDivisionError")
     else:
         print("Successful")
-       
-myFun()
+```
+If we call above function as
+
+```python
+myFun(1,2)
 ```
 
-Output:
+then output
+
 ```
 Successful
 ```
+
+and if 
+
+```python
+myFun(1,0)
+```
+
+then output
+
+```
+Caught ZeroDivisionError
+```
+
+Here, try block will look for ZeroDivisionError exception if raised and will print the message `Caught ZeroDivisionError`, otherwise the `else` condition will execute. So basically it works as an if...else conditional statement.
+
+Now that we have learned about `try`, `raise`, `except` and `finally` statements, let's use them with Built-in and User-defined exceptions.
 
 ## Built-in Exceptions
 We can handle [Exceptions](/python/exceptions) using the try/except/raise/finally/else blocks we have learned above. For example,
