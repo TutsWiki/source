@@ -6,7 +6,7 @@ menu:
     parent: R
 next: /r/basic_syntax
 title: Installing R and RStudio in Windows & Linux
-weight: 26
+weight: 2
 url: /r/install-env-setup
 description: Detailed steps with screenshots on how to install R and RStudio IDE in Windows, Ubuntu and CentOS.
 keywords:

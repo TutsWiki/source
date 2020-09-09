@@ -17,18 +17,18 @@ tags: [Java]
 
 ### 1.1 Introduction
 - Lambda expression is the fundamental approach to **functional programming** in Java.
-- It is an anonymous function which doesn't belong to any class nor a name.
+- It is an anonymous function which doesn’t belong to any class nor does it have a name.
 - It provides a concise way to show a method or interface.
 - Provides implementation of **functional interface**.
 
 ### 1.2 Syntax
-`Parameter -> body of expression`
+`Parameter(s) -> body of expression`
 
 ### 1.3 Characteristics
-- **Optional type declaration** - Declaration of parameter type is not required.
-- **Optional parentheses around parameters** - Required when multiple parameters are used.
-- **Optional curly braces** - only to be used when the expression body contains multiple statements.
-- **Optional return keyword** - automatically returns the value when the body contains one expression to return it.   
+- **Optional type declaration** - Declaration of parameter type is not required. It means when declaring parameters we don't have to declare their type.
+- **Optional parentheses** - Required when multiple parameters are used. It means we don’t have place parentheses when only a single parameter is passed
+- **Optional curly braces** - only to be used when the expression body contains multiple statements and is not necessary when the body contains only one statement.
+- **Optional return keyword** - automatically returns the value when body contains one expression to return it. It means when only one expression returns the value then we dont need to add return keyword before it.
 
 ### 1.4 Parameter Types
 
@@ -278,41 +278,48 @@ Output:
 
 #### Filtering Collection Data Using Lambda Expression
 ```
-import java.util.*;
+import java.util.*;  
 import java.util.stream.Stream;
 
 
-class Product {
+class Product{  
+ 	 
+	String brand;  
+	float price;  
+	public Product(String brand, float price) {  
+    	super();  
 
-    String name;
-    float price;
-    public Product(String name, float price) {
-        super();
+    	this.brand = brand;  
+    	this.price = price;  
+	}  
+}  
+public class Test  {  
+	public static void main(String[] args)
+	{  
+        	List<Product> lst=new ArrayList<Product>();  
+        	lst.add(new Product("Asus",10000));  
+        	lst.add(new Product("Dell",20000));  
+    	       lst.add(new Product("Rogue",30000));  
+    	       lst.add(new Product("Mac Book",40000));  
+        
+     	 
+            Stream<Product> data = lst.stream().filter(p -> p.price > 15000);  
+     	 
+            data.forEach(  product -> System.out.println(product.brand+": "+product.price)  
+    	);  
 
-        this.name = name;
-        this.price = price;
-    }
-}
-public class Example {
-    public static void main(String[] args) {
-        List < Product > list = new ArrayList < Product > ();
-        list.add(new Product("Asus", 17000));
-        list.add(new Product("Dell", 65000));
-        list.add(new Product("Rogue", 25000));
-        list.add(new Product("Mac Book", 15000));
-        list.add(new Product("Acer", 26000));
-        list.add(new Product("Lenovo", 19000));
 
-        Stream < Product > filtered_data = list.stream().filter(p - > p.price > 18000);
 
-        filtered_data.forEach(product - > System.out.println(product.name + ": " + product.price));
-    }
-}
+   }  
+} 
+
 ```
 Output:
 ```
-Dell: 65000.0
-Rogue: 25000.0
-Acer: 26000.0
-Lenevo: 19000.0
+$ javac Test.java
+$ java Test
+
+Dell: 20000.0
+Rogue: 30000.0
+Mac Book: 40000.0
 ```
