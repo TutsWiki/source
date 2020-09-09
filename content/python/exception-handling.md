@@ -88,7 +88,7 @@ Thank You
 
 Now that we have learned about `try`, `raise`, `except` and `finally` blocks, let's use them with Built-in and User-defined exceptions.
 
-### try / else
+### try and else
 
 ```python
 def myFun():
@@ -110,7 +110,7 @@ Exception caught
 Bye
 ```
 
-### try / except / else
+### try, except and else
 ```python
 def myFun():
     try:
