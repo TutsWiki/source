@@ -131,8 +131,8 @@ myList = [0,5,4,8,4]
 for i in range(0,6):
     print(myList[i])
 ```
-We can see that there are 5 integers in the list `myList` but our for loop is iterating 6 times. So when the loop reaches the 6th iteration, it raises the following exception,
-Output:
+We can see that there are 5 integers in the list `myList` but our for loop is iterating 6 times. So when the loop reaches the 6th iteration, it raises the following exception
+
 ```
 0
 5
