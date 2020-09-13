@@ -97,7 +97,7 @@ void postOrder(struct BST* root)
 }
 ```
 ### 6. Finding the minimum node
-According to the property the BST, the value of every node in the left subtree of the current node should be less than the value of the current node. Hence, this property is used while finding the minimum node in a BST. We reach to the leftmost node in the BST which has the minimum possible value in the BST.
+According to the property of the BST, the value of every node in the left subtree of the current node should be less than the value of the current node. Hence, this property is used while finding the minimum node in a BST. We reach to the leftmost node in the BST which has the minimum possible value in the BST.
 ```c
 struct BST* findMinNode(struct BST* root)
 {
