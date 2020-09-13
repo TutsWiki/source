@@ -17,7 +17,7 @@ tags: [DSA]
 ---
 Now when there are sorting algorithms already available like [Merge Sort](/data-structures-algorithms/merge-sort/) and Quick Sort which can sort a large number of elements in quick time and that too efficiently in most of the cases, we still might require to rely on other sorting techniques in some cases. Today we will discuss one such sorting technique called **Insertion Sort**. Insertion sort is one of the easiest and efficient sorting algorithms that is a comparison based sorting technique. Insertion sort is very advantageous in cases where the number of elements is small and can provide the best case time complexity of `O(n)`.
 
-Let's discuss some of the major advantages of Insertion Sort
+Let's discuss some of the major advantages and disadvantages of Insertion Sort.
 
 ## Advantages
 1. Implementation of insertion sort is very easy as compared to sorting algorithms like quick sort, merge sort or heap sort.
