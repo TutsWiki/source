@@ -27,8 +27,8 @@ tags: [Java]
 ### 1.3 Characteristics
 - **Optional type declaration** - Declaration of parameter type is not required. It means when declaring parameters we don't have to declare their type.
 - **Optional parentheses** - Required when multiple parameters are used. It means we don’t have place parentheses when only a single parameter is passed
-- **Optional curly braces** - only to be used when the expression body contains multiple statements and is not necessary when the body contains only one statement.
-- **Optional return keyword** - automatically returns the value when body contains one expression to return it. It means when only one expression returns the value then we dont need to add return keyword before it.
+- **Optional curly braces** - Only to be used when the expression body contains multiple statements and is not necessary when the body contains only one statement.
+- **Optional return keyword** - Automatically returns the value when body contains one expression to return it. It means when only one expression returns the value then we dont need to add return keyword before it.
 
 ### 1.4 Parameter Types
 
@@ -296,21 +296,16 @@ class Product{
 public class Test  {  
 	public static void main(String[] args)
 	{  
-        	List<Product> lst=new ArrayList<Product>();  
+		List<Product> lst=new ArrayList<Product>();  
         	lst.add(new Product("Asus",10000));  
         	lst.add(new Product("Dell",20000));  
-    	       lst.add(new Product("Rogue",30000));  
-    	       lst.add(new Product("Mac Book",40000));  
+    	       	lst.add(new Product("Rogue",30000));  
+		lst.add(new Product("Mac Book",40000));  
         
+		Stream<Product> data = lst.stream().filter(p -> p.price > 15000);  
      	 
-            Stream<Product> data = lst.stream().filter(p -> p.price > 15000);  
-     	 
-            data.forEach(  product -> System.out.println(product.brand+": "+product.price)  
-    	);  
-
-
-
-   }  
+            	data.forEach(  product -> System.out.println(product.brand+": "+product.price));  
+   	}  
 } 
 
 ```
