@@ -249,7 +249,7 @@ class FBPost {
 }
 ```
 #### Explanation
-In the above example, if the user tries to serialize the `FBPost` object, then `NotSerizalizableException` will be thrown because of the `post` object since it is not Serializable.
+In the above example, if the user tries to serialize the `FBPost` object, then `NotSerizalizableException` will be thrown because of `post` object since it is not Serializable unless it implements the `Serializable` interface.
 
 ## Key Terms
 
