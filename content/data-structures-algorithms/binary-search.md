@@ -8,17 +8,17 @@ next: /data-structures-algorithms/tree-data-structure
 title: Binary Search
 weight: 35
 url: /data-structures-algorithms/binary-search/
-description: Merge sort is a popular sorting algorithm which uses divide and conquer algorithm. The heart of the Merge Sort is a procedure called Merge.
+description: Select a middle element from the array and divide the array in two parts. Left side contains elements which are smaller than the middle element (in case of ascending) and right side contains elements greater than middle element.
 keywords:
   - sorting
   - merge
   - algorithms
 tags: [DSA]
 ---
-<meta property="og:image" content="https://tutswiki.com/images/DSA/merge-array.png"/>
+<meta property="og:image" content="https://tutswiki.com/images/DSA/binary-search-divide-flow.png"/>
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Merge Sort" />
-<meta name=”twitter:description” content="Merge sort is a popular sorting algorithm which uses divide and conquer algorithm. The heart of the Merge Sort is a procedure called Merge." />
+<meta name="twitter:title" content="Binary Search" />
+<meta name=”twitter:description” content="Select a middle element from the array and divide the array in two parts. Left side contains elements which are smaller than the middle element (in case of ascending) and right side contains elements greater than middle element." />
 
 Generally if we are asked to perform searching, what we do is take every element one by one and compare with the input value. This in computing terms is called Linear Search.
 
