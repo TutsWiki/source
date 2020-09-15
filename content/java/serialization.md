@@ -18,7 +18,7 @@ tags: [Java]
 <meta name="twitter:title" content="Serialization in Java" />
 <meta name=”twitter:description” content="Serialization is the mechanism to convert an object into a sequence of bytes so that it could be used in any external process like sending an object via a network or saving in memory." />
 
-## What is Serialization ?
+## What is Serialization?
 
 **Serialization** is the mechanism to convert an object into a sequence of bytes so that it could be used in any external process like sending an object via a network or saving in memory. The created sequence of bytes will keep the information that is stored in the object as well as information of Object type and structure, to recreate it again when needed. The mechanism of recreating the object from these sequence of bytes is called **Deserialization**.
 
@@ -227,10 +227,7 @@ Here, `Post` implements Serializable and thus `FBPost` will also become Serializ
 > But this concept does not work the other way round, which means when a subclass implements Serializable interface it will not affect the Parent class.
 
 ## Serialization with Aggregation
-In many use cases, there are one or more objects that reside in an object as data members, then this relationship is known as Aggregation. 
-These objects act as properties for the aggregating object. And to make an aggregating object serializable, all the inner objects are required to be Serializable.
-<br/>
-If any of the data members are not Serialiazabile then the `NotSerializableException` will be thrown while serializing the object.
+Aggregation is used to form a `HAS-A` relationship in Java which means, one class has one or more references to other classes. Such classes will only become serializable when all the references inside these classes are Serializable. Otherwise, while attempting to serialize these classes, a `NotSerializableException` will occur.
 
 ### Example
 ```java
