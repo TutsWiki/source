@@ -4,7 +4,7 @@ linktitle: Writing and Reading config files in Python
 title: Writing and Reading config files in Python
 weight: 10
 url: /read-write-config-files-in-python
-description: Learn how to write and read config files in Python using configparser module.
+description: Learn how to write and read .ini config files in Python using configparser module.
 keywords:
   - python
   - config
@@ -85,7 +85,7 @@ config_object.read("config.ini")
 
 #Get the password
 userinfo = config_object["USERINFO"]
-print "Password is {}".format(userinfo["password"])
+print("Password is {}".format(userinfo["password"]))
 ```
 
 Output:
