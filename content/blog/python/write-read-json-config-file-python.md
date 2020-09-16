@@ -16,7 +16,7 @@ tags: [Python]
 ---
 A `Config` short for `Configuration` file is a file that stores information such as parameters, settings, configurations, and preferences of an application.
 
-`Config files` are simple plain text files with `.config`, `.ini`, `.json`, `.xml`, `.yaml` file extensions among others that can be created, viewed or edited using any text editor.
+`Config files` are simply plain text files with `.config`, `.ini`, `.json`, `.xml`, `.yaml` file extensions among others that can be created, viewed or edited using any text editor.
 
 For example, the `Web.config` file in Microsoft ASP.NET MVC application contains configuration information that controls the working of the application. It may be for individual pages or the entire application.
 
@@ -39,7 +39,7 @@ We've already covered `.ini`, `.yaml` and `.xml` in below articles, in this arti
 
 ## Reading and Writing config data to JSON file in Python
 
-`JSON` or `Javascript Object Notation` file is used to store and transfer data in the form of `arrays` or `Key - Value` pairs. Let's now understand read and write operations to the JSON file.
+`JSON` or `Javascript Object Notation` file is used to store and transfer data in the form of `arrays` or `Key-Value` pairs. Let's now understand read and write operations to the JSON file.
 
 ### Creating JSON config file in Python
 

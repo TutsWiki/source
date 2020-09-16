@@ -39,7 +39,7 @@ File: tutswiki.xml
  </content>
 </mail>
 ```
-As we can see, all the tags used are user-defined which makes XML self explanatory. We will be using the same file for reading and writing data.
+As we can see, all the tags used are user-defined which makes XML self-explanatory. We will be using the same file for reading and writing data.
 
 For parsing the XML file, we will be using the `BeautifulSoup` module along with `html parser`. First, we need to install the latest `BeautifulSoup4` package using the following command.
 

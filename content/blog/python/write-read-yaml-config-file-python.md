@@ -24,7 +24,7 @@ We've already covered `.ini`, `.json` and `.xml` in below articles, in this arti
 ## Reading and Writing config data to YAML file in Python
 `YAML` or `YAML Ain't Markup Language` is a case sensitive and human-friendly data serialization language used mainly for configurations.
 
-For reading and writing to the YAML file, we first need to install the `PyYAML` package  by using the following command.
+For reading and writing to the YAML file, we first need to install the `PyYAML` package by using the following command.
 
 ```console
 $ pip install pyyaml
