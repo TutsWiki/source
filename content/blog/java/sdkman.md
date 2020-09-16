@@ -6,11 +6,11 @@ weight: 10
 url: /sdkman-installing-multiple-versions-java-same-machine
 description: SDKMan is a tool by which you can install multiple versions of Java in the same machine and manually switch between them according to your needs.
 keywords:
-  - random
-  - programming
-  - languages
+  - sdkman
+  - java
+  - install
 ---
-<meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
+<meta property="og:image" content="https://tutswiki.com/images/blog/sdkman-version.png"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="SDKMan - Installing Multiple Versions of Java in Same Machine" />
 <meta name=”twitter:description” content="SDKMan is a tool by which you can install multiple versions of Java in the same machine and manually switch between them according to your needs." />
