@@ -30,6 +30,12 @@ Let's see how can we create and read config files in Python.
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+We’ve already covered .yaml, .json and .xml in below articles, in this article we’ll focus on .ini config files.
+
+- [.json file in Python](/read-write-json-config-file-in-python/)
+- [.yaml file in Python](/read-write-yaml-config-file-in-python/)
+- [.xml file in Python](/read-write-xml-config-files-in-python/)
+
 ## Creating config file in Python
 
 In Python we have [configparser](https://docs.python.org/3/library/configparser.html) module which can help us with creation of config files (.ini format).
