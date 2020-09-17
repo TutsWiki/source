@@ -130,7 +130,7 @@ Static methods are stored at a common memory allocation in Java memory and if we
 
 The above code will give the output `Honda starts` i.e. `h.start()` function of child class will be executed because we called the function with the help of the object of class `honda`. If we would have called it with the help of the object of class `car` then `start` function of class `car` would have been executed.
 
-- We cannot access the `start` function of the class `car` (parent class) with the help of the class `honda` (child class). It is called **method hiding** in Java i.e. static function `start` in class car is hidden.
+- We cannot access the `start` function of the class `car` (parent class) with the help of the class `honda` (child class). It is called **method hiding** in Java i.e. static function `start` in class `car` is hidden.
 - A **static method cannot be overridden by a non-static method** and a **non-static method cannot be hidden by a static method**.
 - Hence it depends on the type of reference variable used for calling static methods, therefore static methods are decidable at the compile time. Hence, they cannot be overridden.
 

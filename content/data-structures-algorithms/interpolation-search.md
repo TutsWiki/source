@@ -44,7 +44,7 @@ But we know the array is uniformly distributed, therefore it will be beneficial 
 
 Interpolation search is an optimized version of vanilla Binary Search, which is best suited for uniformly distributed values.
 
-Almost the whole algorithm is similar to that of binary search, except selecting the **pivot point** or probe which is selected on the basis of the value being searched.
+Almost the whole algorithm is similar to that of binary search, except selecting the **pivot point** or probe which is selected based on the value being searched.
 
 ![probe formula](/images/DSA/probe-formula.png "Formula for finding probe")
 
@@ -61,9 +61,9 @@ The above algorithm works for elements sorted in **ascending order**, for descen
 
 ## Example
 
-Consider the Array : `7 10 13 17 20 23 26 29 32`
+Consider the Array: `7 10 13 17 20 23 26 29 32`
 
-Element to search : `29`
+Element to search: `29`
 
 ![Interpolation Search Example Array](/images/DSA/interpolation-search-example-array.png "Example Array")
 
