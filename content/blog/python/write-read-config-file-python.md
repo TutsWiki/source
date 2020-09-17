@@ -4,7 +4,7 @@ linktitle: Writing and Reading config files in Python
 title: Writing and Reading config files in Python
 weight: 10
 url: /read-write-config-files-in-python
-description: Learn how to write and read config files in Python using configparser module.
+description: Learn how to write and read .ini config files in Python using configparser module.
 keywords:
   - python
   - config
@@ -29,6 +29,12 @@ Let's see how can we create and read config files in Python.
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+We’ve already covered .yaml, .json and .xml in below articles, in this article we’ll focus on .ini config files.
+
+- [.json file in Python](/read-write-json-config-file-in-python/)
+- [.yaml file in Python](/read-write-yaml-config-file-in-python/)
+- [.xml file in Python](/read-write-xml-config-files-in-python/)
 
 ## Creating config file in Python
 
@@ -85,7 +91,7 @@ config_object.read("config.ini")
 
 #Get the password
 userinfo = config_object["USERINFO"]
-print "Password is {}".format(userinfo["password"])
+print("Password is {}".format(userinfo["password"]))
 ```
 
 Output:
