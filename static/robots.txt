@@ -80,3 +80,4 @@ User-agent: WWWOFFLE
 User-agent: Xaldon\ WebSpider  
 User-agent: Zeus 
 Disallow: /
+Sitemap: https://tutswiki.com/sitemap.xml
