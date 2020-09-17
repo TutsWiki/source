@@ -127,18 +127,21 @@ We used the same class test to print the two different types of data (`String` a
 With wildcard, we can further enhance the usage of generics. We use a wildcard when we want to make a method or class that can accept any kind of data or collection or when we want to impose some restrictions or relaxation on a variable. Let’s take an example:
 
 ```java
-void printCollection(Collection < Object > c) {
-  for (Object e: c) {
-    System.out.println(e);
+void test(Collection < Object > c) 
+{
+  for (Object i: c) 
+  {
+    System.out.println(i);
   }
 }
 ```
 The above code will only accept the type Object for functioning and will not accept any other type of collection. That's the point where wildcard comes to play its role. To make the method acceptable for any data collections, we will use the wildcard '?'.
 
 ```java
-void printCollection(Collection<?> c) {
-    for (Object e : c) {
-        System.out.println(e);
+void test(Collection<?> c) 
+{
+    for (Object i : c) {
+        System.out.println(i);
     }
 }
 ```
@@ -150,32 +153,29 @@ Now the above code will run for any type of collections like Integer, Double, Ob
 It provides the freedom to the variable by either making it a specific type or subtype of the specific type. In Java, it is declared by using the `?` keyword followed by the `extend` keyword. Extend keyword is used to provide access to the subtypes of the specific type to the methods. Example `list<? extends Number>` can be used to extend the type `Number` along with its subtype (`Integer`, `Double` etc.) whereas `list<Numbers>` restrict user with a list of type number only. Observe the below code for better understanding.
 
 ```java
-import java.util.ArrayList;
+import java.util.Array;
+import java.util.List;
 public class UpperBoundWildcard {
-  private static Double add(ArrayList < ? extends Number > num) {
-    double sum = 0.0;
-    for (Number n: num) {
-      sum = sum + n.doubleValue();
+    private static Double SumOfElements(ArrayList < ? extends Number > num) {
+        double sum = 0.0;
+        for (Number n: num) {
+            sum = sum + n.doubleValue();
+        }
+        return sum;
     }
-    return sum;
-  }
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    ArrayList < Integer > l1 = new ArrayList < Integer > ();
-    l1.add(10);
-    l1.add(20);
-    System.out.println("Displaying the sum = " + add(l1));
-    ArrayList < Double > l2 = new ArrayList < Double > ();
-    l2.add(30.0);
-    l2.add(40.0);
-    System.out.println("Displaying the sum = " + add(l2));
-  }
-}
+        List < Integer > ListOfIntegres = Arrays.asList(10, 20, 30);
+        System.out.println("The sum of the Integer list is = " + SumOfElements(ListOfInteger));
+        List < Double > ListOfDecimals = Arrays.asList(100.0, 200.0, 300.0);
+        System.out.println("The sum of the Double list is = " + SumOfElements(ListOfDecimals));
+    }
+} 
 ```
-OUTPUT:
-```bash
-Displaying the sum = 30.0
-Displaying the sum = 70.0
+Output:
+```console
+The sum of the Integer list is = 60.0
+The sum of the Double list is = 600.0
 ```
 In the above code, a list of integer and list of double is executed without any error.
 
@@ -187,31 +187,31 @@ Unbounded wild cards are used when we don't know what type of list will come as 
 import java.util.Arrays;
 import java.util.List;
 public class UnboundedWildcard {
-  public static void display(List < ? >list) {
-    for (Object o: list) {
-      System.out.println(o);
+    public static void show(List < ? > list) {
+        for (Object o: list) {
+            System.out.println(o);
+        }
     }
-  }
-  public static void main(String[] args) {
-    List < Integer > l1 = Arrays.asList(1, 2, 3);
-    System.out.println("Displaying the Integer values");
-    display(l1);
-    List < String > l2 = Arrays.asList("One", "Two", "Three");
-    System.out.println("Displaying the String values");
-    display(l2);
-  }
+    public static void main(String[] args) {
+        List < Integer > ListOfIntegers = Arrays.asList(5, 10, 15);
+        System.out.println("List of Integer values-");
+        show(ListOfIntegers);
+        List < String > ListOfString = Arrays.asList("Virat", "Dhoni", "Dravid");
+        System.out.println("List of String values");
+        show(ListOfString);
+    }
 }
 ```
-OUTPUT:
-```bash
-Displaying the Integer values
-1
-2
-3
-Displaying the String values
-One
-Two
-Three
+Output:
+```console
+List of Integer values
+5
+10
+15
+List of String values
+Virat
+Dhoni
+Dravid
 ```
 
 The above code worked well for both types of lists i.e. integer and string. This is the advantage of unbounded wildcard.
@@ -224,31 +224,31 @@ We use lower bound wildcards when we want to work on a specific type or supercla
 import java.util.Arrays;
 import java.util.List;
 public class LowerBoundWildcard {
-  public static void addNumbers(List < ? super Integer > list) {
-    for (Object n: list) {
-      System.out.println(n);
+    public static void show(List < ? super Integer > list) {
+        for (Object n: list) {
+            System.out.println(n);
+        }
     }
-  }
-  public static void main(String[] args) {
-    List < Integer > l1 = Arrays.asList(1, 2, 3);
-    System.out.println("Displaying the Integer values");
-    addNumbers(l1);
-    List < Number > l2 = Arrays.asList(1.0, 2.0, 3.0);
-    System.out.println("Displaying the Number values");
-    addNumbers(l2);
-  }
-}  
+    public static void main(String[] args) {
+        List < Integer > ListOfIntegres = Arrays.asList(10, 20, 30);
+        System.out.println("Showing the Integer values");
+        show(ListOfIntegres);
+        List < Number > ListOfNumbers = Arrays.asList(100.0, 200.0, 300.0);
+        System.out.println("Showing the Number values");
+        show(ListOfNumbers);
+    }
+}
 ```
-OUTPUT:
-```bash
-Displaying the Integer values
-1
-2
-3
-Displaying the Number values
-1.0
-2.0
-3.0
+Output:
+```console
+Showing the Integer values
+10
+20
+30
+Showing the Number values
+100.0
+200.0
+300.0  
 ```
 In the above code, we declared the list type be integers but by using the `super` keyword we made the method acceptable for superclass of integers. That's why we were able to print double values too because superclass of integers i.e. numbers contains `double` class.
 
@@ -258,23 +258,23 @@ In the above code, we declared the list type be integers but by using the `super
 - Type safety: It provides the user the type safety facility i.e. a user can store only a single type of object. For example - a list can be either of integer type or string type `{1,2,3}` or `{"one","two","three"}` but list like `{1 ,2," three"}` is not acceptable. Observe the below code for better understanding.
 ```java
 List list = new Arraylist();
-list.add(50);
-list.add("hello");
+list.add(100);
+list.add("Tuts");
 List < Integer > list = new Arraylist < Integer > ();
-list.add(10);
-list.add("10"); //compile time error because type safety not followed
+list.add(200);
+list.add("Wiki"); //compile time error because type safety not followed
 ```
 - Compile time error detection: A user mainly prefer to detect the error at compile time rather than run time because error handling at compile time is far easier than that at run time. And this facility is provided by generics to the user.
 - Free from typecasting: While accessing the member of the list, one doesn't need to typecast the object like one used to do before without generics. 
 
 ```java
-List list =new ArrayList();
-list.add(“hello”);
-String s=(String) list.get(0);//typecasting
+List list = new ArrayList();
+list.add(“Tuts”);
+String s = (String) list.get(0); //typecasting
 //After generics, we don’t need typecasting.
-List<String> list=new ArrayList<String>();
-List.add("hello");
-String s=list.get(0);
+List < String > list = new ArrayList < String > ();
+list.add("Wiki");
+String s = list.get(0);
 ```
 
 
