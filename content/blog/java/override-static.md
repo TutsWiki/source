@@ -6,7 +6,7 @@ menu:
     parent: java
 title: How to Override/Overload Static Method in Java?
 weight: 3
-url: /override-overload-static-method
+url: /override-overload-static-method-java
 description: Can a Static Method be Overridden or Overloaded in Java? Overriding and Overloading is a way to achieve Polymorphism in OOP.
 keywords:
   - java
