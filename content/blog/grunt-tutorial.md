@@ -49,7 +49,7 @@ If you save a file you can have your tests run or your code minified.
 This means you can stop worrying about this stuff. You don't need to issue commands in the command line constantly. Just code and _let Grunt work for you_.
 
 If you think about it Grunt is like [Codekit](http://incident57.com/codekit/) but with nothing but a CLI.
-It's cross-platform out of the box, free as in [MIT licensed](https://github.com/gruntjs/grunt/blob/master/LICENSE-MIT) and extensible as hell.
+It's cross-platform out of the box, free as in [MIT licensed](https://github.com/gruntjs/grunt/blob/master/LICENSE) and extensible as hell.
 
 ## First use
 Grunt is able to set up a project for you by scaffolding a template based on your input in the commandline. This is nice but not needed for this simple demo. I want to show you how Grunt can help you in all your projects by adding just two files!
