@@ -15,7 +15,7 @@ keywords:
   - resource
 tags: [Java]  
 ---
-In the previous tutorial, we learned how to handle an exception using [throw and throws](/java/exceptions/exception-handling/throw-throws/) keywords. Now we will learn about **finally** block.
+In the previous tutorial, we learned how to handle an exception using [throw and throws](/java/throw-throws/) keywords. Now we will learn about **finally** block.
 ## finally
 `finally` is the block that will always get executed irrespective of the fact whether the exception is handled or not.
 
