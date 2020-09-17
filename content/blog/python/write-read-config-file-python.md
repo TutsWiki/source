@@ -34,7 +34,7 @@ We’ve already covered .yaml, .json and .xml in below articles, in this article
 
 - [.json file in Python](/read-write-json-config-file-in-python/)
 - [.yaml file in Python](/read-write-yaml-config-file-in-python/)
-- [.xml file in Python](/read-write-xml-config-files-in-python/)
+- [.xml file in Python](/read-write-xml-config-file-in-python/)
 
 ## Creating config file in Python
 
