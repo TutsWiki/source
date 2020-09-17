@@ -81,7 +81,17 @@ mid = 6
 
 In this case, we can see that the probe is right-biased as the required value is on the right side of the array, similarly, if the value would have been on the left side of the array, the probe value would have been left-biased.
 
-Now let's have a look at the Java code for Interpolation Search:-
+![Interpolation Search Example Array](/images/DSA/interpolation-search-example-array-2.png "Example Array 2")
+
+	low=7, high=8
+
+	mid = 7 + (((8-7)/(32-29))*(29-29))
+
+	mid = 7
+
+Here `arr[mid] = 29` which is the required element, hence we converge to the result in just two passes.
+
+Now let's have a look at the **Java code for Interpolation Search**.
 
 ## Code
 
