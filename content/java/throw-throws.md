@@ -15,7 +15,7 @@ keywords:
   - throws
 tags: [Java]  
 ---
-In the previous tutorial, we learned how to handle an exception using [try and catch block](/java/exceptions/exception-handling/#try-and-catch). Now we will learn how exception handling is done using **throw** and **throws** keyword.
+In the previous tutorial, we learned how to handle an exception using [try and catch block](/java/exception-handling/#try-and-catch/). Now we will learn how exception handling is done using **throw** and **throws** keyword.
 
 ## throw keyword
 The keyword `throw` is employed to throw an exception explicitly. It is mainly used to throw `custom exceptions` or `user-defined exceptions`. It is placed inside the method.
