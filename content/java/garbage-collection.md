@@ -1,5 +1,5 @@
 ---
-date: 2020-08-30
+date: 2020-09-18
 linktitle: Garbage Collection
 menu:
   main:
@@ -7,11 +7,13 @@ menu:
 title: Garbage Collection in Java
 weight: 7
 url: /java/garbage-collection
-description: The keyword throw is employed to throw an exception explicitly. It is mainly used to throw custom exceptions or user-defined exceptions.
+description: The process of releasing the heap memory occupied by objects which do not have any live references in the Java program is known as garbage collection. null, gc, finalize.
 keywords:
   - java
   - garbage
   - gc
+  - null
+  - finalize
 tags: [Java]  
 ---
 ## 1. Garbage Collection
