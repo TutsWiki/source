@@ -5,7 +5,7 @@ menu:
   main:
     parent: java
 title: Garbage Collection in Java
-weight: 7
+weight: 10
 url: /java/garbage-collection
 description: The process of releasing the heap memory occupied by objects which do not have any live references in the Java program is known as garbage collection. null, gc, finalize.
 keywords:
@@ -45,8 +45,8 @@ Whenever a Java program is compiled and executed, **JVM** creates three threads
 - Here `finalize()` method can be considered to have almost the same functionality as `destructors()` in C++
 - After the `finalize()` method is executed, the garbage collector releases the memory of the objects and hence protects the program from unwanted memory leaks           
 
-### 3. Object Dereferncing Methods
-#### Nulling the reference
+## 3. Object Dereferncing Methods
+### Assing Null to Object
 ```java
 School obj = new School();
 obj = null;
@@ -54,26 +54,26 @@ obj = null;
 
 Here the `obj` variable, first refers to an object in the heap memory but after nulling the `obj` there is no other reference to that object, hence garbage collector identifies it and releases that object’s memory.
 
-#### Assigning the reference to another object
+### Assign the Reference to Another Object
 ```java
 School obj1 = new School();
 School obj2 = new School();
 obj1 = obj2;
 ```
-Now the object previously referenced by obj1 in the heap memory is available for garbage collection as no live reference is available for that object now.
+Now the object previously referenced by `obj1` in the heap memory is available for garbage collection as no live reference is available for that object now.
 
-#### Anonymous object
+### Anonymous Object
 ```java
 new School();
 ```
 Anonymous objects don’t have any reference so garbage collector releases their memory once they serve their purpose
    
-### 4. gc() Method    
+## 4. gc() Method    
 - In Java, JVM implicitly calls the garbage collector but this method can be used to call the garbage collector explicitly
 - This method doesn't guarantee that the garbage collector will be executed at that point
 - This method is not a command, it's just a request, the final decision is taken by JVM whether to execute the garbage collector or not
 
-### Example
+## Example
 File : Test.java
 ```java
 import java.io.*;
