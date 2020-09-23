@@ -19,6 +19,16 @@ tags: [DSA]
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Exponential Search" />
 <meta name=”twitter:description” content="In this algorithm, ultimately we rely on Binary Search for searching, but before that, we finalize a range in which the element we want to search might be present." />
+The term Exponential generally denotes rapid growth, and mathematically it means increasing in powers.
+
+For example:
+
+- Exponential growth of 2: *2^0, 2^1, 2^2, 2^3, 2^4 and so on* => *(1, 2, 4, 8, 16,.....)*
+
+- Exponential growth of 3: *3^0, 3^1, 3^2, 3^3, 3^4 and so on* => *(1, 3, 9, 27, 81,....)*
+
+We use the same generated numbers ( powers of 2 ) to jump indexes in array and get closer to the index of key.
+
 In this algorithm, ultimately we rely on [Binary Search](/data-structures-algorithms/binary-search/ "Binary Search") for searching, but before that, we finalize a range in which the element we want to search might be present.
 
 To finalize this range we follow a certain algorithm, let's have a quick look at the overview of working of this algorithm with the help of an example.
@@ -86,7 +96,7 @@ After 3rd pass i will be 8 - condition satisfied
 After 4th pass i will be 16 - CONDITION FAILED
 ```
 
-Note that the value of i is now 16, so while calling binary search method we will use `i/2`.
+Note that the value of i is now `16`, and the index `16` is out of range in this case, so to get the previous value of `i` we will divide it by `2`, and call binary search using index of `low` as `i/2`.
 
 Now we call the binary search method.
 
