@@ -57,6 +57,7 @@ Since each thread has its resource, multiple processes can be executed parallell
 1. For basic tasks, as there is overhead associated with managing threads.
 2. Threading makes the program more complex which makes the debugging process more difficult.
 3. Processes are CPU bound, and we only have single processing core.
+
 > **CPU Bound Processes:** Processes that spend most of their time while executing on CPU.
 
 Assuming that our goals align with the scenarios mentioned in the `Why use threading` section, let's now discuss its types.
@@ -163,6 +164,7 @@ Thread 2 Sat Sep 19 13:04:03 2020
 `_thread` is an effective option for low-level threading. But Python's new `threading` module is more powerful and supports high-level threading.
 
 To create a new thread, we create an object of `Thread` class, which takes `target` as a parameter.
+
 - `target:` Name of the function to be executed
 - `args:` Optional parameter to pass argument tuple
 
@@ -292,9 +294,9 @@ Thread 2: finished at Fri Sep 18 16:51:46 2020
 
 - The `threading` module also provides the following additional methods -
 
-  - `threading.active_Count()` âˆ’ It returns the number of active threads.
-  - `threading.current_Thread()` âˆ’ It returns the current thread being executed.
-  - `threading.enumerate()` âˆ’ It returns a list of active threads.
+  - `threading.active_Count()`: It returns the number of active threads.
+  - `threading.current_Thread()`: It returns the current thread being executed.
+  - `threading.enumerate()`: It returns a list of active threads.
 
 The below example uses these additional methods.
 ```python
