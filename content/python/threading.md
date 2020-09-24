@@ -17,7 +17,7 @@ keywords:
   - thread
 tags: [Python]  
 ---
-<meta property="og:image" content="https://tutswiki.com/images/Python/threading.png?width=30pc"/>
+<meta property="og:image" content="https://tutswiki.com/images/Python/threading.jpg?width=30pc"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Threading in Python" />
 <meta name=”twitter:description” content="Learn what is threading, various types (kernel, user, daemon) and how to use it in Python using _thread or threading module." />
@@ -31,7 +31,7 @@ In this tutorial, we will understand the concept of **threading in Python**. Let
 
 Since each thread has its resource, multiple processes can be executed parallelly by increasing the number of threads in a process, as depicted below.
 
-![Multithreading in Python](/images/Python/threading.png "Threading")
+![Multithreading in Python](/images/Python/threading.jpg "Threads")
 
 ## Why use threading
 - `Threads` improve the performance of the processes through `parallelism` and `concurrency`.
