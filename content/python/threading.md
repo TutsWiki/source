@@ -31,7 +31,7 @@ In this tutorial, we will understand the concept of **threading in Python**. Let
 
 Since each thread has its resource, multiple processes can be executed parallelly by increasing the number of threads in a process, as depicted below.
 
-![Multithreading](/images/Python/threading.png "Threading")
+![Multithreading in Python](/images/Python/threading.png "Threading")
 
 ## Why use threading
 - `Threads` improve the performance of the processes through `parallelism` and `concurrency`.
