@@ -6,7 +6,7 @@ menu:
     parent: C++
 next: /cplusplus/installation
 title: Introduction
-weight: 25
+weight: 1
 url: /cplusplus/introduction
 description: A gentle introduction to C++ programming language. History, Popularity and Applications.
 keywords:
