@@ -22,7 +22,7 @@ tags: [Java]
 ## What is PostgreSQL?
 
 PostgreSQL is a free and open-source ORDBMS which is known for its extensibility and SQL compliance.
-It is recommended, for storing high volume of data, thus used in major web development projects, which can produce a large amount of user-generated data.
+It is recommended, for storing a high volume of data, thus used in major web development projects, which can produce a large amount of user-generated data.
 
 ## Features of PostgreSQL
 - Stores high volume of Data efficiently.
@@ -43,7 +43,7 @@ It is recommended, for storing high volume of data, thus used in major web devel
 
     ![postgresql download List](/images/Java/postgresql-download-list.png "Windows Installer List")
 
-3. After completion of Download, open the Setup file, and you'll will get the following screen, click on the Next button.
+3. After completion of Download, open the Setup file, and you'll get the following screen, click on the Next button.
 
     ![Postgresql Setup Start](/images/Java/postgresql-setup-screen.jpg "Setup")
 
@@ -71,7 +71,7 @@ It is recommended, for storing high volume of data, thus used in major web devel
 
     ![PostgreSQL Port](/images/Java/postgresql-port.jpg "Port")
 
-    - Set your Locale. Locale is the parameter that defines the user's region and hence affects the language of the User interface. Here, the most visible change it will cause is the change in the default date-time format.
+    - Set your Locale. Locale is a parameter that defines the user's region and hence affects the language of the User interface. Here, the most visible change it will cause is the change in the default date-time format.
 
     ![PostgreSQL Locale](/images/Java/postgresql-locale.jpg "Locale")
 
@@ -121,7 +121,7 @@ It is recommended, for storing high volume of data, thus used in major web devel
 1. Password Authentication Failed: That means the entered password is wrong
 2. `psql` not found: That means the environment variable is not correctly setup.
 
-In the above setup, you will also get GUI Software for Database Management called `PGAdmin4`. You can find the executable in the directory `pgadmin/pgadmin4.exe` inside the *Installation Folder*. In the left pane, you can select the server. When selected, it will ask the password for *postgres*, you should enter the password from Step `2.4`.
+In the above setup, you will also get GUI Software for Database Management called `PGAdmin4`. You can find the executable in the directory `pgadmin/pgadmin4.exe` inside the *Installation Folder*. In the left pane, you can select the server. When selected, it will ask the password for postgres user, you should enter the password from Step `2.4`.
 
 The GUI will open in the browser and will look like this.
 
@@ -170,7 +170,7 @@ The GUI will open in the browser and will look like this.
     sudo -u my_user psql
     ```
 
-8. To check Connection Info, after above command
+8. To check Connection Info, after the above command
     ```terminal
     /conninfo
     ```
@@ -191,15 +191,15 @@ To use GUI for PostgreSQL, you can download `PGAdmin3` from the `Ubuntu Software
 
 Java Database Connectivity (JDBC) is the standard API that enables Java applications to connect with the various databases.
 
-- It provide the methods to connect with the databases and execute queries on them which includes queries to get, add, remove, and modify data in a database.
+- It provides the methods to connect with the databases and execute queries on them which includes queries to get, add, remove, and modify data in a database.
 - JDBC is database-independent and uses vendor-specific drivers to connect with databases.
 - JDBC also provides a JDBC-to-ODBC bridge to communicate with databases with ODBC.
 
-For the following content, you are expected to have a basic knowledge of the Java and DBMS.
+For the following content, you are expected to have a basic knowledge of Java and DBMS.
 
 ## How to use JDBC
 
-To use JDBC, the user should have database with a user which have sufficient privilieges on that database. JDBC also needs that user's name and password to create connection with Database.
+To use JDBC, you should have a database with a user which have sufficient privileges on that database. JDBC also needs that user's name and password to create a connection with the database.
 
 ### Example
 ```terminal
@@ -221,7 +221,7 @@ Netbeans is the official Java IDE and managed by Oracle.
 1. Download and install [Netbeans IDE](https://netbeans.org/downloads/6.1/index.html).
 2. Create a new Java Project in Netbeans IDE.
 3. Add downloaded PostgreSQL driver in the Project.
-    1. Right Click on `Projects` and select `Properties`.
+    1. Right-click on `Projects` and select `Properties`.
     2. Click on `Add Library` and search for the PostgreSQL driver and select it.
     3. If not found, click on `Add JAR/Folder` and select downloaded Drivers.
 
@@ -230,7 +230,7 @@ Netbeans is the official Java IDE and managed by Oracle.
 1. Download and install [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/#section=windows).
 2. Create a Java Command Line Project.
 3. Add downloaded PostgreSQL driver in the Project.<br />
-    1. After opening the project, Click on `File` and then select `Project Structure`.
+    1. After opening the project, click on `File` and then select `Project Structure`.
     2. Go to `Library` in `Project Settings` Menu in Left Pane.
     3. Click on the `+` Plus button in Main Pane.
     4. Browse for the Downloaded PostgreSQL Drivers and select the jar file.
@@ -362,7 +362,7 @@ Created Table `Post`
 - The `createTable()` method creates a table with columns `id`, `content`, and `likes` where `id` is Auto-Generated, Primary key for the table; `content` is a string which contains the content of the posts; `likes` is an integer that will store the total likes given to the post.
 - In this method, we used the `Statement` object to create a static statement for a database.
 - Then we used `executeUpdate()` to execute the statement. Here, `executeStatement()` will return `0`(zero) by default.
-- This method could throw `SQLException`, if any database access occurs.
+- This method could throw `SQLException` if any database access occurs.
 
 ### Possible Errors
 - `Relation "post" already exists`: If `post` table is already present in the Database.
@@ -371,7 +371,7 @@ Created Table `Post`
 To verify that the table is created, you can do any of the following:
 
 - Run this program again. If the table already exists, a `PSQLException` is thrown with the message "Table already exists".
-- Open `psql` in terminal with the following command: `psql -U temp_user -d my_database` and then enter the respective password. After this, enter command `\dt;` , and you will get the following output
+- Open `psql` in the terminal with the following command: `psql -U temp_user -d my_database` and then enter the respective password. After this, enter command `\dt;`, and you will get the following output
 ```terminal
 my_database=> \dt;
 
@@ -382,7 +382,7 @@ my_database=> \dt;
 (1 row)
 ```
 
-## Entering a new record in table
+## Entering a new record in the table
 
 ### Code
 
@@ -458,7 +458,7 @@ my_database=> SELECT * from post;
 (1 row)
 ```
 
-## Fetching records from table
+## Fetching records from the table
 
 ### Code
 ```java
@@ -520,7 +520,7 @@ Post with Id = 1 had content = 'This is my First post by JDBC' with 1 likes
 - Initially, `ResultSet` will have a cursor on the first record of the queried data. The Queried record can be fetched by the `next()` method of `ResultSet` which moves the cursor to the next record.
 - The `getInt()` and `getString()` methods are used to get the Data of a result where the parameter will specify the column for which method is called, and the return value will be the value of the specified column.
 
-## Update existing record in table
+## Update existing record in the table
 
 ### Code
 ```java
@@ -583,7 +583,7 @@ Update Successful
 You can verify the above program by the following methods:
 
 - Use the aforementioned `printAllPosts()` method and find the post with `id` = 1 from the output and check whether its `likes` got updated to 1 or not.
-- Can run the following query directly in *psql*: `SELECT * FROM post WHERE id = 1`, and you will get the following output.
+- Can run the following query directly in psql: `SELECT * FROM post WHERE id = 1`, and you will get the following output.
 ```terminal
 my_database=> SELECT * FROM post WHERE id = 1;
 
@@ -593,7 +593,7 @@ my_database=> SELECT * FROM post WHERE id = 1;
 (1 row)
 ```
 
-## Deleting a record from table
+## Deleting a record from the table
 
 ### Code
 ```java
@@ -653,8 +653,9 @@ Here, `executeUpadate()` will return the count of records affected by the execut
 
 ### Verification
 User can verify the above program using the following methods
+
 - Can run the above `printAllPost()` method to print the Posts, and try to find the Post with Id = 1, if not found then the program worked correctly.
-- Can run the following Query, directly in *psql*: `SELECT * FROM post WHERE id = 1`, and user will get the following output.
+- Can run the following Query, directly in psql: `SELECT * FROM post WHERE id = 1`, and you will get the following output.
 ```terminal
 my_database=> SELECT * FROM post WHERE id = 1;
 
@@ -677,20 +678,20 @@ my_database=> SELECT * FROM post WHERE id = 1;
 | Statement | PreparedStatement |
 | :-: | :-: |
 | The Statement is static, and hence will result in the same query in each execution | PreparedStatement is dynamic and can be modified by the parameters which can be set dynamically. |
-| The Statement is generally used for one time. The Statement queries will result in the same query every but the output may vary based on the other queries ran in the middle of the two uses of Statement. | PreparedStatement can be reused any number of times. Every time when parameters are changed, the query will change. This is faster than creating a new Statement every time. |
+| The Statement is generally used for one time. The Statement queries will result in the same query every but the output may vary based on the other queries ran in the middle of the two uses of Statement. | PreparedStatement can be reused any number of times. Whenever parameters are changed, the query will change. This is faster than creating a new Statement every time. |
 
 ## Features of JDBC
 
 - **Portability**: JDBC code is highly portable as compared to ODBC.
 - **Advanced Datatypes Support**: Like BLOB, etc.
-- **Supports Batch Processing**: The aim of batch processing is to reduce Database Visits thus it optimizes the execution time when the Database is stored in a different system than the server and if there is an inherent latency in connection with the Database.
+- **Supports Batch Processing**: Batch processing aims to reduce Database Visits thus it optimizes the execution time when the Database is stored in a different system than the server and if there is an inherent latency in connection with the Database.
 - **Supports Savepoints**: JDBC supports the savepoints which allow users to roll back the changes done till a particular savepoint.
 
 
 ## Key Terms
 
 1. **Relational Database**: Relational Database stores the data in such a way so that it allows information to get accessed or identified by other related information, thus creating a *relationship* between them. The most common way to structure a Relational Database is through related tables.
-2. **RDBMS**: Relational Database Management System is the software that enable users to build and manage a relational database. 
+2. **RDBMS**: Relational Database Management System is the software that enables users to build and manage a relational database. 
 3. **ORDBMS**: Object-Relation Database Management System combines the advantages of *Object-Oriented Database Models* and RDBMS to provide a superior DBMS. It allows the usage of complex data types and types of inheritance.
 4. **SQL**: Structured Query Language is used to access and manage RDBMS. It is famous for its simplicity, usefulness, and similarity with the English language. It provides functionality to
     
