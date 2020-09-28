@@ -86,7 +86,7 @@ Output:
 Welcome to the catch block.
 Hi, my_name_is_John
 ```
-Here the exception arises but then also the finally block gets executed. Now, what happens if we write the final block with try block but without catch block.
+Here the exception arises but then also the finally block gets executed. Now, what happens if we write the finally block with try block but without catch block.
 Let's see the given example
 ### Example
 ```java
@@ -116,11 +116,12 @@ The above code gets terminated abnormally because the exception has not been han
 Unlike catch block, we can't use multiple finally block with one try block.
 
 ## When finally doesn't work?
-It might happen sometime that finally block does not get executed. Some of the possible cases are
-- Using the method System.exit(0)
-- Using a fatal error that can cause the process to abort
-- If there is exception present in finally block itself
-- If the thread gets disturbed
+It might happen sometime that finally block does not get executed. Some of the possible cases are:
+
+ - Using the method System.exit(0)
+ - Using a fatal error that can cause the process to abort
+ - If there is exception present in finally block itself
+ - If the thread gets disturbed
 
 finally block is also used for explicitly closing the resources such as connections, files, etc.
 
