@@ -63,7 +63,7 @@ It is recommended, for storing a high volume of data, thus used in major web dev
 
     ![PostgreSQL Data Store](/images/Java/postgresql-data-dir.jpg "Data Store")
 
-    - Enter the password for the Root User: `__postgres__`. Do enter it carefully, because this is the root password.
+    - Enter the password for the Root User: postgres. Do enter it carefully, because this is the root password.
 
     ![PostgreSQL Password](/images/Java/postgresql-password.jpg "Password")
 
