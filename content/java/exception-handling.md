@@ -81,7 +81,7 @@ When you will compile the above code, it will easily get compiled without any wa
 ```java
 class test {
   public static void main(String[] args) {
-    System.out.println(“hi”);
+    System.out.println("hi");
     try {
       System.out.println("welcome");
       int x = 10,
