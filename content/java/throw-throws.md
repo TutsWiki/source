@@ -105,7 +105,7 @@ hello
 Now the above code will not terminate abnormally because we have handled it using try and catch block. Remember that you cannot write any code below the `throw` keyword statement. If you do so then you will get a compiler error.
 
 ## throws keyword
-`throws` keyword is used at the time of method declaration which indicates to the caller method that a particular type of exceptions may arrive if you are using this method and accordingly the caller method has to handle that exception. `throws` keyword is used only for **checked exceptions**.
+`throws` keyword is used at the time of method declaration which indicates to the caller method that a particular type of exception may arrive if you are using this method and accordingly the caller method has to handle that exception. `throws` keyword is used only for **checked exceptions**.
 ### Syntax
 `Method () throws Exception1 ,Exception2……Exception n`
 For better understanding, consider the example given below
