@@ -108,11 +108,11 @@ It is recommended, for storing a high volume of data, thus used in major web dev
 5. To test the Postgres Installation:
 
     - Enter command `psql -U postgres`
-    - Enter your root password, which you entered in Step `2.4`.
-    - If entered without any error, you will see the new prompt of the Postgres `postgres=#`.
-    - Enter `\du` to list all the available users.
-    - Enter `\l` to list all the databases.
-    - Enter `\conninfo` to view connection info.
+    - Enter your root password, which you entered in "password step" in installation section
+    - If entered without any error, you will see the new prompt of the Postgres `postgres=#`
+    - Enter `\du` to list all the available users
+    - Enter `\l` to list all the databases
+    - Enter `\conninfo` to view connection info
 
     ![PostgreSQL Run](/images/Java/psql.jpg)
     
@@ -121,7 +121,7 @@ It is recommended, for storing a high volume of data, thus used in major web dev
 1. Password Authentication Failed: That means the entered password is wrong
 2. `psql` not found: That means the environment variable is not correctly setup.
 
-In the above setup, you will also get GUI Software for Database Management called `PGAdmin4`. You can find the executable in the directory `pgadmin/pgadmin4.exe` inside the *Installation Folder*. In the left pane, you can select the server. When selected, it will ask the password for postgres user, you should enter the password from Step `2.4`.
+In the above setup, you will also get GUI Software for Database Management called `PGAdmin4`. You can find the executable in the directory `pgadmin/pgadmin4.exe` inside the *Installation Folder*. In the left pane, you can select the server. When selected, it will ask the password for postgres user, you should enter the same password that you set during installation.
 
 The GUI will open in the browser and will look like this.
 
