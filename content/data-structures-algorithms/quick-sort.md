@@ -210,7 +210,7 @@ public class Sorting {
 		Sorting sort = new Sorting(); // creating object of class Sorting
 		int[] arr = { 9, 14, 6, 1, 7, 11, 3, 5 };
 		sort.quickSort(arr, 0, 7); // method call
-		System.out.println("Array after applying Quick Sort sort : " + Arrays.toString(arr));
+		System.out.println("Array after applying Quick Sort: " + Arrays.toString(arr));
 	}
 }
 ```

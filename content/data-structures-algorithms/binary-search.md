@@ -39,13 +39,13 @@ If the element to search is smaller than middle element, then we discard the rig
 
 This process of partitioning the array into two parts and comparing the middle element is continued until we find our element.
 
-Let's have a deeper look at the algorithm
+Let's have a deeper look at the algorithm:
 
 1. Find middle element in the array.
 2. Compare it with the given value.
 3. If it matches, return success
 4. If the given element is smaller, select the left sub-array and perform the steps from 1.
-5. If the given element is greater, select the right sub-array and perform the steps from 1
+5. If the given element is greater, select the right sub-array and perform the steps from 1.
 6. Repeat the steps until the element is found or only one element is left in the sub-array.
 
 Please note that the above algorithm is applicable for elements stored in **ascending order**, in case of descending order, if element is smaller than middle element then right sub-array will be selected and vice versa.

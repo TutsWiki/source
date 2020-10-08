@@ -7,7 +7,7 @@ menu:
 title: Exception Handling
 weight: 6
 url: /java/exception-handling
-description: Exception handling is the facility provided by Java to handle all the unwanted event or exception that arises in our program to maintain the normal flow of our code. try,catch,throw,finally
+description: Exception handling is the facility provided by Java to handle all the unwanted events or exceptions that arises in our program to maintain the normal flow of our code. try,catch,throw,finally
 keywords:
   - java
   - exception
@@ -81,7 +81,7 @@ When you will compile the above code, it will easily get compiled without any wa
 ```java
 class test {
   public static void main(String[] args) {
-    System.out.println(“hi”);
+    System.out.println("hi");
     try {
       System.out.println("welcome");
       int x = 10,
