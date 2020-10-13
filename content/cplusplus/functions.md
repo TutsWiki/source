@@ -16,7 +16,7 @@ keywords:
   - oop
 tags: [C++]  
 ---
-<meta property="og:image" content="https://tutswiki.com/images/cplusplus/process-address-space.png"/>
+<meta property="og:image" content="https://tutswiki.com/images/cplusplus/functions.png"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Functions in C++" />
 <meta name=”twitter:description” content="Functions provide reusability and modularity to code, instead of writing the same piece of code multiple times we can define it once at a single place in a function." />
