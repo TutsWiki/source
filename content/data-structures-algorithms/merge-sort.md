@@ -56,6 +56,17 @@ Here sub-array_1 `A[p,q]` and sub-array-2 `A[q+1,r]` are sorted individually and
 ![Steps of Merge Sort](/images/DSA/merge-array-10.png "Step")
 - Thus by the end of the Merge procedure the two individually sorted sub_array gets sorted as a whole in the original array A
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Psuedo code for Merge Sort procedure
 ```
 Merge(A, p, q, r) {

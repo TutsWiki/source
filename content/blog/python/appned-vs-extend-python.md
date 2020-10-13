@@ -25,6 +25,17 @@ Notice the bold words in the definition. append adds `an item` and extend `appen
 
 Let's take an example:
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## append a list to another list in Python
 
 ```python
