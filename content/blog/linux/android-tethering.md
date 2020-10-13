@@ -29,6 +29,17 @@ Tethering the internet through your phone to your Linux desktop can be done main
 
 Let's check them out!
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9878675755379402"
+     data-ad-slot="5842766387"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### USB Tethering
 Connection over USB is just as simple as connecting your phone to a charger point. However, just like electricity is essential to charge your phone, internet connection in your phone is necessary to share it with others. Rare is the case when your charging cable is not suitable to be used as a data-transfer wire and you need to buy an apt one separately.
 
