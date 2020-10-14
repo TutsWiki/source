@@ -31,27 +31,24 @@ File: Test.java
 ```java
 import java.io.*;
 
-class Addition
-{
-   void add(int c, int d)
-   {
-       System.out.println("The first ans is: "+ (c+d));
-   }
-   
-   void add(double c, double d)
-   {
-      System.out.println("The second ans is: "+(c+d));
-   }
+class Addition {
+    void add(int c, int d) {
+        System.out.println("The first ans is: " + (c + d));
+    }
+
+    void add(double c, double d) {
+        System.out.println("The second ans is: " + (c + d));
+    }
 }
 
 public class Test {
-    public static void main (String[] args) {
-   
-      Addition obj = new Addition();
-      obj.add(20,30);
-      obj.add(30.2,40.4);
+    public static void main(String[] args) {
+
+        Addition obj = new Addition();
+        obj.add(20, 30);
+        obj.add(30.2, 40.4);
     }
-}      
+}     
 ```
 Output:
 ```console
@@ -82,27 +79,23 @@ File: Test.java
 ```java
 import java.io.*;
 
-class Master
-{
-   public void fnct()
-   {
-      System.out.println("Master Class");
-   }
+class Master {
+    public void fnct() {
+        System.out.println("Master Class");
+    }
 }
-class Servant extends Master
-{
-   //Overriding method
-    public void fnct()
-    {
-      System.out.println("Servant Class");
+class Servant extends Master {
+    //Overriding method
+    public void fnct() {
+        System.out.println("Servant Class");
     }
 }
 
-public class Test{
-   public static void main( String args[]) {
-  Servant obj = new Servant();
-           obj.fnct();
-   }
+public class Test {
+    public static void main(String args[]) {
+        Servant obj = new Servant();
+        obj.fnct();
+    }
 }
 ```
 Output:
