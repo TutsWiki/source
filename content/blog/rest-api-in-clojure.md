@@ -18,7 +18,7 @@ keywords:
 
 Clojure is one of the most interesting new languages targeting the JVM. Initially only the JVM, in the meantime it is also available for JavaScript. Essentially, you can write Clojure and either execute it as Java program or JavaScript program, of course each flavor has its unique features as well.
 
-Clojure is a Lisp, thus the syntax may be foreign, but it is really, really easy since there are very few syntactic variations. The language “Lisp” is very lean and usually easily learned.
+Clojure is a Lisp, thus the syntax may be foreign, but it is really, really easy since there are very few syntactic variations. The language "Lisp" is very lean and usually easily learned.
 
 In this post, we’re going to create a complete REST application from scratch. There are already some (very) good tutorials available, but some are not quite up to date (see [Heroku’s Devcenter](https://devcenter.heroku.com/articles/clojure-web-application) or Mark McGranaghan for good ones). Clojure itself is still a young language, Lisp of course has a lot of history.
 
@@ -321,7 +321,7 @@ To round the post up, here is the whole program:
 ```
 Yeah, the whole program with connection pooling, JSON de/encoding in roughly 90 lines of (admittedly dense) code.
 
-To sum it up: Clojure is fun, concise, and very powerful. Together with the excellent Java integration it ranks very high on my “languages I adore” list.
+To sum it up: Clojure is fun, concise, and very powerful. Together with the excellent Java integration it ranks very high on my languages I adore list.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"

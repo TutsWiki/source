@@ -269,7 +269,7 @@ list.add("Wiki"); //compile time error because type safety not followed
 
 ```java
 List list = new ArrayList();
-list.add(“Tuts”);
+list.add("Tuts");
 String s = (String) list.get(0); //typecasting
 //After generics, we don’t need typecasting.
 List < String > list = new ArrayList < String > ();

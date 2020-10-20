@@ -230,7 +230,7 @@ int main()
 {
 	vector<int> v = { 1, 2, 4, 8, 13 };
 	func(v);
-	cout << ”Values in the vector are: “;
+	cout << "Values in the vector are: ";
 	print(v);
 	return 0;
 }
@@ -270,7 +270,7 @@ int main()
 {
 	vector<int> v = { 1, 2, 4, 8, 13 };
 	func(v);
-	cout << ”Values in vector are: “;
+	cout << "Values in vector are: ";
 	print(v);
 	return 0;
 }

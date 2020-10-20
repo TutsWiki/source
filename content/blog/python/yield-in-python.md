@@ -17,5 +17,5 @@ tags: [Python]
 
 ### References
 
-- [What does the “yield” keyword do in Python?](https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python)
+- [What does the "yield" keyword do in Python?](https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python)
 - [Yield expressions](https://docs.python.org/3/reference/expressions.html?highlight=yield#yield-expressions)
