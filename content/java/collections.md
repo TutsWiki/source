@@ -217,7 +217,7 @@ Explanation:
 
 ## Map
 
-- This is an interface for storing key-value pairs. Here, one `object(value)` is associated with another `object(*key*)` which is used to index the previous `object(value)`.
+- This is an interface for storing key-value pairs. Here, one `object(value)` is associated with another `object(key)` which is used to index the previous `object(value)`.
 - `Keys` of `Map` must be unique. If `Keys` are mutable, then `Map` may require additional logic to maintain consistency.
 
 ## Popular Implementations of Map
