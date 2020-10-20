@@ -4,7 +4,7 @@ linktitle: Medium Alternatives
 title: List of Medium Alternatives
 weight: 9
 url: /medium-alternatives
-description: List of the most popular alternatives and similar websites
+description: Let's track down platforms similar to Medium and discover the extensive features they have to offer. Covers Self-hosted, Open-Source, Federated and Paid solutions.
 keywords:
   - medium
   - cms
@@ -13,7 +13,7 @@ keywords:
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="List of Medium Alternatives" />
-<meta name=”twitter:description” content="Let's track down a few other platforms other than Medium and discover the extensive features they have to offer." />
+<meta name=”twitter:description” content="Let's track down platforms similar to Medium and discover the extensive features they have to offer. Covers Self-hosted, Open-Source, Federated and Paid solutions." />
 
 Medium is a global platform **connecting writers, bloggers and readers** through quality content including both informative articles and expressive opinions. Medium functions on the Content Management System (CMS) framework and aims at delivering a personalised reading experience to its readers. A CMS helps the user **create, manage, and modify the contents** of his/her website without the need for any HTML or CSS coding skills.
 
