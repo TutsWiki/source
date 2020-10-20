@@ -99,7 +99,7 @@ class voting {
 ```
 Output:
 ```bash
-Exception in thread “main” AgeLimit:you are not eligible for voting.
+Exception in thread "main" AgeLimit:you are not eligible for voting.
 hello 
 ```
 Now the above code will not terminate abnormally because we have handled it using try and catch block. Remember that you cannot write any code below the `throw` keyword statement. If you do so then you will get a compiler error.
