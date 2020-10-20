@@ -29,7 +29,7 @@ Collections Framework is composed of
 - **Implementation**: These are the classes that implement that aforementioned Interfaces. For example: `java.util.HashMap`, `java.util.ArrayList` etc.
 - **Algorithms**: These are the methods used to manage collections or perform other computations like search, sort etc. These algorithms are polymorphic, i.e, the same algorithm works for different types of Collections.<br /> 
 
-Example: `binarySearch()` method of `java.util.Collections` is used to search an element in a `List`.   It also works on List implementations like `ArrayList` and `LinkedList`.
+    Example: `binarySearch()` method of `java.util.Collections` is used to search an element in a `List`.   It also works on List implementations like `ArrayList` and `LinkedList`.
  
 > Java Collections Framework is very much similar to the C++ STL (Standard Template Library).
 
