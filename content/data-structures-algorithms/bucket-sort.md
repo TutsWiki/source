@@ -1,5 +1,5 @@
 ---
-date: 2020-08-22
+date: 2020-10-20
 linktitle: Bucket Sort
 menu:
   main:
@@ -8,7 +8,7 @@ next: /data_structures_algorithms/tree_data_structure
 title: Bucket Sort
 weight: 25
 url: /data-structures-algorithms/bucket-sort/
-description: We saw how Counting Sort sorts elements in linear time, another such sorting technique is Bucket Sort. We create buckets within a certain range and assign elements accordingly, after this we apply some sorting technique to sort elements in buckets.
+description: We saw how Counting Sort sorts elements in linear time, another such sorting technique is Bucket Sort. We create buckets within a certain range and assign elements accordingly, then we apply some sorting technique to sort elements in buckets.
 keywords:
   - sorting
   - bucket
@@ -56,7 +56,7 @@ Number of Buckets = (Maximum element - Minimum Element)/10 + 1
 ```
 In this case, 7 buckets will be created.
 
-After the buckets are created our main motive is to assign elements in appropriate bucket.
+After the buckets are created our main motive is to assign elements in the appropriate bucket.
 
 ```
 min = 5
@@ -232,4 +232,4 @@ public class Sorting {
 | Auxiliary Space | O(n+k) | 
 
 
-Bucket sort should be preferred when the elements are **uniformly distributed** and the number of elements are **not very large**.
+Bucket sort should be preferred when the elements are **uniformly distributed** and the number of elements is **not very large**.
