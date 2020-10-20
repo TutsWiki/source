@@ -27,9 +27,7 @@ Collections Framework is composed of
 
 - **Interface**: Interfaces are abstract data types which are implemented to create different collections. For example: `java.util.Map`, `java.util.List` etc.
 - **Implementation**: These are the classes that implement that aforementioned Interfaces. For example: `java.util.HashMap`, `java.util.ArrayList` etc.
-- **Algorithms**: These are the methods used to manage collections or perform other computations like search, sort etc. These algorithms are polymorphic, i.e, the same algorithm works for different types of Collections.<br /> 
-
-    Example: `binarySearch()` method of `java.util.Collections` is used to search an element in a `List`.   It also works on List implementations like `ArrayList` and `LinkedList`.
+- **Algorithms**: These are the methods used to manage collections or perform other computations like search, sort etc. These algorithms are polymorphic, i.e, the same algorithm works for different types of Collections. For example: `binarySearch()` method of `java.util.Collections` is used to search an element in a `List`.   It also works on List implementations like `ArrayList` and `LinkedList`.
  
 > Java Collections Framework is very much similar to the C++ STL (Standard Template Library).
 
@@ -219,7 +217,7 @@ Explanation:
 
 ## Map
 
-- This is an interface for storing key-value pairs. Here, one `object(*value*)` is associated with another `object(*key*)` which is used to index the previous `object(*value*)`.
+- This is an interface for storing key-value pairs. Here, one `object(value)` is associated with another `object(*key*)` which is used to index the previous `object(value)`.
 - `Keys` of `Map` must be unique. If `Keys` are mutable, then `Map` may require additional logic to maintain consistency.
 
 ## Popular Implementations of Map
