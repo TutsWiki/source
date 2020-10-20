@@ -1,7 +1,7 @@
 ---
 date: 2020-10-20
 linktitle: Medium Alternatives
-title: List of Medium Alternatives
+title: List of Medium Alternatives (self-hosted, open-source and paid)
 weight: 9
 url: /medium-alternatives
 description: Let's track down platforms similar to Medium and discover the extensive features they have to offer. Covers Self-hosted, Open-Source, Federated and Paid solutions.
@@ -12,7 +12,7 @@ keywords:
 
 <meta property="og:image" content="https://tutswiki.com/img/tutswiki-logo.png"/>
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="List of Medium Alternatives" />
+<meta name="twitter:title" content="List of Medium Alternatives (self-hosted, open-source and paid)" />
 <meta name=”twitter:description” content="Let's track down platforms similar to Medium and discover the extensive features they have to offer. Covers Self-hosted, Open-Source, Federated and Paid solutions." />
 
 Medium is a global platform **connecting writers, bloggers and readers** through quality content including both informative articles and expressive opinions. Medium functions on the Content Management System (CMS) framework and aims at delivering a personalised reading experience to its readers. A CMS helps the user **create, manage, and modify the contents** of his/her website without the need for any HTML or CSS coding skills.
@@ -50,7 +50,7 @@ But Write.As has another blog-powerhouse in store known as [WriteFreely](https:/
 
 With a 14 days free trial, Ghost Pro is also divided into three parts - Basic, Standard, Business - varying mainly in terms of views per month, the number of staff enrolled to collectively edit the file and the maximum number of members who can view your blog.
 
-Being a developer platform, the member of the Ghost pro is the owner of whatever he/she builds and is this ensured secure content protection and built-in SEO functionality.
+Member of the Ghost Pro community have a **complete control** over their blog posts since Ghost is developer platform. Thus, it further ensures content-protection and enhanced SEO functionality.
 
 No additional plugins are required for adding logos, creating navigation menus and injecting analytic codes.
 
