@@ -106,3 +106,5 @@ sudo apt install ./Downloads/google-chrome-stable_current_amd64.deb
 sudo apt remove google-chrome-stable
 ```
 ![Installation in ubuntu](/images/blog/deb_10.png "remove-through-apt")
+
+Also see: [How to install software in Linux (RPM/DEB systems)](/install-software-linux-yum-rpm-apt-dpkg/)
