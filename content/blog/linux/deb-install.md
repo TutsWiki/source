@@ -3,7 +3,7 @@ date: 2020-11-01
 linktitle: Install deb file from command line
 title: Install deb file from command line (dpkg, apt, gdebi, software center)
 weight: 10
-url: /install-deb-command-line-dpkg-apt-gdebi-eddy
+url: /install-deb-command-line-dpkg-apt-gdebi
 description: Find out various ways to install deb package in Ubuntu/Debian using dkpg, apt, gdebi, eddy or software center.
 keywords:
   - deb
