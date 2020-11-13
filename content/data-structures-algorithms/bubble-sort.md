@@ -1,5 +1,5 @@
 ---
-date: 2020-10-31
+date: 2020-11-13
 linktitle: Bubble Sort
 menu:
   main:
