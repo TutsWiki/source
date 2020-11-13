@@ -53,7 +53,7 @@ There will be 5 iterations of the outer loop
     Since 5 > 3
     Swapping will be done
 
-Array after swapping will look like:-
+Array after swapping will look like:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-2.png "Bubble Sort Example Array")
 
@@ -62,7 +62,7 @@ Array after swapping will look like:-
     Since 5 > 4
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-3.png "Bubble Sort Example Array")
 
@@ -71,7 +71,7 @@ Array after swapping:-
     Since 5 > 1
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-4.png "Bubble Sort Example Array")
 
@@ -80,7 +80,7 @@ Array after swapping:-
     Since 5 > 1
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-5.png "Bubble Sort Example Array")
 
@@ -105,7 +105,7 @@ Array after swapping:-
     Since 4 > 2
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-7.png "Bubble Sort Example Array")
 
@@ -121,7 +121,7 @@ Array after swapping:-
     Since 3 > 1
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-8.png "Bubble Sort Example Array")
 
@@ -130,7 +130,7 @@ Array after swapping:-
     Since 3 > 2
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-9.png "Bubble Sort Example Array")
 
