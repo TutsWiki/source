@@ -96,7 +96,7 @@ Array after swapping:
     Since 4 > 1
     Swapping will be done
 
-Array after swapping:-
+Array after swapping:
 
 ![Bubble-Sort-Example-Array](/images/DSA/bubble-sort-example-array-6.png "Bubble Sort Example Array")
 
