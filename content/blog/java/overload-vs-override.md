@@ -7,7 +7,7 @@ menu:
 title: Method Overloading and Overriding in Java
 weight: 3
 url: /method-overload-vs-override-java-differences
-description: 
+description: Overloading of methods means when the class defines more than one method with the same name but with different parameters.
 keywords:
   - java
   - override

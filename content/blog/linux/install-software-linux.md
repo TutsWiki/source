@@ -175,3 +175,5 @@ Watch the video for live examples of searching, installing and removing some act
 
 ## Summary
 Packages are used to install software on Linux system. You can manipulate packages with a package manager. Two of the most popular package formats are RPM and Debian. For RPM-based distributions use the `yum` and `rpm` commands to manage packages. For Debian-based distributions use `apt` and `dpkg` to manage packages.
+
+Also see: [Install deb file from command line](/install-deb-command-line-dpkg-apt-gdebi/)
