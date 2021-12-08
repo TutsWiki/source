@@ -31,7 +31,7 @@ Let's have a look at each of these measures of central tendency one by one.
 ### Mean
 Mean is defined as the sum of all the observations divided by total number of sample observations. The basic formula for the mean of all the observations y1, y2, y3,…yn is given by 
 
-`X = y1+ y2 + y3 + ... + yn / n`
+`X = (y1+ y2 + y3 + ... + yn) / n`
 
 Let us consider an example of dataset containing 7 datapoints `3, 5, 7, 9, 11, 13, 15`
 
