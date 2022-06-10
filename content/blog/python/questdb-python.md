@@ -132,7 +132,7 @@ print(rawData)
 ```
 Output:
 ```bash
-"tempF","rain24H","thunder","timestamp"
+"temp","rain24H","thunder","timestamp"
 -37,234.0,false,"2020-08-24T11:41:37.191530Z"
 -11,165.52,false,"2020-08-24T11:41:37.195714Z"
 -31,178.13,true,"2020-08-24T11:41:37.202453Z"
