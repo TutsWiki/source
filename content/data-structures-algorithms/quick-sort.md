@@ -161,57 +161,71 @@ Now let's have a look at the code for Quick Sort.
 
 ## Quick Sort Code
 
-```java
+```
+java
 
-import java.util.Arrays;
+import java.util.*;
 
-public class Sorting {
+public class quickSort {
 
-	int partition(int arr[], int low, int high) {
-		int pivot = arr[low]; // selecting first element as pivot element
-		int i = low;
-		int j = high;
-		int temp; // temporary variable for swapping
+	public static void main(String[] args) {
+
+		int[] arr = { 12, 11, 13, 5, 3, 2, 16, 9, 34, 34 };
+		qSort(arr, 0, arr.length - 1);
+		System.out.println("Sorted array is: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+
+	}
+
+	// defining the qSort function which sorts the divided lists
+	static void qSort(int[] arr, int left, int right) {
+		if (left < right) {
+			int pIndex = partition(arr, left, right);
+			qSort(arr, left, pIndex - 1);
+			qSort(arr, pIndex + 1, right);
+		}
+	}
+
+	// Partition function consider first element as pivot and divides the list
+	// around it
+	static int partition(int[] arr, int left, int right) {
+		int pivot = arr[left];// first element as pivot
+
+		// start comparing elements with pivot, if they are smaller then pivot then move
+		// them to the left of the pivot
+		int i = left;
+		int j = right;
 
 		while (i < j) {
-
-			while (arr[i] <= pivot) {
-				i++;
-			}
-
+			i++;// avoid the pivot element
+			//find smaller element than pivot
 			while (arr[j] > pivot) {
 				j--;
 			}
-			//swapping
-			if (i < j) {
-				temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
+			//find greater element than pivot
+			while (arr[i] < pivot && i < right) {
+				i++;
 			}
+			//swap elements around pivot
+			if (i < j) {
+				swap(arr, i, j);
 
+			}
 		}
-		arr[low] = arr[j];
-		arr[j] = pivot;
+		//place pivot to correct position
+		swap(arr, left, j);
 
 		return j;
-
 	}
 
-	void quickSort(int arr[], int low, int high) {
-
-		if (low < high) {
-			int locationOfPivot = partition(arr, low, high);
-			quickSort(arr, low, locationOfPivot - 1); // recursive call to left sub-array
-			quickSort(arr, locationOfPivot + 1, high); // recursive call to right sub-array
-		}
+	static void swap(int[] arr, int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 
-	public static void main(String[] args) {
-		Sorting sort = new Sorting(); // creating object of class Sorting
-		int[] arr = { 9, 14, 6, 1, 7, 11, 3, 5 };
-		sort.quickSort(arr, 0, 7); // method call
-		System.out.println("Array after applying Quick Sort: " + Arrays.toString(arr));
-	}
 }
 ```
 
