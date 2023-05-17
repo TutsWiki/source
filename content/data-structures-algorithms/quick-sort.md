@@ -174,12 +174,12 @@ public class Sorting {
 		int temp; // temporary variable for swapping
 
 		while (i < j) {
-
-			while (arr[i] <= pivot) {
+                        /* boundary check */
+			while (i<=high && arr[i] <= pivot) {
 				i++;
 			}
-
-			while (arr[j] > pivot) {
+                        /*boundary check */
+			while (j>=low && arr[j] > pivot) {
 				j--;
 			}
 			//swapping
