@@ -24,13 +24,13 @@ keywords:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-pd.set_option('display.mpl_style', 'default') # Make the graphs a bit prettier
+plt.style.use('default') # Make the graphs a bit prettier
 plt.rcParams['figure.figsize'] = (15, 5)
 plt.rcParams['font.family'] = 'sans-serif'
 
-# This is necessary to show lots of columns in pandas 0.12. 
+# This is necessary to show lots of columns in pandas 0.12.
 # Not necessary in pandas 0.13.
-pd.set_option('display.width', 5000) 
+pd.set_option('display.width', 5000)
 pd.set_option('display.max_columns', 60)
 ```
 
@@ -232,7 +232,7 @@ Output:
 This turns out to be really easy!
 Dataframes have a [.groupby()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html) method that is similar to [SQL groupby](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-group-by-transact-sql), if you're familiar with that. I'm not going to explain more about it right now -- if you want to to know more, [the documentation](http://pandas.pydata.org/pandas-docs/stable/groupby.html) is really good.
 
-In this case, `berri_bikes.groupby('weekday').aggregate(sum)` means 
+In this case, `berri_bikes.groupby('weekday').aggregate(sum)` means
 
 > "Group the rows by weekday and then add up all the values with the same weekday."
 
@@ -360,9 +360,9 @@ Let's put all that together, to prove how easy it is. 6 lines of magical pandas!
 If you want to play around, try changing sum to max, numpy.median, or any other function you like.
 
 ```python
-bikes = pd.read_csv('../data/bikes.csv', 
-                    sep=';', encoding='latin1', 
-                    parse_dates=['Date'], dayfirst=True, 
+bikes = pd.read_csv('../data/bikes.csv',
+                    sep=';', encoding='latin1',
+                    parse_dates=['Date'], dayfirst=True,
                     index_col='Date')
 # Add the weekday column
 berri_bikes = bikes[['Berri 1']].copy()

@@ -9,7 +9,7 @@ prev: /pandas-cookbook/chapter5
 title: Chapter 6 - String Operations
 weight: 35
 url: /pandas-cookbook/chapter6
-description: String Operations in pandas. Using resampling and plotting temperature. 
+description: String Operations in pandas. Using resampling and plotting temperature.
 keywords:
   - pandas
   - string
@@ -23,7 +23,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-pd.set_option('display.mpl_style', 'default')
+plt.style.use('default')
 plt.rcParams['figure.figsize'] = (15, 3)
 plt.rcParams['font.family'] = 'sans-serif'
 ```
@@ -165,7 +165,7 @@ Output:
 If we wanted the median temperature each month, we could use the [resample()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html) method like this:
 
 ```python
-weather_2012['Temp (C)'].resample('M').apply(np.median).plot(kind='bar')
+weather_2012['Temp (°C)'].resample('ME').apply('median').plot(kind='bar')
 ```
 
 Output:
@@ -202,7 +202,7 @@ Name: Weather, dtype: float64
 and then use resample to find the percentage of time it was snowing each month
 
 ```python
-is_snowing.astype(float).resample('M').apply(np.mean)
+is_snowing.astype(float).resample('ME').apply('mean')
 ```
 
 Output:
@@ -225,7 +225,7 @@ Freq: M, Name: Weather, dtype: float64
 ```
 
 ```python
-is_snowing.astype(float).resample('M').apply(np.mean).plot(kind='bar')
+is_snowing.astype(float).resample('ME').apply('mean').plot(kind='bar')
 ```
 
 Output:
@@ -242,9 +242,9 @@ So now we know! In 2012, December was the snowiest month. Also, this graph sugge
 We can also combine these two statistics (temperature, and snowiness) into one dataframe and plot them together:
 
 ```python
-temperature = weather_2012['Temp (C)'].resample('M').apply(np.median)
+temperature = weather_2012['Temp (°C)'].resample('ME').apply('median')
 is_snowing = weather_2012['Weather'].str.contains('Snow')
-snowiness = is_snowing.astype(float).resample('M').apply(np.mean)
+snowiness = is_snowing.astype(float).resample('ME').apply('mean')
 
 # Name the columns
 temperature.name = "Temperature"

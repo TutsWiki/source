@@ -24,7 +24,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-pd.set_option('display.mpl_style', 'default')
+plt.style.use('default')
 plt.rcParams['figure.figsize'] = (15, 3)
 plt.rcParams['font.family'] = 'sans-serif'
 ```
@@ -64,7 +64,7 @@ To get the data for March 2013, we need to format it with month=3, year=2012.
 
 ```python
 url = url_template.format(month=3, year=2012)
-weather_mar2012 = pd.read_csv(url, index_col='Date/Time', parse_dates=True)
+weather_mar2012 = pd.read_csv(url, index_col='Date/Time (LST)', parse_dates=True)
 ```
 
 This is super great! We can just use the same read_csv function as before, and just give it a URL as a filename. Awesome.
@@ -1604,7 +1604,7 @@ Output:
 Let's plot it!
 
 ```python
-weather_mar2012[u"Temp (\xc2\xb0C)"].plot(figsize=(15, 5))
+weather_mar2012[u"Temp (°C)"].plot(figsize=(15, 5))
 ```
 
 Output:
@@ -1616,18 +1616,6 @@ Output:
 Notice how it goes up to 25° C in the middle there? That was a big deal. It was March, and people were wearing shorts outside.
 
 And I was out of town and I missed it. Still sad, humans.
-
-I had to write '\xb0' for that degree character °. Let's fix up the columns. We're going to just print them out, copy, and fix them up by hand.
-
-```python
-weather_mar2012.columns = [
-    u'Year', u'Month', u'Day', u'Time', u'Data Quality', u'Temp (C)', 
-    u'Temp Flag', u'Dew Point Temp (C)', u'Dew Point Temp Flag', 
-    u'Rel Hum (%)', u'Rel Hum Flag', u'Wind Dir (10s deg)', u'Wind Dir Flag', 
-    u'Wind Spd (km/h)', u'Wind Spd Flag', u'Visibility (km)', u'Visibility Flag',
-    u'Stn Press (kPa)', u'Stn Press Flag', u'Hmdx', u'Hmdx Flag', u'Wind Chill', 
-    u'Wind Chill Flag', u'Weather']
-```
 
 You'll notice in the summary above that there are a few columns which are are either entirely empty or only have a few values in them. Let's get rid of all of those with dropna.
 
@@ -1758,12 +1746,12 @@ Output:
 </div>
 </div>
 
-The Year/Month/Day/Time columns are redundant, though, and the Data Quality column doesn't look too useful. Let's get rid of those.
+The Year/Month/Day/Time columns are redundant, though. Let's get rid of those.
 
 The `axis=1` argument means "Drop columns", like before. The default for operations like `dropna` and `drop` is always to operate on rows.
 
 ```python
-weather_mar2012 = weather_mar2012.drop(['Year', 'Month', 'Day', 'Time', 'Data Quality'], axis=1)
+weather_mar2012 = weather_mar2012.drop(['Year', 'Month', 'Day', 'Time (LST)'], axis=1)
 weather_mar2012[:5]
 ```
 
@@ -1857,7 +1845,7 @@ Awesome! We now only have the relevant columns, and it's much more manageable.
 This one's just for fun -- we've already done this before, using groupby and aggregate! We will learn whether or not it gets colder at night. Well, obviously. But let's do it anyway.
 
 ```python
-temperatures = weather_mar2012[[u'Temp (C)']].copy()
+temperatures = weather_mar2012[[u'Temp (°C)']].copy()
 print(temperatures.head)
 temperatures.loc[:,'Hour'] = weather_mar2012.index.hour
 temperatures.groupby('Hour').aggregate(np.median).plot()
@@ -1866,7 +1854,7 @@ temperatures.groupby('Hour').aggregate(np.median).plot()
 Output:
 
 ```bash
-Date/Time                    
+Date/Time
 2012-03-01 00:00:00      -5.5
 2012-03-01 01:00:00      -5.7
 2012-03-01 02:00:00      -5.4
@@ -1948,13 +1936,10 @@ I noticed that there's an irritating bug where when I ask for January, it gives 
 
 ```python
 def download_weather_month(year, month):
-    if month == 1:
-        year += 1
     url = url_template.format(year=year, month=month)
-    weather_data = pd.read_csv(url, skiprows=15, index_col='Date/Time', parse_dates=True, header=True)
+    weather_data = pd.read_csv(url, index_col='Date/Time (LST)', parse_dates=True)
     weather_data = weather_data.dropna(axis=1)
-    weather_data.columns = [col.replace('\xb0', '') for col in weather_data.columns]
-    weather_data = weather_data.drop(['Year', 'Day', 'Month', 'Time', 'Data Quality'], axis=1)
+    weather_data = weather_data.drop(['Year', 'Month', 'Day', 'Time (LST)'], axis=1)
     return weather_data
 ```
 
@@ -2050,7 +2035,7 @@ Output:
 Now we can get all the months at once. This will take a little while to run.
 
 ```python
-data_by_month = [download_weather_month(2012, i) for i in range(1, 13)]
+data_by_month = [download_weather_month(2012, i) for i in range(1, 12)]
 ```
 
 Once we have this, it's easy to concatenate all the dataframes together into one big dataframe using [pd.concat](http://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.concat.html). And now we have the whole year's data!
